@@ -14,18 +14,26 @@ minetest.register_node("ks_terrain:topsoil", {
 })
 
 
-minetest.register_node("ks_terrain:stone", {
-	description = "Stone",
-	tiles = {"terrain.stone.png"},
-	groups = {rock = 1},
+minetest.register_node("ks_terrain:dolomite", {
+	description = "Dolomite Stone",
+	tiles = {"terrain.dolomite.png"},
+	groups = {stone = 1},
 	is_ground_content = true
 })
 
 
-minetest.register_node("ks_terrain:stone_with_magnetite", {
-	description = "Stone-Embedded Magnetite Nodules",
-	tiles = {"terrain.stone.png^terrain.magnetite_ore.png"},
-	groups = {rock = 1},
+minetest.register_node("ks_terrain:dolomite", {
+	description = "Dolomite Stone",
+	tiles = {"terrain.dolomite.png"},
+	groups = {stone = 1},
+	is_ground_content = true
+})
+
+
+minetest.register_node("ks_terrain:aragonite", {
+	description = "Aragonite Stone",
+	tiles = {"terrain.aragonite.png"},
+	groups = {stone = 1},
 	is_ground_content = true
 })
 
