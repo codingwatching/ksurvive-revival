@@ -1,7 +1,7 @@
 minetest.register_node("ks_terrain:topsoil_with_grass", {
 	description = "Topsoil with Grass",
 	tiles = {"terrain.grass.png", "terrain.topsoil.png", "terrain.topsoil.png^terrain.grass_side.png"},
-	groups = {topsoil = 1},
+	groups = {topsoil = 1, diggable = 3},
 	is_ground_content = true
 })
 
@@ -9,7 +9,7 @@ minetest.register_node("ks_terrain:topsoil_with_grass", {
 minetest.register_node("ks_terrain:topsoil", {
 	description = "Topsoil",
 	tiles = {"terrain.topsoil.png"},
-	groups = {topsoil = 1},
+	groups = {topsoil = 1, diggable = 2},
 	is_ground_content = true
 })
 
@@ -17,7 +17,7 @@ minetest.register_node("ks_terrain:topsoil", {
 minetest.register_node("ks_terrain:subsoil", {
 	description = "Subsoil",
 	tiles = {"terrain.subsoil.png"},
-	groups = {subsoil = 1},
+	groups = {subsoil = 1, diggable = 2},
 	is_ground_content = true
 })
 
@@ -25,7 +25,7 @@ minetest.register_node("ks_terrain:subsoil", {
 minetest.register_node("ks_terrain:dolomite", {
 	description = "Dolomite Stone",
 	tiles = {"terrain.dolomite.png"},
-	groups = {stone = 1, sedimentaryrock = 1},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
 	is_ground_content = true
 })
 
@@ -33,7 +33,7 @@ minetest.register_node("ks_terrain:dolomite", {
 minetest.register_node("ks_terrain:aragonite", {
 	description = "Aragonite Stone",
 	tiles = {"terrain.aragonite.png"},
-	groups = {stone = 1, sedimentaryrock = 1},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 2},
 	is_ground_content = true
 })
 
@@ -41,7 +41,7 @@ minetest.register_node("ks_terrain:aragonite", {
 minetest.register_node("ks_terrain:feldspar", {
 	description = "Feldspar Stone",
 	tiles = {"terrain.feldspar.png"},
-	groups = {stone = 1, igneousrock = 1},
+	groups = {stone = 1, igneousrock = 1, chippable = 3},
 	is_ground_content = true
 })
 
@@ -49,7 +49,7 @@ minetest.register_node("ks_terrain:feldspar", {
 minetest.register_node("ks_terrain:feldspar_red", {
 	description = "Feldspar-Granite Stone",
 	tiles = {"terrain.feldspar_red.png"},
-	groups = {stone = 1},
+	groups = {stone = 1, chippable = 3},
 	is_ground_content = true
 })
 

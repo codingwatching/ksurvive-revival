@@ -16,9 +16,9 @@ minetest.register_biome({
 	name = "grassland",
 	node_dust = "biomes_topsoil_grass",
 	node_top = "biomes_topsoil",
-	depth_top = 4,
+	depth_top = 1,
 	node_filler = "biomes_subsoil",
-	depth_filler = 8,
+	depth_filler = 2,
 	heat_point = 0,
 	humidity_point = 50,
 })
