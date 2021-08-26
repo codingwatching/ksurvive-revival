@@ -1,3 +1,19 @@
+minetest.register_node("ks_terrain:topsoil_with_grass", {
+	description = "Topsoil with Grass",
+	tiles = {"terrain.grass.png", "terrain.topsoil.png", "terrain.topsoil.png^terrain.grass_side.png"},
+	groups = {topsoil = 1},
+	is_ground_content = true
+})
+
+
+minetest.register_node("ks_terrain:topsoil", {
+	description = "Topsoil",
+	tiles = {"terrain.topsoil.png"},
+	groups = {topsoil = 1},
+	is_ground_content = true
+})
+
+
 minetest.register_node("ks_terrain:stone", {
 	description = "Stone",
 	tiles = {"terrain.stone.png"},
