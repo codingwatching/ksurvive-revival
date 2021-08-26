@@ -22,6 +22,14 @@ minetest.register_node("ks_terrain:stone", {
 })
 
 
+minetest.register_node("ks_terrain:stone_with_magnetite", {
+	description = "Stone-Embedded Magnetite Nodules",
+	tiles = {"terrain.stone.png^terrain.magnetite_ore.png"},
+	groups = {rock = 1},
+	is_ground_content = true
+})
+
+
 minetest.register_node("ks_terrain:source_water", {
 	description = "Water Source",
 	tiles = {"terrain.source_water.png"},
