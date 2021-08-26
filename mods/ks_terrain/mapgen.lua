@@ -14,11 +14,11 @@ minetest.register_alias("biomes_topsoil_grass", "ks_terrain:topsoil_with_grass")
 -- Jetzt ich bin... I'm just gonna register biomes now.
 minetest.register_biome({
 	name = "grassland",
-	node_top = "biomes_topsoil_grass",
-	depth_top = 1,
-	node_filler = "biomes_topsoil",
-	depth_filler = 3,
-	-- try to add subsoil here
+	node_dust = "biomes_topsoil_grass",
+	node_top = "biomes_topsoil",
+	depth_top = 4,
+	node_filler = "biomes_subsoil",
+	depth_filler = 8,
 	heat_point = 0,
 	humidity_point = 50,
 })
