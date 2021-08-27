@@ -4,6 +4,7 @@ minetest.register_alias("mapgen_stone", "ks_terrain:dolomite")
 minetest.register_alias("mapgen_water_source", "ks_terrain:water_source")
 
 
+
 -- Now, I am registering the nodes needed for making grassland biomes.
 minetest.register_alias("biomes_wetsoil", "ks_terrain:wetsoil")
 minetest.register_alias("biomes_drysoil", "ks_terrain:drysoil")
@@ -35,4 +36,34 @@ minetest.register_biome({
 
 
 
+-- Register bedrock alias.
 minetest.register_alias("strata_bedrock", "ks_terrain:feldspar")
+
+
+
+-- Register the bedrock layer.
+minetest.register_ore({
+	ore_type = "stratum",
+	ore = "strata_bedrock",
+	wherein = "mapgen_stone",
+	y_min = -31000,
+	y_max = -12,
+})
+
+
+
+-- Register alternate stone aliases
+minetest.register_alias("stone_argonite", "ks_terrain:argonite")
+
+
+
+-- Register some alternate stone nodes
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "stone_argonite",
+	wherein = "mapgen_stone",
+	y_min = -31000,
+	y_max = -12,
+	clust_scarcity = 8*8*8,
+	clust_size = 6,
+})
