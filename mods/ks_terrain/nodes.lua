@@ -1,5 +1,5 @@
 minetest.register_node("ks_terrain:wetsoil_with_grass", {
-	description = "Wetsoil with Grass",
+	description = "Wet Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.wetsoil.png", "terrain.wetsoil.png^terrain.grass_side.png"},
 	groups = {wetsoil = 1, diggable = 3},
 	is_ground_content = true
@@ -7,7 +7,7 @@ minetest.register_node("ks_terrain:wetsoil_with_grass", {
 
 
 minetest.register_node("ks_terrain:drysoil_with_grass", {
-	description = "Drysoil with Grass",
+	description = "Dry Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.drysoil.png", "terrain.drysoil.png^terrain.grass_side.png"},
 	groups = {wetsoil = 1, diggable = 3},
 	is_ground_content = true
@@ -15,7 +15,7 @@ minetest.register_node("ks_terrain:drysoil_with_grass", {
 
 
 minetest.register_node("ks_terrain:wetsoil", {
-	description = "Wetsoil",
+	description = "Wet Soil",
 	tiles = {"terrain.wetsoil.png"},
 	groups = {wetsoil = 1, diggable = 2},
 	is_ground_content = true
@@ -23,7 +23,7 @@ minetest.register_node("ks_terrain:wetsoil", {
 
 
 minetest.register_node("ks_terrain:drysoil", {
-	description = "Drysoil",
+	description = "Dry Soil",
 	tiles = {"terrain.drysoil.png"},
 	groups = {drysoil = 1, diggable = 2},
 	is_ground_content = true
