@@ -23,7 +23,7 @@ minetest.register_alias("coe", "chest_of_everything:chest")
 
 minetest.register_tool("ks_tools:woodtool", {
 	description = "Wooden Tool",
-	inventory_image = "devtool.png",
+	inventory_image = "devtool2.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=3,
@@ -32,4 +32,5 @@ minetest.register_tool("ks_tools:woodtool", {
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
+	visual_scale = 1.69,
 })

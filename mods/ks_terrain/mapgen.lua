@@ -5,20 +5,34 @@ minetest.register_alias("mapgen_water_source", "ks_terrain:water_source")
 
 
 -- Now, I am registering the nodes needed for making grassland biomes.
-minetest.register_alias("biomes_topsoil", "ks_terrain:topsoil")
-minetest.register_alias("biomes_subsoil", "ks_terrain:subsoil")
-minetest.register_alias("biomes_topsoil_grass", "ks_terrain:topsoil_with_grass")
+minetest.register_alias("biomes_wetsoil", "ks_terrain:wetsoil")
+minetest.register_alias("biomes_drysoil", "ks_terrain:drysoil")
+minetest.register_alias("biomes_wetsoil_grass", "ks_terrain:wetsoil_with_grass")
+minetest.register_alias("biomes_drysoil_grass", "ks_terrain:drysoil_with_grass")
 
 
 
 -- Jetzt ich bin... I'm just gonna register biomes now.
 minetest.register_biome({
-	name = "grassland",
-	node_dust = "biomes_topsoil_grass",
-	node_top = "biomes_topsoil",
+	name = "wet_soiled_grassland",
+	node_top = "biomes_wetsoil_grass",
 	depth_top = 1,
-	node_filler = "biomes_subsoil",
-	depth_filler = 2,
-	heat_point = 0,
+	node_filler = "biomes_wetsoil",
+	depth_filler = 3,
+	heat_point = 65,
 	humidity_point = 50,
 })
+
+minetest.register_biome({
+	name = "dry_soiled_grassland",
+	node_top = "biomes_drysoil_grass",
+	depth_top = 1,
+	node_filler = "biomes_drysoil",
+	depth_filler = 3,
+	heat_point = 70,
+	humidity_point = 50,
+})
+
+
+
+minetest.register_alias("strata_bedrock", "ks_terrain:feldspar")

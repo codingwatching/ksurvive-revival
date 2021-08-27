@@ -1,23 +1,31 @@
-minetest.register_node("ks_terrain:topsoil_with_grass", {
-	description = "Topsoil with Grass",
-	tiles = {"terrain.grass.png", "terrain.topsoil.png", "terrain.topsoil.png^terrain.grass_side.png"},
-	groups = {topsoil = 1, diggable = 3},
+minetest.register_node("ks_terrain:wetsoil_with_grass", {
+	description = "Wetsoil with Grass",
+	tiles = {"terrain.grass.png", "terrain.wetsoil.png", "terrain.wetsoil.png^terrain.grass_side.png"},
+	groups = {wetsoil = 1, diggable = 3},
 	is_ground_content = true
 })
 
 
-minetest.register_node("ks_terrain:topsoil", {
-	description = "Topsoil",
-	tiles = {"terrain.topsoil.png"},
-	groups = {topsoil = 1, diggable = 2},
+minetest.register_node("ks_terrain:drysoil_with_grass", {
+	description = "Drysoil with Grass",
+	tiles = {"terrain.grass.png", "terrain.drysoil.png", "terrain.drysoil.png^terrain.grass_side.png"},
+	groups = {wetsoil = 1, diggable = 3},
 	is_ground_content = true
 })
 
 
-minetest.register_node("ks_terrain:subsoil", {
-	description = "Subsoil",
-	tiles = {"terrain.subsoil.png"},
-	groups = {subsoil = 1, diggable = 2},
+minetest.register_node("ks_terrain:wetsoil", {
+	description = "Wetsoil",
+	tiles = {"terrain.wetsoil.png"},
+	groups = {wetsoil = 1, diggable = 2},
+	is_ground_content = true
+})
+
+
+minetest.register_node("ks_terrain:drysoil", {
+	description = "Drysoil",
+	tiles = {"terrain.drysoil.png"},
+	groups = {drysoil = 1, diggable = 2},
 	is_ground_content = true
 })
 
