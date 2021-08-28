@@ -2,6 +2,7 @@
 -- I am registering the two strictly needed mapgen aliases
 minetest.register_alias("mapgen_stone", "ks_terrain:dolomite")
 minetest.register_alias("mapgen_water_source", "ks_terrain:water_source")
+minetest.register_alias("mapgen_river_water_source", "ks_terrain:water_source")
 
 
 
@@ -11,6 +12,7 @@ minetest.register_alias("biomes_drysoil", "ks_terrain:drysoil")
 minetest.register_alias("biomes_wetsoil_grass", "ks_terrain:wetsoil_with_grass")
 minetest.register_alias("biomes_drysoil_grass", "ks_terrain:drysoil_with_grass")
 minetest.register_alias("biomes_shore_sand", "ks_terrain:sand")
+minetest.register_alias("biomes_riverbed", "ks_terrain:dolomite_gravel")
 local shoreline_height = 5
 
 
@@ -22,6 +24,8 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "biomes_wetsoil",
 	depth_filler = 5,
+	node_riverbed = "biomes_riverbed",
+	depth_riverbed = 4,
 	heat_point = 65,
 	humidity_point = 50,
 	y_min = shoreline_height,
@@ -34,6 +38,8 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "biomes_drysoil",
 	depth_filler = 5,
+	node_riverbed = "biomes_riverbed",
+	depth_riverbed = 4,
 	heat_point = 70,
 	humidity_point = 50,
 	y_min = shoreline_height,
