@@ -34,7 +34,8 @@ minetest.register_item(':', {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			sliceable={times={[1]=1.5, [2]=3}, maxlevel=1},
+			sliceable={times={[1]=1, [2]=3}, maxlevel=1},
+			diggable={times={[1]=3}, maxlevel=1},
 		},
 		damage_groups = {fleshy=0}
 	}
