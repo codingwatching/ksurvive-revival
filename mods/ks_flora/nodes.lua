@@ -7,7 +7,7 @@ minetest.register_node("ks_flora:juniper_planks", {
 
 minetest.register_node("ks_flora:maple_planks", {
 	description = "Maple-Wood Planks",
-	tiles = {"flora.maple_wood.png"},
+	tiles = {"flora.maple_wood.png", "flora.maple_wood.png", "flora.maple_wood_end.png", "flora.maple_wood_end.png", "flora.maple_wood.png", "flora.maple_wood.png"},
 	groups = {woodplank = 1, choppable = 1},
 	is_ground_content = true
 })
