@@ -7,9 +7,7 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "shapeless",
-	recipe = {
-		{"ks_flora:juniper_stick", "ks_flora:juniper_stick", "ks_flora:juniper_stick", "ks_flora:juniper_stick"}
-	},
+	recipe = {"ks_flora:juniper_stick", "ks_flora:juniper_stick", "ks_flora:juniper_stick", "ks_flora:juniper_stick"},
 	output = "ks_tools:juniper_planks"
 })
 
@@ -31,9 +29,7 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "shapeless",
-	recipe = {
-		{"ks_flora:maple_stick", "ks_flora:maple_stick", "ks_flora:maple_stick", "ks_flora:maple_stick"}
-	},
+	recipe = {"ks_flora:maple_stick", "ks_flora:maple_stick", "ks_flora:maple_stick", "ks_flora:maple_stick"},
 	output = "ks_tools:maple_planks"
 })
 
