@@ -1,15 +1,17 @@
 minetest.register_node("ks_terrain:wetsoil_with_grass", {
 	description = "Wet Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.wetsoil.png", "terrain.wetsoil.png^terrain.grass_side.png"},
-	groups = {wetsoil = 1, diggable = 3},
+	groups = {wetsoil = 1, diggable = 2},
 	is_ground_content = true
 })
 
 
 minetest.register_node("ks_terrain:drysoil_with_grass", {
-	description = "Dry Soil with Grass",
+	description = "Dry Soil with St. Augustine Grass",
+	drawtype = "plantlike_rooted",
 	tiles = {"terrain.grass.png", "terrain.drysoil.png", "terrain.drysoil.png^terrain.grass_side.png"},
-	groups = {wetsoil = 1, diggable = 3},
+	special_tiles = {"terrain.st_augustine.png"},
+	groups = {wetsoil = 1, diggable = 2},
 	is_ground_content = true
 })
 
@@ -27,6 +29,7 @@ minetest.register_node("ks_terrain:drysoil", {
 	tiles = {"terrain.drysoil.png"},
 	groups = {drysoil = 1, diggable = 2},
 	is_ground_content = true
+
 })
 
 
@@ -41,7 +44,7 @@ minetest.register_node("ks_terrain:dolomite", {
 minetest.register_node("ks_terrain:aragonite", {
 	description = "Aragonite Stone",
 	tiles = {"terrain.aragonite.png"},
-	groups = {stone = 1, sedimentaryrock = 1, chippable = 2},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
 	is_ground_content = true
 })
 
@@ -49,7 +52,7 @@ minetest.register_node("ks_terrain:aragonite", {
 minetest.register_node("ks_terrain:feldspar", {
 	description = "Feldspar Stone",
 	tiles = {"terrain.feldspar.png"},
-	groups = {stone = 1, igneousrock = 1, chippable = 3},
+	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true
 })
 
@@ -57,12 +60,12 @@ minetest.register_node("ks_terrain:feldspar", {
 minetest.register_node("ks_terrain:feldspar_red", {
 	description = "Feldspar-Granite Stone",
 	tiles = {"terrain.feldspar_red.png"},
-	groups = {stone = 1, chippable = 3},
+	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true
 })
 
 
-minetest.register_node("ks_terrain:source_water", {
+minetest.register_node("ks_terrain:water_source", {
 	description = "Water Source",
 	tiles = {"terrain.source_water.png"},
 	groups = {water = 1},

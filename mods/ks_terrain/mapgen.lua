@@ -47,23 +47,23 @@ minetest.register_ore({
 	ore = "strata_bedrock",
 	wherein = "mapgen_stone",
 	y_min = -31000,
-	y_max = -12,
+	y_max = -50,
 })
 
 
 
 -- Register alternate stone aliases
-minetest.register_alias("stone_argonite", "ks_terrain:argonite")
+minetest.register_alias("stone_aragonite", "ks_terrain:aragonite")
 
 
 
 -- Register some alternate stone nodes
 minetest.register_ore({
 	ore_type = "sheet",
-	ore = "stone_argonite",
+	ore = "stone_aragonite",
 	wherein = "mapgen_stone",
 	y_min = -31000,
-	y_max = -12,
+	y_max = -1,
 	clust_scarcity = 8*8*8,
 	clust_size = 6,
 })
