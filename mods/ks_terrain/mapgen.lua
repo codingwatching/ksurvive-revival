@@ -15,6 +15,7 @@ minetest.register_alias("biomes_seabed", "ks_terrain:dolomite_gravel")
 minetest.register_alias("biomes_mountain_soil", "ks_terrain:dolomite_gravel")
 local shoreline_height = 5
 local mountain_height = 50
+local feldspar_level = -50
 
 
 
@@ -81,7 +82,7 @@ minetest.register_biome({
 	node_dungeon = "dungeon_stone_brick",
 	heat_point = 70,
 	humidity_point = 50,
-	y_min = -31000,
+	y_min = feldspar_level,
 	y_max = -10
 })
 
@@ -109,13 +110,14 @@ minetest.register_ore({
 	ore = "strata_bedrock",
 	wherein = "mapgen_stone",
 	y_min = -31000,
-	y_max = -50,
+	y_max = feldspar_level,
 })
 
 
 
 -- Register alternate stone aliases
 minetest.register_alias("stone_aragonite", "ks_terrain:aragonite")
+minetest.register_alias("stone_bedrock_red", "ks_terrain:feldspar_red")
 
 
 
@@ -124,8 +126,18 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "stone_aragonite",
 	wherein = "mapgen_stone",
+	y_min = -1,
+	y_max = feldspar_level,
+	clust_scarcity = 8*8*8,
+	clust_size = 6,
+})
+
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "stone_bedrock_red",
+	wherein = "strata_bedrock",
 	y_min = -31000,
-	y_max = -1,
+	y_max = feldspar_level,
 	clust_scarcity = 8*8*8,
 	clust_size = 6,
 })

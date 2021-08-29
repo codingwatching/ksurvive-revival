@@ -8,7 +8,7 @@ minetest.register_tool("ks_tools:maple_adze", {
 		max_drop_level=1,
 		groupcaps={
 			diggable={times={[1]=tool_damage*2, [2]=tool_damage*4}, uses=tool_durability, maxlevel=1},
-			choppable={times={[1]=tool_damage*4, [2]=tool_damage*8}, uses=tool_durability, maxlevel=2},
+			choppable={times={[1]=tool_damage*5, [2]=tool_damage*10}, uses=tool_durability, maxlevel=2},
 			sliceable={times={[1]=tool_damage/2, [2]=tool_damage}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
@@ -24,30 +24,10 @@ minetest.register_tool("ks_tools:juniper_adze", {
 		max_drop_level=1,
 		groupcaps={
 			diggable={times={[1]=tool_damage*2, [2]=tool_damage*4}, uses=tool_durability, maxlevel=1},
-			choppable={times={[1]=tool_damage*4, [2]=tool_damage*8}, uses=tool_durability, maxlevel=2},
+			choppable={times={[1]=tool_damage*5, [2]=tool_damage*10}, uses=tool_durability, maxlevel=2},
 			sliceable={times={[1]=tool_damage/2, [2]=tool_damage}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
-})
-
-
-
-minetest.register_craft({
-	recipe = {
-		{"ks_tools:maple_stick", "ks_tools:maple_stick"},
-		{"                    ", "ks_tools:maple_stick"},
-		{"                    ", "ks_tools:maple_stick"}
-	},
-	output = "ks_tools:maple_adze"
-})
-
-minetest.register_craft({
-	recipe = {
-		{"ks_tools:juniper_stick", "ks_tools:juniper_stick"},
-		{"                      ", "ks_tools:juniper_stick"},
-		{"                      ", "ks_tools:juniper_stick"}
-	},
-	output = "ks_tools:juniper_adze"
 })
