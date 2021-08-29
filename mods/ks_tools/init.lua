@@ -3,6 +3,8 @@ local modpath = minetest.get_modpath("ks_tools")
 
 dofile(modpath.."/basic_materials.lua")
 dofile(modpath.."/wood_adze.lua")
+dofile(modpath.."/crafting.lua")
+dofile(modpath.."/stone_toolheads.lua")
 
 
 

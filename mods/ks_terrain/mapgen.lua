@@ -2,7 +2,6 @@
 -- I am registering the two strictly needed mapgen aliases
 minetest.register_alias("mapgen_stone", "ks_terrain:dolomite")
 minetest.register_alias("mapgen_water_source", "ks_terrain:water_source")
-minetest.register_alias("mapgen_river_water_source", "ks_terrain:water_source")
 
 
 
@@ -12,8 +11,15 @@ minetest.register_alias("biomes_drysoil", "ks_terrain:drysoil")
 minetest.register_alias("biomes_wetsoil_grass", "ks_terrain:wetsoil_with_grass")
 minetest.register_alias("biomes_drysoil_grass", "ks_terrain:drysoil_with_grass")
 minetest.register_alias("biomes_shore_sand", "ks_terrain:sand")
-minetest.register_alias("biomes_riverbed", "ks_terrain:dolomite_gravel")
+minetest.register_alias("biomes_seabed", "ks_terrain:dolomite_gravel")
+minetest.register_alias("biomes_mountain_soil", "ks_terrain:dolomite_gravel")
 local shoreline_height = 5
+local mountain_height = 50
+
+
+
+-- Registering dungeon nodes here.
+minetest.register_alias("dungeon_stone_brick", "ks_decor:dolomite_brick")
 
 
 
@@ -24,12 +30,10 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "biomes_wetsoil",
 	depth_filler = 5,
-	node_riverbed = "biomes_riverbed",
-	depth_riverbed = 4,
 	heat_point = 65,
 	humidity_point = 50,
 	y_min = shoreline_height,
-	y_max = 50
+	y_max = mountain_height-1
 })
 
 minetest.register_biome({
@@ -38,12 +42,10 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "biomes_drysoil",
 	depth_filler = 5,
-	node_riverbed = "biomes_riverbed",
-	depth_riverbed = 4,
 	heat_point = 70,
 	humidity_point = 50,
-	y_min = shoreline_height,
-	y_max = 50
+	y_min = shoreline_height+5,
+	y_max = mountain_height-1
 })
 
 minetest.register_biome({
@@ -56,6 +58,41 @@ minetest.register_biome({
 	humidity_point = 50,
 	y_min = -10,
 	y_max = shoreline_height-1
+})
+
+minetest.register_biome({
+	name = "populated_shoreline",
+	node_top = "biomes_shore_sand",
+	depth_top = 3,
+	node_filler = "biomes_wetsoil",
+	depth_filler = 2,
+	heat_point = 45,
+	humidity_point = 45,
+	y_min = -10,
+	y_max = shoreline_height
+})
+
+minetest.register_biome({
+	name = "underwater_grassland",
+	node_top = "biomes_seabed",
+	depth_top = 4,
+	node_filler = "biomes_wetsoil",
+	depth_filler = 1,
+	heat_point = 70,
+	humidity_point = 50,
+	y_min = -31000,
+	y_max = -10
+})
+
+minetest.register_biome({
+	name = "mountain",
+	node_top = "biomes_mountain_soil",
+	depth_top = 4,
+	node_dungeon = "dungeon_stone_brick",
+	heat_point = 70,
+	humidity_point = 50,
+	y_min = mountain_height,
+	y_max = 31000
 })
 
 

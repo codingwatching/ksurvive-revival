@@ -27,3 +27,10 @@ minetest.register_craft({
 	},
 	output = "ks_flora:maple_planks 2"
 })
+
+minetest.register_craft({
+	recipe = {
+		{"ks_flora:maple_planks"}
+	},
+	output = "ks_tools:maple_stick 4"
+})

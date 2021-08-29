@@ -42,14 +42,16 @@ minetest.register_node("ks_terrain:dolomite", {
 	description = "Dolomite Stone",
 	tiles = {"terrain.dolomite.png"},
 	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
-	is_ground_content = true
+	is_ground_content = true,
+	drop = "ks_tools:dolomite_rock 2"
 })
 
 minetest.register_node("ks_terrain:dolomite_gravel", {
 	description = "Dolomite Gravel",
 	tiles = {"terrain.dolomite_gravel.png"},
 	groups = {wetsoil = 1, diggable = 2},
-	is_ground_content = true
+	is_ground_content = true,
+	drop = "ks_tools:dolomite_rock"
 })
 
 
