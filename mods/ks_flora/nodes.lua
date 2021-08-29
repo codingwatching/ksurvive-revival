@@ -2,6 +2,7 @@ minetest.register_node("ks_flora:juniper_planks", {
 	description = "Juniper-Wood Planks",
 	tiles = {"flora.juniper_wood.png", "flora.juniper_wood.png", "flora.juniper_wood_end.png", "flora.juniper_wood_end.png", "flora.juniper_wood.png", "flora.juniper_wood.png"},
 	groups = {woodplank = 1, choppable = 1},
+	paramtype2 = "facedir",
 	is_ground_content = true
 })
 
@@ -9,6 +10,7 @@ minetest.register_node("ks_flora:maple_planks", {
 	description = "Maple-Wood Planks",
 	tiles = {"flora.maple_wood.png", "flora.maple_wood.png", "flora.maple_wood_end.png", "flora.maple_wood_end.png", "flora.maple_wood.png", "flora.maple_wood.png"},
 	groups = {woodplank = 1, choppable = 1},
+	paramtype2 = "facedir",
 	is_ground_content = true
 })
 

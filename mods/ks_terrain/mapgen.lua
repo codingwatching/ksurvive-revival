@@ -19,7 +19,7 @@ local mountain_height = 50
 
 
 -- Registering dungeon nodes here.
-minetest.register_alias("dungeon_stone_brick", "ks_decor:dolomite_brick")
+minetest.register_alias("dungeon_stone_brick", "ks_decor:dolomite_bricks")
 
 
 
@@ -78,6 +78,7 @@ minetest.register_biome({
 	depth_top = 4,
 	node_filler = "biomes_wetsoil",
 	depth_filler = 1,
+	node_dungeon = "dungeon_stone_brick",
 	heat_point = 70,
 	humidity_point = 50,
 	y_min = -31000,
