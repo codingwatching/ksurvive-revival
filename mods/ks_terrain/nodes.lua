@@ -1,45 +1,43 @@
-minetest.register_node("ks_terrain:wetsoil_with_grass", {
-	description = "Wet Soil with Grass",
-	tiles = {"terrain.grass.png", "terrain.wetsoil.png", "terrain.wetsoil.png^terrain.grass_side.png"},
-	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
+minetest.register_node("ks_terrain:silt_soil_with_grass", {
+	description = "Silt Soil with Grass",
+	tiles = {"terrain.grass.png", "terrain.silt_soil.png", "terrain.silt_soil.png^terrain.grass_side.png"},
+	groups = {soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
-minetest.register_node("ks_terrain:drysoil_with_grass", {
-	description = "Dry Soil with St. Augustine Grass",
-	drawtype = "plantlike_rooted",
-	tiles = {"terrain.grass.png", "terrain.drysoil.png", "terrain.drysoil.png^terrain.grass_side.png"},
-	special_tiles = {"terrain.st_augustine.png"},
-	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
+minetest.register_node("ks_terrain:coarse_soil_with_grass", {
+	description = "Coarse Soil with Grass",
+	tiles = {"terrain.grass.png", "terrain.coarse_soil.png", "terrain.coarse_soil.png^terrain.grass_side.png"},
+	groups = {soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
-minetest.register_node("ks_terrain:wetsoil", {
-	description = "Wet Soil",
-	tiles = {"terrain.wetsoil.png"},
-	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
+minetest.register_node("ks_terrain:silt_soil", {
+	description = "Silt Soil",
+	tiles = {"terrain.silt_soil.png"},
+	groups = {soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
-minetest.register_node("ks_terrain:drysoil", {
-	description = "Dry Soil",
-	tiles = {"terrain.drysoil.png"},
-	groups = {drysoil = 1, diggable = 2, falling_node = 1},
+minetest.register_node("ks_terrain:coarse_soil", {
+	description = "Coarse Soil",
+	tiles = {"terrain.coarse_soil.png"},
+	groups = {soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 
 })
 
-minetest.register_node("ks_terrain:sand", {
+minetest.register_node("ks_terrain:fine_sand", {
 	description = "Fine Sand",
 	tiles = {"terrain.fine_sand.png"},
-	groups = {wetsoil = 1, diggable = 1, falling_node = 1},
+	groups = {sand = 1, diggable = 1, falling_node = 1},
 	is_ground_content = true
 })
 
 minetest.register_node("ks_terrain:coarsesand", {
 	description = "Coarse Sand",
 	tiles = {"terrain.coarse_sand.png"},
-	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
+	groups = {sand = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
