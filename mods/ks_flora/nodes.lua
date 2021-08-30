@@ -103,7 +103,23 @@ minetest.register_node("ks_flora:holly_living_leaves", {
 	tiles = {"flora.holly_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, maple_leaves = 1},
+	groups = {sliceable = 1, holly_leaves = 1},
+	drop = {
+		max_items = 2,
+		items = {
+			{items = {"ks_flora:holly_berries"}},
+			{items = {"ks_tools:holly_stick"}, rarity = 4},
+		}
+	},
+	is_ground_content = true
+})
+
+minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
+	description = "Living Holly Leaves with Holly Berries",
+	tiles = {"flora.holly_leaves.png^flora.holly_berries_overlay.png"},
+	paramtype = "light",
+	drawtype = "allfaces_optional",
+	groups = {sliceable = 1, holly_leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
