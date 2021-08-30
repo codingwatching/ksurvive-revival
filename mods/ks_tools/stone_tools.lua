@@ -14,9 +14,9 @@ minetest.register_tool("ks_tools:juniper_dolomite_pickaxe", {
 	visual_scale = 1.69,
 })
 
-minetest.register_tool("ks_tools:maple_dolomite_pickaxe", {
+minetest.register_tool("ks_tools:douglasfir_dolomite_pickaxe", {
 	description = "Dolomite Pickaxe",
-	inventory_image = "tools.tool_dolomite_pickaxe_maple.png",
+	inventory_image = "tools.tool_dolomite_pickaxe_douglasfir.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -44,9 +44,9 @@ minetest.register_tool("ks_tools:juniper_dolomite_shovel", {
 	visual_scale = 1.69,
 })
 
-minetest.register_tool("ks_tools:maple_dolomite_shovel", {
+minetest.register_tool("ks_tools:douglasfir_dolomite_shovel", {
 	description = "Dolomite Shovel",
-	inventory_image = "tools.tool_dolomite_shovel_maple.png",
+	inventory_image = "tools.tool_dolomite_shovel_douglasfir.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -75,9 +75,9 @@ minetest.register_tool("ks_tools:juniper_dolomite_axe", {
 	visual_scale = 1.69,
 })
 
-minetest.register_tool("ks_tools:maple_dolomite_axe", {
+minetest.register_tool("ks_tools:douglasfir_dolomite_axe", {
 	description = "Dolomite Axe",
-	inventory_image = "tools.tool_dolomite_axe_maple.png",
+	inventory_image = "tools.tool_dolomite_axe_douglasfir.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
