@@ -14,6 +14,14 @@ minetest.register_node("ks_flora:maple_planks", {
 	is_ground_content = true
 })
 
+minetest.register_node("ks_flora:douglasfir_planks", {
+	description = "Douglas Fir-Wood Planks",
+	tiles = {"flora.douglasfir_wood.png", "flora.douglasfir_wood.png", "flora.douglasfir_wood_end.png", "flora.douglasfir_wood_end.png", "flora.douglasfir_wood.png", "flora.douglasfir_wood.png"},
+	groups = {woodplank = 1, choppable = 1},
+	paramtype2 = "facedir",
+	is_ground_content = true
+})
+
 
 
 minetest.register_node("ks_flora:juniper_living_log", {
@@ -50,6 +58,31 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 		items = {
 			{items = {"ks_flora:juniper_berries"}},
 			{items = {"ks_tools:juniper_stick"}, rarity = 4},
+		}
+	},
+	is_ground_content = true
+})
+
+
+
+minetest.register_node("ks_flora:douglasfir_living_log", {
+	description = "Living Douglas Fire Log",
+	tiles = {"flora.douglasfir_log_top.png", "flora.douglasfir_log_top.png", "flora.douglasfir_log.png"},
+	groups = {woodlog = 1, choppable = 2, falling_node = 1},
+	is_ground_content = true,
+	drop = "ks_flora:douglasfir_log"
+})
+
+minetest.register_node("ks_flora:douglasfir_living_leaves", {
+	description = "Living Douglas Fir Leaves",
+	tiles = {"flora.douglasfir_leaves.png"},
+	paramtype = "light",
+	drawtype = "allfaces_optional",
+	groups = {sliceable = 1, douglasfir_leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"ks_tools:douglasfir_stick"}, rarity = 4},
 		}
 	},
 	is_ground_content = true
@@ -130,6 +163,13 @@ minetest.register_node("ks_flora:juniper_log", {
 minetest.register_node("ks_flora:maple_log", {
 	description = "Maple Log",
 	tiles = {"flora.maple_log_top.png", "flora.maple_log_top.png", "flora.maple_log.png"},
+	groups = {woodlog = 1, choppable = 2},
+	is_ground_content = true
+})
+
+minetest.register_node("ks_flora:douglasfir_log", {
+	description = "Douglas Fir Log",
+	tiles = {"flora.douglasfir_log_top.png", "flora.douglasfir_log_top.png", "flora.douglasfir_log.png"},
 	groups = {woodlog = 1, choppable = 2},
 	is_ground_content = true
 })
