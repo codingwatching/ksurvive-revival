@@ -1,10 +1,10 @@
 minetest.register_craft({
 	recipe = {
-		{"ks_tools:maple_stick", "ks_tools:maple_stick"},
-		{"                    ", "ks_tools:maple_stick"},
-		{"                    ", "ks_tools:maple_stick"}
+		{"ks_tools:douglasfir_stick", "ks_tools:douglasfir_stick"},
+		{"                         ", "ks_tools:douglasfir_stick"},
+		{"                         ", "ks_tools:douglasfir_stick"}
 	},
-	output = "ks_tools:maple_adze"
+	output = "ks_tools:douglasfir_adze"
 })
 
 minetest.register_craft({
@@ -54,8 +54,8 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "shapeless",
-	recipe = {"ks_tools:toolhead_dolomite_pickaxe", "ks_tools:maple_stick"},
-	output = "ks_tools:maple_dolomite_pickaxe"
+	recipe = {"ks_tools:toolhead_dolomite_pickaxe", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_dolomite_pickaxe"
 })
 
 minetest.register_craft({
@@ -66,8 +66,8 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "shapeless",
-	recipe = {"ks_tools:toolhead_dolomite_shovel", "ks_tools:maple_stick"},
-	output = "ks_tools:maple_dolomite_shovel"
+	recipe = {"ks_tools:toolhead_dolomite_shovel", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_dolomite_shovel"
 })
 
 minetest.register_craft({
@@ -78,6 +78,6 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "shapeless",
-	recipe = {"ks_tools:toolhead_dolomite_axe", "ks_tools:maple_stick"},
-	output = "ks_tools:maple_dolomite_axe"
+	recipe = {"ks_tools:toolhead_dolomite_axe", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_dolomite_axe"
 })
