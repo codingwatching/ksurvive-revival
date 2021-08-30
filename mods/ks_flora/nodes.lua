@@ -6,9 +6,9 @@ minetest.register_node("ks_flora:juniper_planks", {
 	is_ground_content = true
 })
 
-minetest.register_node("ks_flora:maple_planks", {
-	description = "Maple-Wood Planks",
-	tiles = {"flora.maple_wood.png", "flora.maple_wood.png", "flora.maple_wood_end.png", "flora.maple_wood_end.png", "flora.maple_wood.png", "flora.maple_wood.png"},
+minetest.register_node("ks_flora:holly_planks", {
+	description = "Holly-Wood Planks",
+	tiles = {"flora.holly_wood.png", "flora.holly_wood.png", "flora.holly_wood_end.png", "flora.holly_wood_end.png", "flora.holly_wood.png", "flora.holly_wood.png"},
 	groups = {woodplank = 1, choppable = 1},
 	paramtype2 = "facedir",
 	is_ground_content = true
@@ -90,62 +90,24 @@ minetest.register_node("ks_flora:douglasfir_living_leaves", {
 
 
 
-minetest.register_node("ks_flora:maple_living_log", {
-	description = "Living Maple Log",
-	tiles = {"flora.maple_log_top.png", "flora.maple_log_top.png", "flora.maple_log.png"},
+minetest.register_node("ks_flora:holly_living_log", {
+	description = "Living Holly Log",
+	tiles = {"flora.holly_log_top.png", "flora.holly_log_top.png", "flora.holly_log.png"},
 	groups = {woodlog = 1, choppable = 2, falling_node = 1},
 	is_ground_content = true,
-	drop = "ks_flora:maple_log"
+	drop = "ks_flora:holly_log"
 })
 
-minetest.register_node("ks_flora:maple_living_branch", {
-	description = "Living Maple Branch",
-	tiles = {"flora.maple_log.png"},
-	groups = {woodlog = 1, choppable = 2},
-	is_ground_content = true,
-	drop = "ks_flora:maple_log"
-})
-
-minetest.register_node("ks_flora:maple_living_leaves", {
-	description = "Living Green Maple Leaves",
-	tiles = {"flora.maple_leaves.png"},
+minetest.register_node("ks_flora:holly_living_leaves", {
+	description = "Living Holly Leaves",
+	tiles = {"flora.holly_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
 	groups = {sliceable = 1, maple_leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ks_tools:maple_stick"}, rarity = 4},
-		}
-	},
-	is_ground_content = true
-})
-
-minetest.register_node("ks_flora:maple_red_living_leaves", {
-	description = "Red Living Maple Leaves",
-	tiles = {"flora.red_maple_leaves.png"},
-	paramtype = "light",
-	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, maple_leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"ks_tools:maple_stick"}, rarity = 4},
-		}
-	},
-	is_ground_content = true
-})
-
-minetest.register_node("ks_flora:maple_mixed_living_leaves", {
-	description = "Mixed Living Maple Leaves",
-	tiles = {"flora.mixed_maple_leaves.png"},
-	paramtype = "light",
-	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, maple_leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"ks_tools:maple_stick"}, rarity = 4},
+			{items = {"ks_tools:holly_stick"}, rarity = 4},
 		}
 	},
 	is_ground_content = true
@@ -160,9 +122,9 @@ minetest.register_node("ks_flora:juniper_log", {
 	is_ground_content = true
 })
 
-minetest.register_node("ks_flora:maple_log", {
+minetest.register_node("ks_flora:holly_log", {
 	description = "Maple Log",
-	tiles = {"flora.maple_log_top.png", "flora.maple_log_top.png", "flora.maple_log.png"},
+	tiles = {"flora.holly_log_top.png", "flora.holly_log_top.png", "flora.holly_log.png"},
 	groups = {woodlog = 1, choppable = 2},
 	is_ground_content = true
 })
