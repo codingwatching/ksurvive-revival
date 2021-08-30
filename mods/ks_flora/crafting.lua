@@ -16,21 +16,30 @@ minetest.register_craft({
 
 minetest.register_craft({
 	recipe = {
-		{"ks_flora:maple_planks"}
+		{"ks_flora:holly_planks"}
 	},
-	output = "ks_tools:maple_stick 4"
+	output = "ks_tools:holly_stick 4"
 })
 
 minetest.register_craft({
 	recipe = {
-		{"ks_flora:maple_log"}
+		{"ks_flora:holly_log"}
 	},
-	output = "ks_flora:maple_planks 2"
+	output = "ks_flora:holly_planks 2"
+})
+
+
+
+minetest.register_craft({
+	recipe = {
+		{"ks_flora:douglasfir_planks"}
+	},
+	output = "ks_tools:douglasfir_stick 4"
 })
 
 minetest.register_craft({
 	recipe = {
-		{"ks_flora:maple_planks"}
+		{"ks_flora:douglasfir_log"}
 	},
-	output = "ks_tools:maple_stick 4"
+	output = "ks_flora:douglasfir_planks 2"
 })
