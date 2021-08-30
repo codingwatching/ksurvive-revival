@@ -34,7 +34,7 @@ minetest.register_node("ks_terrain:fine_sand", {
 	is_ground_content = true
 })
 
-minetest.register_node("ks_terrain:coarsesand", {
+minetest.register_node("ks_terrain:coarse_sand", {
 	description = "Coarse Sand",
 	tiles = {"terrain.coarse_sand.png"},
 	groups = {sand = 1, diggable = 2, falling_node = 1},
