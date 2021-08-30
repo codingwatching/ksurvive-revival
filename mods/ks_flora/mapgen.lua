@@ -69,26 +69,26 @@ minetest.register_decoration({
 	decoration = "ks_flora:mountain_hut_small",
 	deco_type = "schematic",
 	schematic = minetest.get_modpath("ks_flora").."/schematics/mountain_hut_small.mts",
-	place_on = "biomes_shore_sand",
+	place_on = "biomes_shore_coarse_sand",
 	sidelen = 9,
 	fill_ratio = 0.001,
 	y_max = 12,
 	y_min = 1,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
-	biomes = "populated_shoreline"
+	biomes = "coarse_shoreline"
 })
 
 minetest.register_decoration({
 	decoration = "ks_flora:mountain_hut",
 	deco_type = "schematic",
 	schematic = minetest.get_modpath("ks_flora").."/schematics/mountain_hut.mts",
-	place_on = "biomes_shore_sand",
+	place_on = "biomes_shore_coarse_sand",
 	sidelen = 9,
 	fill_ratio = 0.0001,
 	y_max = 12,
 	y_min = 1,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
-	biomes = "populated_shoreline"
+	biomes = "coarse_shoreline"
 })

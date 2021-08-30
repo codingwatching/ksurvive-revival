@@ -11,6 +11,7 @@ minetest.register_alias("biomes_drysoil", "ks_terrain:drysoil")
 minetest.register_alias("biomes_wetsoil_grass", "ks_terrain:wetsoil_with_grass")
 minetest.register_alias("biomes_drysoil_grass", "ks_terrain:drysoil_with_grass")
 minetest.register_alias("biomes_shore_sand", "ks_terrain:sand")
+minetest.register_alias("biomes_shore_coarse_sand", "ks_terrain:coarsesand")
 minetest.register_alias("biomes_seabed", "ks_terrain:dolomite_gravel")
 minetest.register_alias("biomes_mountain_soil", "ks_terrain:dolomite_gravel")
 local shoreline_height = 5
@@ -31,10 +32,10 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "biomes_wetsoil",
 	depth_filler = 5,
-	heat_point = 65,
+	heat_point = 60,
 	humidity_point = 50,
 	y_min = shoreline_height,
-	y_max = mountain_height-1
+	y_max = mountain_height-25
 })
 
 minetest.register_biome({
@@ -43,9 +44,9 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "biomes_drysoil",
 	depth_filler = 5,
-	heat_point = 70,
+	heat_point = 50,
 	humidity_point = 50,
-	y_min = shoreline_height+5,
+	y_min = shoreline_height+3,
 	y_max = mountain_height-1
 })
 
@@ -55,20 +56,20 @@ minetest.register_biome({
 	depth_top = 4,
 	node_filler = "biomes_wetsoil",
 	depth_filler = 2,
-	heat_point = 60,
+	heat_point = 45,
 	humidity_point = 50,
 	y_min = -10,
 	y_max = shoreline_height-1
 })
 
 minetest.register_biome({
-	name = "populated_shoreline",
-	node_top = "biomes_shore_sand",
+	name = "coarse_shoreline",
+	node_top = "biomes_shore_coarse_sand",
 	depth_top = 3,
 	node_filler = "biomes_wetsoil",
 	depth_filler = 2,
-	heat_point = 45,
-	humidity_point = 45,
+	heat_point = 50,
+	humidity_point = 60,
 	y_min = -10,
 	y_max = shoreline_height
 })
@@ -77,11 +78,9 @@ minetest.register_biome({
 	name = "underwater_grassland",
 	node_top = "biomes_seabed",
 	depth_top = 4,
-	node_filler = "biomes_wetsoil",
-	depth_filler = 1,
 	node_dungeon = "dungeon_stone_brick",
-	heat_point = 70,
-	humidity_point = 50,
+	heat_point = 45,
+	humidity_point = 60,
 	y_min = feldspar_level,
 	y_max = -10
 })
@@ -118,6 +117,7 @@ minetest.register_ore({
 -- Register alternate stone aliases
 minetest.register_alias("stone_aragonite", "ks_terrain:aragonite")
 minetest.register_alias("stone_bedrock_red", "ks_terrain:feldspar_red")
+minetest.register_alias("stone_eclogite", "ks_terrain:eclogite")
 
 
 
@@ -139,5 +139,15 @@ minetest.register_ore({
 	y_min = -31000,
 	y_max = feldspar_level,
 	clust_scarcity = 8*8*8,
+	clust_size = 10,
+})
+
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "stone_eclogite",
+	wherein = "strata_bedrock",
+	y_min = -31000,
+	y_max = feldspar_level-50,
+	clust_scarcity = 4*4*4,
 	clust_size = 6,
 })

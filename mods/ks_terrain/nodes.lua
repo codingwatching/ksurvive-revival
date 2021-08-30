@@ -1,7 +1,7 @@
 minetest.register_node("ks_terrain:wetsoil_with_grass", {
 	description = "Wet Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.wetsoil.png", "terrain.wetsoil.png^terrain.grass_side.png"},
-	groups = {wetsoil = 1, diggable = 2},
+	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
@@ -10,21 +10,21 @@ minetest.register_node("ks_terrain:drysoil_with_grass", {
 	drawtype = "plantlike_rooted",
 	tiles = {"terrain.grass.png", "terrain.drysoil.png", "terrain.drysoil.png^terrain.grass_side.png"},
 	special_tiles = {"terrain.st_augustine.png"},
-	groups = {wetsoil = 1, diggable = 2},
+	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
 minetest.register_node("ks_terrain:wetsoil", {
 	description = "Wet Soil",
 	tiles = {"terrain.wetsoil.png"},
-	groups = {wetsoil = 1, diggable = 2},
+	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
 minetest.register_node("ks_terrain:drysoil", {
 	description = "Dry Soil",
 	tiles = {"terrain.drysoil.png"},
-	groups = {drysoil = 1, diggable = 2},
+	groups = {drysoil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 
 })
@@ -32,7 +32,14 @@ minetest.register_node("ks_terrain:drysoil", {
 minetest.register_node("ks_terrain:sand", {
 	description = "Fine Sand",
 	tiles = {"terrain.fine_sand.png"},
-	groups = {wetsoil = 1, diggable = 1},
+	groups = {wetsoil = 1, diggable = 1, falling_node = 1},
+	is_ground_content = true
+})
+
+minetest.register_node("ks_terrain:coarsesand", {
+	description = "Coarse Sand",
+	tiles = {"terrain.coarse_sand.png"},
+	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
@@ -49,7 +56,7 @@ minetest.register_node("ks_terrain:dolomite", {
 minetest.register_node("ks_terrain:dolomite_gravel", {
 	description = "Dolomite Gravel",
 	tiles = {"terrain.dolomite_gravel.png"},
-	groups = {wetsoil = 1, diggable = 2},
+	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true,
 	drop = "ks_tools:dolomite_rock"
 })
@@ -75,6 +82,14 @@ minetest.register_node("ks_terrain:feldspar_red", {
 	description = "Feldspar-Granite Stone",
 	tiles = {"terrain.feldspar_red.png"},
 	groups = {stone = 1, igneousrock = 1, chippable = 2},
+	is_ground_content = true
+})
+
+
+minetest.register_node("ks_terrain:eclogite", {
+	description = "Eclogite Stone",
+	tiles = {"terrain.eclogite.png"},
+	groups = {stone = 1, metamorphicrock = 1, chippable = 3},
 	is_ground_content = true
 })
 
