@@ -1,8 +1,8 @@
 local tool_durability = 15
 
-minetest.register_tool("ks_tools:maple_adze", {
-	description = "Maple Adze",
-	inventory_image = "tools.maple_adze.png",
+minetest.register_tool("ks_tools:douglarsfir_adze", {
+	description = "Adze",
+	inventory_image = "tools.douglasfir_adze.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -17,7 +17,7 @@ minetest.register_tool("ks_tools:maple_adze", {
 })
 
 minetest.register_tool("ks_tools:juniper_adze", {
-	description = "Juniper Adze",
+	description = "Adze",
 	inventory_image = "tools.juniper_adze.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
