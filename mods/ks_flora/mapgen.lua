@@ -7,6 +7,7 @@ minetest.register_decoration({
 	fill_ratio = 0.05,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
+	place_offset_y = -1
 })
 
 minetest.register_decoration({
@@ -18,6 +19,7 @@ minetest.register_decoration({
 	fill_ratio = 0.05,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
+	place_offset_y = -1
 })
 
 minetest.register_decoration({
@@ -29,6 +31,7 @@ minetest.register_decoration({
 	fill_ratio = 0.001,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
+	place_offset_y = -1
 })
 
 minetest.register_decoration({
