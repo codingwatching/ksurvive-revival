@@ -1,5 +1,5 @@
-local g_groups = {attached_node = 1, snappy = 3}
-local gm_groups = {attached_node = 1, snappy = 3, mature_grass = 1}
+local g_groups = {attached_node = 1, sliceable = 1}
+local gm_groups = {attached_node = 1, sliceable = 1, mature_grass = 1}
 
 minetest.register_node("ks_flora:bahia_0", {
 	description = "Bahiagrass Seeds",
@@ -13,7 +13,6 @@ minetest.register_node("ks_flora:bahia_0", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
@@ -33,7 +32,6 @@ minetest.register_node("ks_flora:bahia_1", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
@@ -53,7 +51,6 @@ minetest.register_node("ks_flora:bahia_2", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
@@ -73,7 +70,6 @@ minetest.register_node("ks_flora:bahia_3", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
@@ -93,7 +89,6 @@ minetest.register_node("ks_flora:bahia", {
 	walkable = false,
 	buildable_to = true,
 	groups = gm_groups,
-	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},

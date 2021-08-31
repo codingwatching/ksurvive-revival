@@ -1,3 +1,11 @@
+-- register aliases for retro compat
+minetest.register_alias("ks_flora:maple_planks", "ks_flora:holly_planks")
+minetest.register_alias("ks_flora:maple_living_branch", "ks_flora:holly_living_log")
+minetest.register_alias("ks_flora:maple_living_log", "ks_flora:holly_living_log")
+minetest.register_alias("ks_flora:maple_log", "ks_flora:holly_log")
+
+
+
 minetest.register_node("ks_flora:juniper_planks", {
 	description = "Juniper-Wood Planks",
 	tiles = {"flora.juniper_wood.png", "flora.juniper_wood.png", "flora.juniper_wood_end.png", "flora.juniper_wood_end.png", "flora.juniper_wood.png", "flora.juniper_wood.png"},
@@ -66,7 +74,7 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 
 
 minetest.register_node("ks_flora:douglasfir_living_log", {
-	description = "Living Douglas Fire Log",
+	description = "Living Douglas Fir Log",
 	tiles = {"flora.douglasfir_log_top.png", "flora.douglasfir_log_top.png", "flora.douglasfir_log.png"},
 	groups = {woodlog = 1, choppable = 2, falling_node = 1},
 	is_ground_content = true,
@@ -139,7 +147,7 @@ minetest.register_node("ks_flora:juniper_log", {
 })
 
 minetest.register_node("ks_flora:holly_log", {
-	description = "Maple Log",
+	description = "Holly Log",
 	tiles = {"flora.holly_log_top.png", "flora.holly_log_top.png", "flora.holly_log.png"},
 	groups = {woodlog = 1, choppable = 2},
 	is_ground_content = true

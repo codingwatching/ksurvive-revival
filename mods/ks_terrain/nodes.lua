@@ -1,3 +1,11 @@
+-- register aliases for retro compat
+minetest.register_alias("ks_terrain:wetsoil", "ks_terrain:silt_soil")
+minetest.register_alias("ks_terrain:drysoil", "ks_terrain:coarse_soil")
+minetest.register_alias("ks_terrain:wetsoil_with_grass", "ks_terrain:silt_soil_with_grass")
+minetest.register_alias("ks_terrain:drysoil_with_grass", "ks_terrain:coarse_soil_with_grass")
+
+
+
 minetest.register_node("ks_terrain:silt_soil_with_grass", {
 	description = "Silt Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.silt_soil.png", "terrain.silt_soil.png^terrain.grass_side.png"},

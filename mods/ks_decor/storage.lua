@@ -1,6 +1,13 @@
 local bin_column = 1
 local bin_row = 8
 
+
+
+-- register aliases for retro compat
+minetest.register_alias("ks_decor:maple_bin", "ks_decor:holly_bin")
+
+
+
 minetest.register_node("ks_decor:juniper_bin", {
 	description = "Juniper-Wood Bin",
 	tiles = {"decor.juniper_bin_top.png", "flora.juniper_wood_end.png", "decor.juniper_bin_side.png"},
