@@ -6,9 +6,12 @@ minetest.register_alias("mapgen_water_source", "ks_terrain:water_source")
 
 
 -- Now, I am registering the node aliases and variables needed for making biomes.
+minetest.register_alias("snow", "ks_terrain:snowpile")
 minetest.register_alias("temperate_forest_soil", "ks_terrain:silt_soil")
+minetest.register_alias("prairie_soil", "ks_terrain:mulchy_soil")
 minetest.register_alias("coniferous_forest_soil", "ks_terrain:coarse_soil")
 minetest.register_alias("temperate_forest_soil_grass", "ks_terrain:silt_soil_with_grass")
+minetest.register_alias("prairie_soil_grass", "ks_terrain:mulchy_soil_with_grass")
 minetest.register_alias("coniferous_forest_soil_grass", "ks_terrain:coarse_soil_with_grass")
 minetest.register_alias("beach_sand", "ks_terrain:fine_sand")
 minetest.register_alias("shingle_beach_sand", "ks_terrain:coarse_sand")
@@ -36,8 +39,20 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "temperate_forest_soil",
 	depth_filler = 5,
-	heat_point = 65,
-	humidity_point = 45,
+	heat_point = 55,
+	humidity_point = 65,
+	y_min = shoreline_height,
+	y_max = mountain_height
+})
+
+minetest.register_biome({
+	name = "prairie",
+	node_top = "prairie_soil_grass",
+	depth_top = 1,
+	node_filler = "prairie_soil",
+	depth_filler = 5,
+	heat_point = 45,
+	humidity_point = 55,
 	y_min = shoreline_height,
 	y_max = mountain_height
 })
@@ -48,7 +63,20 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "coniferous_forest_soil",
 	depth_filler = 5,
-	heat_point = 45,
+	heat_point = 35,
+	humidity_point = 65,
+	y_min = shoreline_height,
+	y_max = mountain_height
+})
+
+minetest.register_biome({
+	name = "cold_coniferous_forest",
+	node_dust = "snow",
+	node_top = "coniferous_forest_soil_grass",
+	depth_top = 1,
+	node_filler = "coniferous_forest_soil",
+	depth_filler = 5,
+	heat_point = 0,
 	humidity_point = 65,
 	y_min = shoreline_height,
 	y_max = mountain_height
@@ -140,6 +168,6 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = mountain_height,
 	y_max = mindepth,
-	clust_scarcity = 6*6*6,
-	clust_size = 1,
+	clust_scarcity = 8*2*8,
+	clust_size = 5,
 })

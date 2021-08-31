@@ -26,17 +26,27 @@ minetest.register_decoration({
 	schematic = minetest.get_modpath("ks_flora").."/schematics/holly_tree.mts",
 	place_on = "temperate_forest_soil_grass",
 	sidelen = 9,
-	fill_ratio = 0.08,
+	fill_ratio = 0.001,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-	decoration = "ks_flora:bahiagrass",
+	decoration = "ks_flora:bahia",
 	deco_type = "simple",
 	place_on = "temperate_forest_soil_grass",
 	sidelen = 9,
-	fill_ratio = 0.01,
+	fill_ratio = 0.05,
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+})
+
+minetest.register_decoration({
+	decoration = "ks_flora:bahia",
+	deco_type = "simple",
+	place_on = "prairie_soil_grass",
+	sidelen = 9,
+	fill_ratio = 0.1,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })

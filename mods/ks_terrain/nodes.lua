@@ -6,10 +6,41 @@ minetest.register_alias("ks_terrain:drysoil_with_grass", "ks_terrain:coarse_soil
 
 
 
+minetest.register_node("ks_terrain:snowpile", {
+	description = "Snow Pile",
+	tiles = {"terrain.snow.png"},
+	inventory_image = "terrain.snowball.png",
+	wield_image = "terrain.snowball.png",
+	paramtype = "light",
+	buildable_to = true,
+	floodable = true,
+	drawtype = "nodebox",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, -0.25, 0.5},
+		},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, -6 / 16, 0.5},
+		},
+	},
+	groups = {diggable = 1, falling_node = 1, snow = 1},
+})
+
 minetest.register_node("ks_terrain:silt_soil_with_grass", {
 	description = "Silt Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.silt_soil.png", "terrain.silt_soil.png^terrain.grass_side.png"},
 	groups = {silt_soil = 1, soil = 1, diggable = 2, falling_node = 1},
+	is_ground_content = true
+})
+
+minetest.register_node("ks_terrain:mulchy_soil_with_grass", {
+	description = "Mulchy Soil with Grass",
+	tiles = {"terrain.grass.png", "terrain.mulchy_soil.png", "terrain.mulchy_soil.png^terrain.grass_side.png"},
+	groups = {mulchy_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
@@ -24,6 +55,13 @@ minetest.register_node("ks_terrain:silt_soil", {
 	description = "Silt Soil",
 	tiles = {"terrain.silt_soil.png"},
 	groups = {silt_soil = 1, soil = 1, diggable = 2, falling_node = 1},
+	is_ground_content = true
+})
+
+minetest.register_node("ks_terrain:mulchy_soil", {
+	description = "Mulchy Soil",
+	tiles = {"terrain.mulchy_soil.png"},
+	groups = {mulchy_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
