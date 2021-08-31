@@ -60,8 +60,8 @@ minetest.register_biome({
 	depth_top = 5,
 	heat_point = 50,
 	humidity_point = 75,
-	y_min = shoreline_height,
-	y_max = mountain_height
+	y_min = oceanfloor_height,
+	y_max = shoreline_height
 })
 
 minetest.register_biome({
@@ -72,8 +72,8 @@ minetest.register_biome({
 	depth_filler = 4,
 	heat_point = 50,
 	humidity_point = 75,
-	y_min = shoreline_height,
-	y_max = mountain_height
+	y_min = oceanfloor_height,
+	y_max = shoreline_height
 })
 
 
@@ -141,5 +141,5 @@ minetest.register_ore({
 	y_min = mountain_height,
 	y_max = mindepth,
 	clust_scarcity = 6*6*6,
-	clust_size = 3,
+	clust_size = 1,
 })
