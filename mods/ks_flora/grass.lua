@@ -15,7 +15,6 @@ minetest.register_node("ks_flora:bahia_0", {
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
-	buildable_to = true,
 	groups = g_groups,
 	selection_box = {
 		type = "fixed",
@@ -34,7 +33,6 @@ minetest.register_node("ks_flora:bahia_1", {
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
-	buildable_to = true,
 	groups = g_groups,
 	selection_box = {
 		type = "fixed",
@@ -53,7 +51,6 @@ minetest.register_node("ks_flora:bahia_2", {
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
-	buildable_to = true,
 	groups = g_groups,
 	selection_box = {
 		type = "fixed",
@@ -72,7 +69,6 @@ minetest.register_node("ks_flora:bahia_3", {
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
-	buildable_to = true,
 	groups = g_groups,
 	selection_box = {
 		type = "fixed",
@@ -91,7 +87,6 @@ minetest.register_node("ks_flora:bahia", {
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
-	buildable_to = true,
 	groups = gm_groups,
 	selection_box = {
 		type = "fixed",
@@ -156,4 +151,26 @@ minetest.register_abm({
         local pos = {x = pos.x, y = pos.y, z = pos.z}
         minetest.set_node(pos, {name = "ks_flora:bahia"})
     end
+})
+
+
+
+
+
+-- Snowy dead shrub
+minetest.register_node("ks_flora:snowy_dead_shrub", {
+	description = "Dead Shrub",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.snowy_dead_shrub.png"},
+	inventory_image = "flora.snowy_dead_shrub_bundle.png",
+	wield_image = "flora.snowy_dead_shrub_bundle.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	groups = g_groups,
+	selection_box = {
+		type = "fixed",
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
+	},
 })

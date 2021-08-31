@@ -22,7 +22,7 @@ minetest.register_craft({
 		{"                    ", "ks_tools:holly_stick"},
 		{"                    ", "ks_tools:holly_stick"}
 	},
-	output = "ks_tools:juniper_adze"
+	output = "ks_tools:holly_adze"
 })
 
 minetest.register_craft({

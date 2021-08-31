@@ -46,7 +46,17 @@ minetest.register_decoration({
 	deco_type = "simple",
 	place_on = "prairie_soil_grass",
 	sidelen = 9,
-	fill_ratio = 0.1,
+	fill_ratio = 0.5,
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+})
+
+minetest.register_decoration({
+	decoration = "ks_flora:snowy_dead_shrub",
+	deco_type = "simple",
+	place_on = "cold_desert_soil",
+	sidelen = 9,
+	fill_ratio = 0.5,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })

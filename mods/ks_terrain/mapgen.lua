@@ -13,6 +13,7 @@ minetest.register_alias("coniferous_forest_soil", "ks_terrain:coarse_soil")
 minetest.register_alias("temperate_forest_soil_grass", "ks_terrain:silt_soil_with_grass")
 minetest.register_alias("prairie_soil_grass", "ks_terrain:mulchy_soil_with_grass")
 minetest.register_alias("coniferous_forest_soil_grass", "ks_terrain:coarse_soil_with_grass")
+minetest.register_alias("cold_desert_soil", "ks_terrain:dolomite_gravel")
 minetest.register_alias("beach_sand", "ks_terrain:fine_sand")
 minetest.register_alias("shingle_beach_sand", "ks_terrain:coarse_sand")
 minetest.register_alias("shingle_beach_sand_under", "ks_terrain:fine_sand")
@@ -35,6 +36,7 @@ minetest.register_alias("dungeon_stone_brick", "ks_decor:dolomite_bricks")
 -- Jetzt ich bin... I'm just gonna register biomes now.
 minetest.register_biome({
 	name = "temperate_forest",
+	node_dungeon = "dungeon_stone_brick",
 	node_top = "temperate_forest_soil_grass",
 	depth_top = 1,
 	node_filler = "temperate_forest_soil",
@@ -47,11 +49,12 @@ minetest.register_biome({
 
 minetest.register_biome({
 	name = "prairie",
+	node_dungeon = "dungeon_stone_brick",
 	node_top = "prairie_soil_grass",
 	depth_top = 1,
 	node_filler = "prairie_soil",
 	depth_filler = 5,
-	heat_point = 45,
+	heat_point = 55,
 	humidity_point = 55,
 	y_min = shoreline_height,
 	y_max = mountain_height
@@ -59,6 +62,21 @@ minetest.register_biome({
 
 minetest.register_biome({
 	name = "coniferous_forest",
+	node_dungeon = "dungeon_stone_brick",
+	node_top = "coniferous_forest_soil_grass",
+	depth_top = 1,
+	node_filler = "coniferous_forest_soil",
+	depth_filler = 5,
+	heat_point = 45,
+	humidity_point = 65,
+	y_min = shoreline_height,
+	y_max = mountain_height
+})
+
+minetest.register_biome({
+	name = "cold_coniferous_forest",
+	node_dungeon = "dungeon_stone_brick",
+	node_dust = "snow",
 	node_top = "coniferous_forest_soil_grass",
 	depth_top = 1,
 	node_filler = "coniferous_forest_soil",
@@ -70,13 +88,12 @@ minetest.register_biome({
 })
 
 minetest.register_biome({
-	name = "cold_coniferous_forest",
+	name = "cold_desert",
+	node_dungeon = "dungeon_stone_brick",
 	node_dust = "snow",
-	node_top = "coniferous_forest_soil_grass",
-	depth_top = 1,
-	node_filler = "coniferous_forest_soil",
-	depth_filler = 5,
-	heat_point = 0,
+	node_top = "cold_desert_soil",
+	depth_top = 5,
+	heat_point = 25,
 	humidity_point = 65,
 	y_min = shoreline_height,
 	y_max = mountain_height
@@ -84,9 +101,10 @@ minetest.register_biome({
 
 minetest.register_biome({
 	name = "beach",
+	node_dungeon = "dungeon_stone_brick",
 	node_top = "beach_sand",
 	depth_top = 5,
-	heat_point = 50,
+	heat_point = 70,
 	humidity_point = 75,
 	y_min = oceanfloor_height,
 	y_max = shoreline_height
@@ -94,11 +112,28 @@ minetest.register_biome({
 
 minetest.register_biome({
 	name = "shingle_beach",
+	node_dungeon = "dungeon_stone_brick",
 	node_top = "shingle_beach_sand",
 	depth_top = 1,
 	node_filler = "shingle_beach_sand_under",
 	depth_filler = 4,
-	heat_point = 50,
+	heat_point = 55,
+	humidity_point = 75,
+	y_min = oceanfloor_height,
+	y_max = shoreline_height
+})
+
+minetest.register_biome({
+	name = "cold_shingle_beach",
+	node_dungeon = "dungeon_stone_brick",
+	node_dust = "snow",
+	node_top = "cold_desert_soil",
+	depth_top = 2,
+	node_filler = "shingle_beach_sand",
+	depth_filler = 3,
+	node_water_top = "ks_terrain:icesheet",
+	depth_water_top = 2,
+	heat_point = 35,
 	humidity_point = 75,
 	y_min = oceanfloor_height,
 	y_max = shoreline_height

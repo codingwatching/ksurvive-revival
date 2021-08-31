@@ -1,6 +1,6 @@
 local tool_durability = 15
 
-minetest.register_tool("ks_tools:douglarsfir_adze", {
+minetest.register_tool("ks_tools:douglasfir_adze", {
 	description = "Adze",
 	inventory_image = "tools.douglasfir_adze.png",
 	tool_capabilities = {

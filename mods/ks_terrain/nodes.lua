@@ -30,6 +30,13 @@ minetest.register_node("ks_terrain:snowpile", {
 	groups = {diggable = 1, falling_node = 1, snow = 1},
 })
 
+minetest.register_node("ks_terrain:ice_sheet", {
+	description = "Ice Sheet",
+	tiles = {"terrain.ice_sheet.png"},
+	groups = {ice = 1, chippable = 1, falling_node = 1},
+	is_ground_content = true
+})
+
 minetest.register_node("ks_terrain:silt_soil_with_grass", {
 	description = "Silt Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.silt_soil.png", "terrain.silt_soil.png^terrain.grass_side.png"},
