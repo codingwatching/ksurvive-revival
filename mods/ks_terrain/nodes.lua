@@ -33,7 +33,7 @@ minetest.register_node("ks_terrain:snowpile", {
 minetest.register_node("ks_terrain:ice_sheet", {
 	description = "Ice Sheet",
 	tiles = {"terrain.ice_sheet.png"},
-	groups = {ice = 1, chippable = 1, falling_node = 1},
+	groups = {ice = 1, chippable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
