@@ -1,5 +1,9 @@
 local g_groups = {attached_node = 1, sliceable = 1}
 local gm_groups = {attached_node = 1, sliceable = 1, mature_grass = 1}
+local bahiagrass_soil_type = "group:silt_soil"
+local growthchance = 1
+local growthrate = 0.1
+
 
 minetest.register_node("ks_flora:bahia_0", {
 	description = "Bahiagrass Seeds",
@@ -101,4 +105,55 @@ minetest.register_node("ks_flora:bahia", {
 			{items = {"ks_flora:bahia_0 1"}, rarity = 4},
 		}
 	},
+})
+
+
+
+-- Now, make bahiagrass actually grow.
+minetest.register_abm({
+    nodenames = {"ks_flora:bahia_0"},
+    neighbors = {bahiagrass_soil_type},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "ks_flora:bahia_1"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"ks_flora:bahia_1"},
+    neighbors = {bahiagrass_soil_type},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "ks_flora:bahia_2"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"ks_flora:bahia_2"},
+    neighbors = {bahiagrass_soil_type},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "ks_flora:bahia_3"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"ks_flora:bahia_3"},
+    neighbors = {bahiagrass_soil_type},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "ks_flora:bahia"})
+    end
 })

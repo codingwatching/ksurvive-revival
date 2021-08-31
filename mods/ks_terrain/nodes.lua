@@ -9,28 +9,28 @@ minetest.register_alias("ks_terrain:drysoil_with_grass", "ks_terrain:coarse_soil
 minetest.register_node("ks_terrain:silt_soil_with_grass", {
 	description = "Silt Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.silt_soil.png", "terrain.silt_soil.png^terrain.grass_side.png"},
-	groups = {soil = 1, diggable = 2, falling_node = 1},
+	groups = {silt_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
 minetest.register_node("ks_terrain:coarse_soil_with_grass", {
 	description = "Coarse Soil with Grass",
 	tiles = {"terrain.grass.png", "terrain.coarse_soil.png", "terrain.coarse_soil.png^terrain.grass_side.png"},
-	groups = {soil = 1, diggable = 2, falling_node = 1},
+	groups = {coarse_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
 minetest.register_node("ks_terrain:silt_soil", {
 	description = "Silt Soil",
 	tiles = {"terrain.silt_soil.png"},
-	groups = {soil = 1, diggable = 2, falling_node = 1},
+	groups = {silt_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
 minetest.register_node("ks_terrain:coarse_soil", {
 	description = "Coarse Soil",
 	tiles = {"terrain.coarse_soil.png"},
-	groups = {soil = 1, diggable = 2, falling_node = 1},
+	groups = {coarse_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 
 })
@@ -38,14 +38,14 @@ minetest.register_node("ks_terrain:coarse_soil", {
 minetest.register_node("ks_terrain:fine_sand", {
 	description = "Fine Sand",
 	tiles = {"terrain.fine_sand.png"},
-	groups = {sand = 1, diggable = 1, falling_node = 1},
+	groups = {fine_sand = 1, sand = 1, diggable = 1, falling_node = 1},
 	is_ground_content = true
 })
 
 minetest.register_node("ks_terrain:coarse_sand", {
 	description = "Coarse Sand",
 	tiles = {"terrain.coarse_sand.png"},
-	groups = {sand = 1, diggable = 2, falling_node = 1},
+	groups = {coarse_sand = 1, sand = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true
 })
 
