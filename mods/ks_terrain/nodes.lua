@@ -213,6 +213,7 @@ minetest.register_node("ks_terrain:water_flowing", {
 	},
 	use_texture_alpha = "blend",
 	paramtype = "light",
+	paramtype2 = "flowingliquid",
 	groups = {water = 1},
 	walkable = false,
 	pointable = false,
