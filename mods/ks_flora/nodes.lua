@@ -113,9 +113,8 @@ minetest.register_node("ks_flora:holly_living_leaves", {
 	drawtype = "allfaces_optional",
 	groups = {sliceable = 1, holly_leaves = 1},
 	drop = {
-		max_items = 2,
+		max_items = 1,
 		items = {
-			{items = {"ks_flora:holly_berries"}},
 			{items = {"ks_tools:holly_stick"}, rarity = 4},
 		}
 	},
@@ -129,8 +128,9 @@ minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
 	drawtype = "allfaces_optional",
 	groups = {sliceable = 1, holly_leaves = 1},
 	drop = {
-		max_items = 1,
+		max_items = 2,
 		items = {
+			{items = {"ks_flora:holly_berries"}},
 			{items = {"ks_tools:holly_stick"}, rarity = 4},
 		}
 	},

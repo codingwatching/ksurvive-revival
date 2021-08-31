@@ -32,7 +32,7 @@ minetest.register_alias("dungeon_stone_brick", "ks_decor:dolomite_bricks")
 -- Jetzt ich bin... I'm just gonna register biomes now.
 minetest.register_biome({
 	name = "temperate_forest",
-	node_top = "temperate_forest_grass",
+	node_top = "temperate_forest_soil_grass",
 	depth_top = 1,
 	node_filler = "temperate_forest_soil",
 	depth_filler = 5,
@@ -44,7 +44,7 @@ minetest.register_biome({
 
 minetest.register_biome({
 	name = "coniferous_forest",
-	node_top = "coniferous_forest_grass",
+	node_top = "coniferous_forest_soil_grass",
 	depth_top = 1,
 	node_filler = "coniferous_forest_soil",
 	depth_filler = 5,
