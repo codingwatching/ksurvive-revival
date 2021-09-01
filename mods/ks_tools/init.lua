@@ -20,6 +20,7 @@ minetest.register_tool("ks_tools:devtool", {
 			choppable={times={[1]=0.0, [2]=0.0, [3]=0.0}, maxlevel=255},
 			sliceable={times={[1]=0.0, [2]=0.0, [3]=0.0}, maxlevel=255},
 			dig_immediate={times={[1]=0.0, [2]=0.0, [3]=0.0}, maxlevel=255},
+			grabbable={times={[1]=0.0}}
 		},
 		damage_groups = {fleshy=100},
 	},
@@ -38,6 +39,7 @@ minetest.register_item(':', {
 		groupcaps={
 			sliceable={times={[1]=1, [2]=3}, maxlevel=1},
 			diggable={times={[1]=3}, maxlevel=1},
+			grabbable={times={[1]=0.0}}
 		},
 		damage_groups = {fleshy=0}
 	}

@@ -25,6 +25,15 @@ minetest.register_node("ks_decor:eclogite_lamp", {
 	walkable = false,
 })
 
+minetest.register_node("ks_decor:lantern", {
+	description = "Lantern",
+	drawtype = "plantlike",
+	light_source = 14,
+	tiles = {"decor.lantern.png"},
+	groups = {lantern = 1, grabbable = 1},
+	walkable = false,
+})
+
 
 
 minetest.register_node("ks_decor:devlamp", {
