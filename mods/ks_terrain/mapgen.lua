@@ -209,6 +209,48 @@ minetest.register_ore({
 	clust_size = 6,
 })
 
+
+
+-- register ore aliases
+minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_bauxite")
+minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_uranium")
+minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_bornite")
+
+
+
+-- register ores
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "mineral_bedrock_bauxite",
+	wherein = "strata_bedrock",
+	y_min = feldspar_level-100,
+	y_max = feldspar_level,
+	clust_scarcity = 2*2*2,
+	clust_size = 16,
+})
+
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "mineral_bedrock_uranium",
+	wherein = "strata_bedrock",
+	y_min = feldspar_level-150,
+	y_max = feldspar_level-50,
+	clust_scarcity = 2*2*2,
+	clust_size = 16,
+})
+
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "mineral_bedrock_bornite",
+	wherein = "strata_bedrock",
+	y_min = feldspar_level-200,
+	y_max = feldspar_level-100,
+	clust_scarcity = 2*2*2,
+	clust_size = 16,
+})
+
+
+
 -- Surface eclogite, because why the heck not?
 -- Thought it looked cute, might delete l8r
 minetest.register_ore({
