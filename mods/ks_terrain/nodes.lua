@@ -137,22 +137,6 @@ minetest.register_node("ks_terrain:feldspar_red", {
 })
 
 
-minetest.register_node("ks_terrain:feldspar_bauxite_xenolith", {
-	description = "Feldspar Xenolith with Bauxite",
-	tiles = {"terrain.feldspar_bauxite_xenolith.png"},
-	groups = {stone = 1, igneousrock = 1, xenolith = 1, aluminium_xenolith = 1, chippable = 2},
-	is_ground_content = true
-})
-
-
-minetest.register_node("ks_terrain:feldspar_bauxite_hematite", {
-	description = "Feldspar Xenolith with Hematite",
-	tiles = {"terrain.feldspar_bauxite_hematite.png"},
-	groups = {stone = 1, igneousrock = 1, xenolith = 1, iron_xenolith = 1, chippable = 2},
-	is_ground_content = true
-})
-
-
 minetest.register_node("ks_terrain:eclogite", {
 	description = "Eclogite Stone",
 	tiles = {"terrain.eclogite.png"},
