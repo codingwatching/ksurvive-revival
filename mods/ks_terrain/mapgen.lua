@@ -213,8 +213,8 @@ minetest.register_ore({
 
 -- register ore aliases
 minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_bauxite")
-minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_uranium")
-minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_bornite")
+minetest.register_alias("mineral_bedrock_uranium", "ks_terrain:feldspar_with_uranium")
+minetest.register_alias("mineral_bedrock_bornite", "ks_terrain:feldspar_with_bornite")
 
 
 
