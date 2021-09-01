@@ -175,8 +175,6 @@ minetest.register_ore({
 minetest.register_alias("stone_aragonite", "ks_terrain:aragonite")
 minetest.register_alias("stone_bedrock_red", "ks_terrain:feldspar_red")
 minetest.register_alias("stone_eclogite", "ks_terrain:eclogite")
-minetest.register_alias("xenolith_bedrock_bauxite", "ks_terrain:feldspar_xenolith_bauxite")
-minetest.register_alias("xenolith_bedrock_hematite", "ks_terrain:feldspar_xenolith_hematite")
 
 
 
@@ -199,26 +197,6 @@ minetest.register_ore({
 	y_max = feldspar_level,
 	clust_scarcity = 8*8*8,
 	clust_size = 10,
-})
-
-minetest.register_ore({
-	ore_type = "sheet",
-	ore = "xenolith_bedrock_bauxite",
-	wherein = "strata_bedrock",
-	y_min = maxdepth,
-	y_max = feldspar_level,
-	clust_scarcity = 2*2*2,
-	clust_size = 3,
-})
-
-minetest.register_ore({
-	ore_type = "sheet",
-	ore = "xenolith_bedrock_hematite",
-	wherein = "strata_bedrock",
-	y_min = maxdepth,
-	y_max = feldspar_level,
-	clust_scarcity = 2*2*2,
-	clust_size = 3,
 })
 
 minetest.register_ore({
