@@ -30,7 +30,7 @@ minetest.register_node("ks_decor:lantern", {
 	drawtype = "plantlike",
 	light_source = 14,
 	tiles = {"decor.lantern.png"},
-	groups = {lantern = 1, grabbable = 1},
+	groups = {lantern = 1, grabbable = 1, falling_node = 1},
 	walkable = false,
 })
 
