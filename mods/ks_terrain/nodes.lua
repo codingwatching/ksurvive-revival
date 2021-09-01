@@ -137,6 +137,30 @@ minetest.register_node("ks_terrain:feldspar_red", {
 })
 
 
+minetest.register_node("ks_terrain:feldspar_with_bauxite", {
+	description = "Feldspar Stone with Bauxite",
+	tiles = {"terrain.feldspar.png^terrain.mineral_bauxite_overlay.png"},
+	groups = {stone = 1, igneousrock = 1, chippable = 2},
+	is_ground_content = true
+})
+
+
+minetest.register_node("ks_terrain:feldspar_with_uranium", {
+	description = "Feldspar Stone with Uranium",
+	tiles = {"terrain.feldspar.png^terrain.mineral_uranium_overlay.png"},
+	groups = {stone = 1, igneousrock = 1, chippable = 2},
+	is_ground_content = true
+})
+
+
+minetest.register_node("ks_terrain:feldspar_with_bornite", {
+	description = "Feldspar Stone with Bornite",
+	tiles = {"terrain.feldspar.png^terrain.mineral_bornite_overlay.png"},
+	groups = {stone = 1, igneousrock = 1, chippable = 2},
+	is_ground_content = true
+})
+
+
 minetest.register_node("ks_terrain:eclogite", {
 	description = "Eclogite Stone",
 	tiles = {"terrain.eclogite.png"},
