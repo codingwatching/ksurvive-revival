@@ -1,14 +1,13 @@
 -- { item_name, position_in_inventory }
 local bin_items = {
-	{"ks_tools:holly_adze", 2}
+	"ks_tools:holly_adze"
 }
 
 
-local function insert_item_into_inv(pos, listname)
-	local inv = player:get_inventory()
-	for _, stack in ipairs(give_initial_stuff.items) do
-		inv:add_item("main", stack)
-	end
+local function insert_items(pos, listname, items)
+	local meta = minetest.get_meta(pos)
+	local inv = meta:get_inventory()
+	inv:add_item("container", ItemStack("ks_tools:holly_stick 3"))
 end
 
 
