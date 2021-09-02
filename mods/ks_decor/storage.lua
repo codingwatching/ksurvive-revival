@@ -20,10 +20,7 @@ minetest.register_node("ks_decor:juniper_bin", {
 		meta:set_string("infotext", "Juniper-Wood Bin")
 		local fs_content = "size[8,7;]" ..
 			"list[context;container;0,0.3;10,1;]" ..
-			"list[current_player;main;0,2.85;8,1;]" ..
-			"list[current_player;main;0,4.08;8,3;8]" ..
-			"listring[context;container]" ..
-			"listring[current_player;main]"
+			"listring[context;container]"
 		meta:set_string("formspec", fs_content)
 	end
 })
@@ -40,10 +37,7 @@ minetest.register_node("ks_decor:holly_bin", {
 		meta:set_string("infotext", "Holly-Wood Bin")
 		local fs_content = "size[8,7;]" ..
 			"list[context;container;0,0.3;10,1;]" ..
-			"list[current_player;main;0,2.85;8,1;]" ..
-			"list[current_player;main;0,4.08;8,3;8]" ..
-			"listring[context;container]" ..
-			"listring[current_player;main]"
+			"listring[context;container]"
 		meta:set_string("formspec", fs_content)
 	end
 })
@@ -60,10 +54,7 @@ minetest.register_node("ks_decor:douglasfir_bin", {
 		meta:set_string("infotext", "Douglas Fir-Wood Bin")
 		local fs_content = "size[8,7;]" ..
 			"list[context;container;0,0.3;10,1;]" ..
-			"list[current_player;main;0,2.85;8,1;]" ..
-			"list[current_player;main;0,4.08;8,3;8]" ..
 			"listring[context;container]" ..
-			"listring[current_player;main]"
 		meta:set_string("formspec", fs_content)
 	end
 })
