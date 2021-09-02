@@ -12,6 +12,7 @@ minetest.register_tool("ks_tools:juniper_dolomite_pickaxe", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, pickaxe_tool = 1}
 })
 
 minetest.register_tool("ks_tools:douglasfir_dolomite_pickaxe", {
@@ -26,6 +27,7 @@ minetest.register_tool("ks_tools:douglasfir_dolomite_pickaxe", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, pickaxe_tool = 1}
 })
 
 minetest.register_tool("ks_tools:holly_dolomite_pickaxe", {
@@ -40,6 +42,7 @@ minetest.register_tool("ks_tools:holly_dolomite_pickaxe", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, pickaxe_tool = 1}
 })
 
 
@@ -56,6 +59,7 @@ minetest.register_tool("ks_tools:juniper_dolomite_shovel", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, shovel_tool = 1}
 })
 
 minetest.register_tool("ks_tools:douglasfir_dolomite_shovel", {
@@ -70,6 +74,7 @@ minetest.register_tool("ks_tools:douglasfir_dolomite_shovel", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, shovel_tool = 1}
 })
 
 minetest.register_tool("ks_tools:holly_dolomite_shovel", {
@@ -84,6 +89,7 @@ minetest.register_tool("ks_tools:holly_dolomite_shovel", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, shovel_tool = 1}
 })
 
 
@@ -101,6 +107,7 @@ minetest.register_tool("ks_tools:juniper_dolomite_axe", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, axe_tool = 1}
 })
 
 minetest.register_tool("ks_tools:douglasfir_dolomite_axe", {
@@ -116,6 +123,7 @@ minetest.register_tool("ks_tools:douglasfir_dolomite_axe", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, axe_tool = 1}
 })
 
 minetest.register_tool("ks_tools:holly_dolomite_axe", {
@@ -131,4 +139,5 @@ minetest.register_tool("ks_tools:holly_dolomite_axe", {
 		damage_groups = {fleshy=tool_damage},
 	},
 	visual_scale = 1.69,
+	groups = {stone_tool = 1, dolomite_tool = 1, axe_tool = 1}
 })
