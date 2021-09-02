@@ -13,7 +13,7 @@ local bin_items = {
 	"ks_ores:bauxite "..math.random(max_generated_items),
 	"ks_ores:chalcocite "..math.random(max_generated_items),
 	"ks_glass:annealed_glass "..math.random(max_generated_items),
-	"ks_flora:bahia_0 "..math.random(max_generated_items)*#
+	"ks_flora:bahia_0 "..math.random(max_generated_items)*3
 }
 
 
