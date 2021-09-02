@@ -169,6 +169,14 @@ minetest.register_node("ks_terrain:feldspar_with_bornite", {
 })
 
 
+minetest.register_node("ks_terrain:dolomite_with_chalcocite", {
+	description = "Dolomite Stone with Chalcocite",
+	tiles = {"terrain.dolomite.png^terrain.mineral_chalcocite_overlay.png"},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1),
+	is_ground_content = true
+})
+
+
 minetest.register_node("ks_terrain:eclogite", {
 	description = "Eclogite Stone",
 	tiles = {"terrain.eclogite.png"},
