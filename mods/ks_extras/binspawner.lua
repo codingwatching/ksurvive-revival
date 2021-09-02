@@ -1,4 +1,7 @@
-local max_generated_items = 10
+local max_generated_items = 25
+local bin_column = 1
+local bin_row = 8
+
 
 -- { item_name, position_in_inventory }
 local bin_items = {
@@ -27,7 +30,7 @@ local bin_types = {
 local function choose_bin(options)
 	local result
 	for i, item in ipairs(options) do
-		result = math.random(#options)
+		result = options[math.random(#options)]
 	end
 	return result
 end
@@ -48,23 +51,40 @@ local function choose_items(options, chance)
 end	
 
 
-local function insert_items(pos, listname, items)
+local function on_construct(pos)
 	local meta = minetest.get_meta(pos)
 	local inv = meta:get_inventory()
-	for i = 1, #items_all do
-		inv:add_item("container", items[i])
-		minetest.log("chat", "Inserted item :"..items[i])
-	end
+	meta:set_string("infotext", "Juniper-Wood Bin")
+	local fs_content = "size[8,7;]" ..
+		"list[context;container;0,0.3;10,1;]" ..
+		"listring[context;container]"
+	meta:set_string("formspec", fs_content)
 end
 
 
-minetest.register_lbm({
+local function insert_items(pos, listname, items)
+	local meta = minetest.get_meta(pos)
+	local inv = meta:get_inventory()
+	inv:set_size("container", bin_column*bin_row)
+	for i = 1, #items do
+		inv:add_item("container", items[i])
+		minetest.log("chat", "Inserted item :"..items[i])
+	end
+	local chosen_bin = choose_bin(bin_types)
+	minetest.log("chat", chosen_bin)
+	minetest.swap_node(pos, {name=chosen_bin})
+	on_construct(pos)
+end
+
+
+minetest.register_abm({
 	label = "Generate bins from spawners",
 	name = "ks_extras:bin_spawning",
 	nodenames = "ks_extras:bin_spawner",
-	actions = function(pos, node)
-		insert_item(pos, "container", choose_items(bin_items, 2))
-		minetest.swap_node(pos, choose_bin(bin_types))
+	interval = 1,
+	chance = 1,
+	action = function(pos, node)
+		insert_items(pos, "container", choose_items(bin_items, 4))
 		minetest.log("chat", "Bin spawned at "..pos.x.." "..pos.y.." "..pos.z)
 	end
 })
