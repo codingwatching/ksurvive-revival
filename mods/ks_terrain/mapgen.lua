@@ -216,8 +216,8 @@ minetest.register_ore({
 minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_bauxite")
 minetest.register_alias("mineral_bedrock_uranium", "ks_terrain:feldspar_with_uranium")
 minetest.register_alias("mineral_bedrock_bornite", "ks_terrain:feldspar_with_bornite")
-minetest.register_alias("mineral_stone_bauxite", "ks_terrain:feldspar_with_bauxite")
-minetest.register_alias("mineral_stone_chalcocite", "ks_terrain:feldspar_with_chalcocite")
+minetest.register_alias("mineral_stone_bauxite", "ks_terrain:dolomite_with_bauxite")
+minetest.register_alias("mineral_stone_chalcocite", "ks_terrain:dolomite_with_chalcocite")
 
 
 
@@ -226,20 +226,20 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_stone_bauxite",
 	wherein = "mapgen_stone",
-	y_min = mountain_height,
+	y_min = feldspar_level,
 	y_max = mindepth,
 	clust_scarcity = 2*2*2,
-	clust_size = 16,
+	clust_size = 3,
 })
 
 minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_stone_chalcocite",
 	wherein = "mapgen_stone",
-	y_min = mountain_height,
+	y_min = feldspar_level,
 	y_max = mindepth,
-	clust_scarcity = 2*2*2,
-	clust_size = 16,
+	clust_scarcity = 4*4*4,
+	clust_size = 1,
 })
 
 minetest.register_ore({
@@ -284,4 +284,17 @@ minetest.register_ore({
 	y_max = mindepth,
 	clust_scarcity = 8*2*8,
 	clust_size = 5,
+})
+
+
+
+-- Gravel clusters in dolomite.
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "gravel",
+	wherein = "mapgen_stone",
+	y_min = maxdepth,
+	y_max = mountain_height,
+	clust_scarcity = 8*2*8,
+	clust_size = 9,
 })
