@@ -145,6 +145,14 @@ minetest.register_node("ks_terrain:feldspar_with_bauxite", {
 })
 
 
+minetest.register_node("ks_terrain:dolomite_with_bauxite", {
+	description = "Dolomite Stone with Bauxite",
+	tiles = {"terrain.dolomite.png^terrain.mineral_bauxite_overlay.png"},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1),
+	is_ground_content = true
+})
+
+
 minetest.register_node("ks_terrain:feldspar_with_uranium", {
 	description = "Feldspar Stone with Uranium",
 	tiles = {"terrain.feldspar.png^terrain.mineral_uranium_overlay.png"},
