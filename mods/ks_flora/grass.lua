@@ -1,6 +1,6 @@
 local g_groups = {attached_node = 1, sliceable = 1}
 local gm_groups = {attached_node = 1, sliceable = 1, mature_grass = 1}
-local bahiagrass_soil_type = "group:silt_soil"
+local bahiagrass_soil_type = "group:wet_soil"
 local growthchance = 1
 local growthrate = 0.1
 
