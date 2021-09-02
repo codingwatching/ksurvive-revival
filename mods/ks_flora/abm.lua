@@ -3,7 +3,6 @@ local berry_grow_chance = 1
 
 minetest.register_abm({
 	nodenames = {"ks_flora:juniper_leaves_living"},
-	neighbors = {"group:sand"},
 	interval = berry_growth_rate,
 	chance = berry_grow_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
