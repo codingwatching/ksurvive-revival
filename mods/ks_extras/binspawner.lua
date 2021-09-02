@@ -6,22 +6,44 @@ local bin_items = {
 }
 
 
-local function choose_items(options, chance)
-	local result = {}
+local bin_types = {
+	"ks_decor:douglasfir_bin",
+	"ks_decor:holly_bin",
+	"ks_decor:juniper_bin"
+}
+
+
+local function choose_bin(options)
+	local result
 	for i, item in ipairs(options) do
-		if math.random(1,chance) == 1 then
-			result.insert(item) --add item
-		end
+		result = math.random(#options)
 	end
 	return result
 end
-		
+
+
+local function choose_items(options, chance)
+	local result = {}
+	for i, item in ipairs(options) do
+		if math.random(chance) == 1 then
+			table.insert(result, item) --add item
+		end
+	end
+	minetest.log("chat", "Items chosen.")
+	for i = 1, #result do
+		minetest.log("chat", "Items chosen include :"..result[i])
+	end
+	return result
+end	
 
 
 local function insert_items(pos, listname, items)
 	local meta = minetest.get_meta(pos)
 	local inv = meta:get_inventory()
-	inv:add_item("container", ItemStack(""))
+	for i = 1, #items_all do
+		inv:add_item("container", items[i])
+		minetest.log("chat", "Inserted item :"..items[i])
+	end
 end
 
 
@@ -31,6 +53,7 @@ minetest.register_lbm({
 	nodenames = "ks_extras:bin_spawner",
 	actions = function(pos, node)
 		insert_item(pos, "container", choose_items(bin_items, 2))
+		minetest.swap_node(pos, choose_bin(bin_types))
 		minetest.log("chat", "Bin spawned at "..pos.x.." "..pos.y.." "..pos.z)
 	end
 })
