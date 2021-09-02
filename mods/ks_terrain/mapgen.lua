@@ -2,6 +2,7 @@
 -- I am registering the two strictly needed mapgen aliases
 minetest.register_alias("mapgen_stone", "ks_terrain:dolomite")
 minetest.register_alias("mapgen_water_source", "ks_terrain:water_source")
+minetest.register_alias("mapgen_river_water_source", "ks_terrain:water_source")
 
 
 
@@ -215,10 +216,32 @@ minetest.register_ore({
 minetest.register_alias("mineral_bedrock_bauxite", "ks_terrain:feldspar_with_bauxite")
 minetest.register_alias("mineral_bedrock_uranium", "ks_terrain:feldspar_with_uranium")
 minetest.register_alias("mineral_bedrock_bornite", "ks_terrain:feldspar_with_bornite")
+minetest.register_alias("mineral_stone_bauxite", "ks_terrain:feldspar_with_bauxite")
+minetest.register_alias("mineral_stone_chalcocite", "ks_terrain:feldspar_with_chalcocite")
 
 
 
 -- register ores
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "mineral_stone_bauxite",
+	wherein = "mapgen_stone",
+	y_min = mountain_height,
+	y_max = mindepth,
+	clust_scarcity = 2*2*2,
+	clust_size = 16,
+})
+
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "mineral_stone_chalcocite",
+	wherein = "mapgen_stone",
+	y_min = mountain_height,
+	y_max = mindepth,
+	clust_scarcity = 2*2*2,
+	clust_size = 16,
+})
+
 minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_bedrock_bauxite",
