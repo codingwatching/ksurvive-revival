@@ -112,13 +112,13 @@ minetest.register_node("ks_terrain:dolomite_gravel", {
 	drop = "ks_tools:dolomite_rock"
 })
 
-
 minetest.register_node("ks_terrain:aragonite", {
 	description = "Aragonite Stone",
 	tiles = {"terrain.aragonite.png"},
 	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
 	is_ground_content = true
 })
+
 
 
 minetest.register_node("ks_terrain:feldspar", {
@@ -128,7 +128,6 @@ minetest.register_node("ks_terrain:feldspar", {
 	is_ground_content = true
 })
 
-
 minetest.register_node("ks_terrain:feldspar_red", {
 	description = "Feldspar-Granite Stone",
 	tiles = {"terrain.feldspar_red.png"},
@@ -136,6 +135,12 @@ minetest.register_node("ks_terrain:feldspar_red", {
 	is_ground_content = true
 })
 
+minetest.register_node("ks_terrain:limestone", {
+	description = "Limestone",
+	tiles = {"terrain.limestone.png"},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
+	is_ground_content = true
+})
 
 minetest.register_node("ks_terrain:feldspar_with_bauxite", {
 	description = "Feldspar Stone with Bauxite",
@@ -144,7 +149,6 @@ minetest.register_node("ks_terrain:feldspar_with_bauxite", {
 	is_ground_content = true
 })
 
-
 minetest.register_node("ks_terrain:feldspar_with_uranium", {
 	description = "Feldspar Stone with Uranium",
 	tiles = {"terrain.feldspar.png^terrain.mineral_uranium_overlay.png"},
@@ -152,14 +156,12 @@ minetest.register_node("ks_terrain:feldspar_with_uranium", {
 	is_ground_content = true
 })
 
-
 minetest.register_node("ks_terrain:feldspar_with_bornite", {
 	description = "Feldspar Stone with Bornite",
 	tiles = {"terrain.feldspar.png^terrain.mineral_bornite_overlay.png"},
 	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true
 })
-
 
 minetest.register_node("ks_terrain:dolomite_with_bauxite", {
 	description = "Dolomite Stone with Bauxite",
@@ -178,7 +180,6 @@ minetest.register_node("ks_terrain:dolomite_with_bauxite", {
 	},
 })
 
-
 minetest.register_node("ks_terrain:dolomite_with_chalcocite", {
 	description = "Dolomite Stone with Chalcocite",
 	tiles = {"terrain.dolomite.png^terrain.mineral_chalcocite_overlay.png"},
@@ -196,13 +197,13 @@ minetest.register_node("ks_terrain:dolomite_with_chalcocite", {
 	},
 })
 
-
 minetest.register_node("ks_terrain:eclogite", {
 	description = "Eclogite Stone",
 	tiles = {"terrain.eclogite.png"},
 	groups = {stone = 1, metamorphicrock = 1, chippable = 3},
 	is_ground_content = true
 })
+
 
 
 minetest.register_node("ks_terrain:water_source", {
