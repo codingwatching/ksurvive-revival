@@ -19,7 +19,7 @@ minetest.register_alias("beach_sand", "ks_terrain:fine_sand")
 minetest.register_alias("shingle_beach_sand", "ks_terrain:coarse_sand")
 minetest.register_alias("shingle_beach_sand_under", "ks_terrain:fine_sand")
 minetest.register_alias("seabed_gravel", "ks_terrain:dolomite_gravel")
-minetest.register_alias("mountain_soil", "ks_terrain:dolomite_gravel")
+minetest.register_alias("gravel", "ks_terrain:dolomite_gravel")
 local shoreline_height = 5
 local oceanfloor_height = -10
 local mountain_height = 50
@@ -295,6 +295,6 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = maxdepth,
 	y_max = mountain_height,
-	clust_scarcity = 8*2*8,
+	clust_scarcity = 1*1*1,
 	clust_size = 9,
 })

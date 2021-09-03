@@ -5,3 +5,5 @@ dofile(modpath.."/lamps.lua")
 dofile(modpath.."/storage.lua")
 dofile(modpath.."/mapgen.lua")
 dofile(modpath.."/crafting.lua")
+dofile(modpath.."/doors.lua")
+
