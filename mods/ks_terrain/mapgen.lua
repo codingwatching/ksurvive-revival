@@ -158,6 +158,7 @@ minetest.register_biome({
 
 -- Register bedrock alias.
 minetest.register_alias("strata_bedrock", "ks_terrain:feldspar")
+minetest.register_alias("strata_limestone", "ks_terrain:limestone")
 
 
 
@@ -168,6 +169,16 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = -31000,
 	y_max = feldspar_level,
+})
+
+
+
+minetest.register_ore({
+	ore_type = "stratum",
+	ore = "strata_limestone",
+	wherein = "strata_bedrock",
+	y_min = feldspar_level-60,
+	y_max = feldspar_level-30,
 })
 
 
