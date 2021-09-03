@@ -192,3 +192,100 @@ minetest.register_tool("ks_tools:holly_aragonite_pickaxe", {
 	visual_scale = 1.69,
 	groups = {stone_tool = 1, aragonite_tool = 1, pickaxe_tool = 1}
 })
+
+
+
+minetest.register_tool("ks_tools:juniper_aragonite_shovel", {
+	description = "Aragonite Shovel",
+	inventory_image = "tools.tool_aragonite_shovel_juniper.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			diggable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+		},
+		damage_groups = {fleshy=tool_damage},
+	},
+	visual_scale = 1.69,
+	groups = {stone_tool = 1, aragonite_tool = 1, shovel_tool = 1}
+})
+
+minetest.register_tool("ks_tools:douglasfir_aragonite_shovel", {
+	description = "Aragonite Shovel",
+	inventory_image = "tools.tool_aragonite_shovel_douglasfir.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			diggable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+		},
+		damage_groups = {fleshy=tool_damage},
+	},
+	visual_scale = 1.69,
+	groups = {stone_tool = 1, aragonite_tool = 1, shovel_tool = 1}
+})
+
+minetest.register_tool("ks_tools:holly_aragonite_shovel", {
+	description = "Aragonite Shovel",
+	inventory_image = "tools.tool_aragonite_shovel_holly.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			diggable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+		},
+		damage_groups = {fleshy=tool_damage},
+	},
+	visual_scale = 1.69,
+	groups = {stone_tool = 1, aragonite_tool = 1, shovel_tool = 1}
+})
+
+
+
+minetest.register_tool("ks_tools:juniper_aragonite_axe", {
+	description = "Dolomite Axe",
+	inventory_image = "tools.toolaragonite_axe_juniper.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			choppable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+			sliceable={times={[1]=tool_damage/4, [2]=tool_damage/2}, uses=tool_durability, maxlevel=1},
+		},
+		damage_groups = {fleshy=tool_damage},
+	},
+	visual_scale = 1.69,
+	groups = {stone_tool = 1, aragonite_tool = 1, axe_tool = 1}
+})
+
+minetest.register_tool("ks_tools:douglasfir_aragonite_axe", {
+	description = "Dolomite Axe",
+	inventory_image = "tools.tool_aragonite_axe_douglasfir.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			choppable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+			sliceable={times={[1]=tool_damage/4, [2]=tool_damage/2}, uses=tool_durability, maxlevel=1},
+		},
+		damage_groups = {fleshy=tool_damage},
+	},
+	visual_scale = 1.69,
+	groups = {stone_tool = 1, aragonite_tool = 1, axe_tool = 1}
+})
+
+minetest.register_tool("ks_tools:aragonite_axe", {
+	description = "Dolomite Axe",
+	inventory_image = "tools.tool_aragonite_axe_holly.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			choppable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+			sliceable={times={[1]=tool_damage/4, [2]=tool_damage/2}, uses=tool_durability, maxlevel=1},
+		},
+		damage_groups = {fleshy=tool_damage},
+	},
+	visual_scale = 1.69,
+	groups = {stone_tool = 1, aragonite_tool = 1, axe_tool = 1}
+})
