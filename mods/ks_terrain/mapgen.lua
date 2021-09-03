@@ -183,6 +183,19 @@ minetest.register_ore({
 
 
 
+-- Register a cavern in limestone
+minetest.register_ore({
+	ore_type = "blob",
+	ore = "air",
+	wherein = "strata_limestone",
+	y_min = coastline_height,
+	y_max = feldspar_level,
+	clust_scarcity = 10*10*10,
+	clust_size = 20,
+})
+
+
+
 -- Register alternate stone aliases
 minetest.register_alias("stone_aragonite", "ks_terrain:aragonite")
 minetest.register_alias("stone_bedrock_red", "ks_terrain:feldspar_red")
