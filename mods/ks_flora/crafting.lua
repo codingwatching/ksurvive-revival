@@ -9,7 +9,7 @@ minetest.register_craft({
 	recipe = {
 		{"ks_flora:juniper_log"}
 	},
-	output = "ks_flora:juniper_planks 2"
+	output = "ks_flora:juniper_planks 4"
 })
 
 
@@ -25,7 +25,7 @@ minetest.register_craft({
 	recipe = {
 		{"ks_flora:holly_log"}
 	},
-	output = "ks_flora:holly_planks 2"
+	output = "ks_flora:holly_planks 4"
 })
 
 
@@ -41,5 +41,5 @@ minetest.register_craft({
 	recipe = {
 		{"ks_flora:douglasfir_log"}
 	},
-	output = "ks_flora:douglasfir_planks 2"
+	output = "ks_flora:douglasfir_planks 4"
 })

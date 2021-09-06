@@ -6,6 +6,7 @@ dofile(modpath.."/wood_adze.lua")
 dofile(modpath.."/crafting.lua")
 dofile(modpath.."/stone_toolheads.lua")
 dofile(modpath.."/stone_tools.lua")
+dofile(modpath.."/cooking_tools.lua")
 
 
 minetest.register_tool("ks_tools:devtool", {
