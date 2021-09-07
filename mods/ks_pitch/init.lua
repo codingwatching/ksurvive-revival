@@ -40,7 +40,7 @@ minetest.register_node("ks_pitch:pitch_source", {
 	groups = {pitch = 1, liquid = 3}
 })
 
-minetest.register_node("pitch:pitch_flowing", {
+minetest.register_node("ks_pitch:pitch_flowing", {
 	description = "Flowing Pitch",
 	drawtype = "flowingliquid",
 	tiles = {

@@ -189,7 +189,6 @@ minetest.register_node("ks_flora:juncus_0", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
@@ -209,7 +208,7 @@ minetest.register_node("ks_flora:juncus_1", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
+	
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
@@ -229,7 +228,7 @@ minetest.register_node("ks_flora:juncus_2", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
+	
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
@@ -249,7 +248,7 @@ minetest.register_node("ks_flora:juncus_3", {
 	walkable = false,
 	buildable_to = true,
 	groups = g_groups,
-	sounds = default.node_sound_leaves_defaults(),
+	
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
@@ -269,7 +268,7 @@ minetest.register_node("ks_flora:juncus", {
 	walkable = false,
 	buildable_to = true,
 	groups = gm_groups,
-	sounds = default.node_sound_leaves_defaults(),
+	
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
