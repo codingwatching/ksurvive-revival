@@ -1,6 +1,7 @@
 local g_groups = {attached_node = 1, sliceable = 1}
 local gm_groups = {attached_node = 1, sliceable = 1, mature_grass = 1}
-local bahiagrass_soil_type = "group:wet_soil"
+local bahiagrass_soil_types = {"group:wet_soil"}
+local bouteloua_soil_types = {"group:wet_soil"}
 local growthchance = 1
 local growthrate = 0.1
 
@@ -106,51 +107,47 @@ minetest.register_node("ks_flora:bahia", {
 
 -- Now, make bahiagrass actually grow.
 minetest.register_abm({
-    nodenames = {"ks_flora:bahia_0"},
-    neighbors = {bahiagrass_soil_type},
-    interval = growthrate,
-    chance = growchance,
-    action = function(pos, node, active_object_count,
-            active_object_count_wider)
-        local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "ks_flora:bahia_1"})
-    end
+	nodenames = {"ks_flora:bahia_0"},
+	neighbors = bahia_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:bahia_1"})
+	end
 })
 
 minetest.register_abm({
-    nodenames = {"ks_flora:bahia_1"},
-    neighbors = {bahiagrass_soil_type},
-    interval = growthrate,
-    chance = growchance,
-    action = function(pos, node, active_object_count,
-            active_object_count_wider)
-        local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "ks_flora:bahia_2"})
-    end
+	nodenames = {"ks_flora:bahia_1"},
+	neighbors = bahia_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:bahia_2"})
+	end
 })
 
 minetest.register_abm({
-    nodenames = {"ks_flora:bahia_2"},
-    neighbors = {bahiagrass_soil_type},
-    interval = growthrate,
-    chance = growchance,
-    action = function(pos, node, active_object_count,
-            active_object_count_wider)
-        local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "ks_flora:bahia_3"})
-    end
+	nodenames = {"ks_flora:bahia_2"},
+	neighbors = bahia_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:bahia_3"})
+	end
 })
 
 minetest.register_abm({
-    nodenames = {"ks_flora:bahia_3"},
-    neighbors = {bahiagrass_soil_type},
-    interval = growthrate,
-    chance = growchance,
-    action = function(pos, node, active_object_count,
-            active_object_count_wider)
-        local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "ks_flora:bahia"})
-    end
+	nodenames = {"ks_flora:bahia_3"},
+	neighbors = bahia_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:bahia"})
+	end
 })
 
 
@@ -173,4 +170,161 @@ minetest.register_node("ks_flora:snowy_dead_shrub", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
 	},
+})
+
+
+
+
+
+-- Juncus rushes.
+minetest.register_node("ks_flora:juncus_0", {
+	description = "Juncus Seeds",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_0.png"},
+	inventory_image = "flora.juncus_seeds.png",
+	wield_image = "flora.juncus_seeds.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = g_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("ks_flora:juncus_1", {
+	description = "Juncus Sprouts",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_1.png"},
+	inventory_image = "flora.juncus_1.png",
+	wield_image = "flora.juncus_1.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = g_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("ks_flora:juncus_2", {
+	description = "Young Juncus Rushes",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_2.png"},
+	inventory_image = "flora.juncus_2.png",
+	wield_image = "flora.juncus_2.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = g_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("ks_flora:juncus_3", {
+	description = "Young Juncus Rushes",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_3.png"},
+	inventory_image = "flora.juncus_3.png",
+	wield_image = "flora.juncus_3.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = g_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("ks_flora:juncus", {
+	description = "Mature Juncus Grass",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_4.png"},
+	inventory_image = "flora.juncus_4.png",
+	wield_image = "flora.juncus_4.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = gm_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {
+		max_items = 3,
+		items = {
+			{items = {"ks_flora:juncus_0 2"}},
+			{items = {"ks_flora:juncus_0"}, rarity = 2},
+			{items = {"ks_flora:juncus_stalk"}}
+		}
+	},
+})
+
+-- Now, make juncus actually grow also.
+minetest.register_abm({
+	nodenames = {"ks_flora:juncus_0"},
+	neighbors = juncus_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:juncus_1"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"ks_flora:juncus_1"},
+	neighbors = juncus_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:juncus_2"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"ks_flora:juncus_2"},
+	neighbors = juncus_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:juncus_3"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"ks_flora:juncus_3"},
+	neighbors = juncus_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:juncus"})
+	end
 })
