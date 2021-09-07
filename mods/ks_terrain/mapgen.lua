@@ -208,9 +208,9 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "stone_aragonite",
 	wherein = "mapgen_stone",
-	y_min = coastline_height,
+	y_min = coastline_height + 15,
 	y_max = feldspar_level,
-	clust_scarcity = 8*8*8,
+	clust_scarcity = 4*4*4,
 	clust_size = 12,
 })
 
@@ -253,7 +253,7 @@ minetest.register_ore({
 	y_min = feldspar_level,
 	y_max = mindepth,
 	clust_scarcity = 2*2*2,
-	clust_size = 3,
+	clust_size = 5,
 })
 
 minetest.register_ore({
@@ -263,7 +263,7 @@ minetest.register_ore({
 	y_min = feldspar_level,
 	y_max = mindepth,
 	clust_scarcity = 4*4*4,
-	clust_size = 1,
+	clust_size = 3,
 })
 
 minetest.register_ore({
