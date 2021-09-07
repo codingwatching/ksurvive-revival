@@ -166,6 +166,8 @@ minetest.register_node("ks_terrain:feldspar_with_bornite", {
 
 minetest.register_node("ks_terrain:limestone_with_rose_quartz", {
 	description = "Limestone with Rose Quartz",
+	drawtype = "glasslike",
+	light_source = 14,
 	tiles = {"terrain.limestone.png^terrain.mineral_rose_quartz_overlay.png"},
 	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
 	is_ground_content = true,

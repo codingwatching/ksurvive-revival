@@ -297,9 +297,9 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_limestone_rose_quartz",
 	wherein = "strata_limestone",
-	y_min = feldspar_level,
-	y_max = mindepth,
-	clust_scarcity = 5*5*5,
+	y_min = feldspar_level-70,
+	y_max = feldspar_level-10,
+	clust_scarcity = 2*2*2,
 	clust_size = 5,
 })
 
@@ -356,6 +356,6 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = maxdepth,
 	y_max = mountain_height,
-	clust_scarcity = 1*1*1,
+	clust_scarcity = 2*2*2,
 	clust_size = 9,
 })
