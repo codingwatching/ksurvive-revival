@@ -101,7 +101,7 @@ minetest.register_node("ks_terrain:dolomite", {
 	tiles = {"terrain.dolomite.png"},
 	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
 	is_ground_content = true,
-	drop = "ks_tools:dolomite_rock 2"
+	drop = "ks_tools:dolomite_rock 4"
 })
 
 minetest.register_node("ks_terrain:dolomite_gravel", {
@@ -109,14 +109,15 @@ minetest.register_node("ks_terrain:dolomite_gravel", {
 	tiles = {"terrain.dolomite_gravel.png"},
 	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true,
-	drop = "ks_tools:dolomite_rock"
+	drop = "ks_tools:dolomite_rock 2"
 })
 
 minetest.register_node("ks_terrain:aragonite", {
 	description = "Aragonite Stone",
 	tiles = {"terrain.aragonite.png"},
 	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
-	is_ground_content = true
+	is_ground_content = true,
+	drop = "ks_tools:dolomite_rock 4"
 })
 
 
