@@ -11,6 +11,7 @@ minetest.register_node("ks_decor:aragonite_bricks", {
 	tiles = {"decor.aragonite_bricks.png"},
 	groups = {stonebricks = 1, chippable = 1},
 	is_ground_content = true,
+	drop = "ks_tools:dolomite_rock 4"
 })
 
 minetest.register_node("ks_decor:eclogite_bricks", {
