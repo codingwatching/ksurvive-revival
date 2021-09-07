@@ -112,3 +112,93 @@ minetest.register_craft({
 	recipe = {"ks_tools:toolhead_dolomite_axe", "ks_tools:holly_stick"},
 	output = "ks_tools:holly_dolomite_axe"
 })
+
+
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:aragonite_rock", "ks_tools:aragonite_rock"},
+	output = "ks_tools:aragonite_sharpened_rock"
+})
+
+minetest.register_craft({
+	recipe = {
+		{"ks_tools:aragonite_sharpened_rock", "ks_tools:aragonite_sharpened_rock"}
+	},
+	output = "ks_tools:toolhead_aragonite_pickaxe"
+})
+
+minetest.register_craft({
+	recipe = {
+		{"ks_tools:aragonite_sharpened_rock"}
+	},
+	output = "ks_tools:toolhead_aragonite_shovel"
+})
+
+minetest.register_craft({
+	recipe = {
+		{"ks_tools:aragonite_sharpened_rock"},
+		{"ks_tools:aragonite_sharpened_rock"}
+	},
+	output = "ks_tools:toolhead_aragonite_axe"
+})
+
+
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_pickaxe", "ks_tools:juniper_stick"},
+	output = "ks_tools:juniper_aragonite_pickaxe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_pickaxe", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_aragonite_pickaxe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_pickaxe", "ks_tools:holly_stick"},
+	output = "ks_tools:holly_aragonite_pickaxe"
+})
+
+
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_shovel", "ks_tools:juniper_stick"},
+	output = "ks_tools:juniper_aragonite_shovel"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_shovel", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_aragonite_shovel"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_shovel", "ks_tools:holly_stick"},
+	output = "ks_tools:holly_aragonite_shovel"
+})
+
+
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_axe", "ks_tools:juniper_stick"},
+	output = "ks_tools:juniper_aragonite_axe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_axe", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_aragonite_axe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aragonite_axe", "ks_tools:holly_stick"},
+	output = "ks_tools:holly_aragonite_axe"
+})
