@@ -243,8 +243,8 @@ minetest.register_tool("ks_tools:holly_aragonite_shovel", {
 
 
 minetest.register_tool("ks_tools:juniper_aragonite_axe", {
-	description = "Dolomite Axe",
-	inventory_image = "tools.toolaragonite_axe_juniper.png",
+	description = "Aragonite Axe",
+	inventory_image = "tools.tool_aragonite_axe_juniper.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -259,7 +259,7 @@ minetest.register_tool("ks_tools:juniper_aragonite_axe", {
 })
 
 minetest.register_tool("ks_tools:douglasfir_aragonite_axe", {
-	description = "Dolomite Axe",
+	description = "Aragonite Axe",
 	inventory_image = "tools.tool_aragonite_axe_douglasfir.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -275,7 +275,7 @@ minetest.register_tool("ks_tools:douglasfir_aragonite_axe", {
 })
 
 minetest.register_tool("ks_tools:aragonite_axe", {
-	description = "Dolomite Axe",
+	description = "Aragonite Axe",
 	inventory_image = "tools.tool_aragonite_axe_holly.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,

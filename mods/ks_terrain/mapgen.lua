@@ -19,6 +19,7 @@ minetest.register_alias("beach_sand", "ks_terrain:fine_sand")
 minetest.register_alias("shingle_beach_sand", "ks_terrain:coarse_sand")
 minetest.register_alias("shingle_beach_sand_under", "ks_terrain:fine_sand")
 minetest.register_alias("seabed_gravel", "ks_terrain:dolomite_gravel")
+minetest.register_alias("mountain_gravel", "ks_terrain:dolomite_gravel")
 minetest.register_alias("gravel", "ks_terrain:dolomite_gravel")
 local shoreline_height = 5
 local oceanfloor_height = -10
@@ -98,6 +99,29 @@ minetest.register_biome({
 	humidity_point = 65,
 	y_min = shoreline_height,
 	y_max = mountain_height
+})
+
+minetest.register_biome({
+	name = "warm_mountain",
+	node_dungeon = "dungeon_stone_brick",
+	node_top = "mountain_gravel",
+	depth_top = 10,
+	heat_point = 55,
+	humidity_point = 60,
+	y_min = mountain_height,
+	y_max = mindepth
+})
+
+minetest.register_biome({
+	name = "cold_mountain",
+	node_dungeon = "dungeon_stone_brick",
+	node_dust = "snow",
+	node_top = "mountain_gravel",
+	depth_top = 10,
+	heat_point = 0,
+	humidity_point = 60,
+	y_min = mountain_height,
+	y_max = mindepth
 })
 
 minetest.register_biome({

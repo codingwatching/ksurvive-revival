@@ -62,4 +62,5 @@ minetest.register_decoration({
 	fill_ratio = 0.5,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
+	biomes = "cold_desert"
 })

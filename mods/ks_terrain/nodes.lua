@@ -226,16 +226,15 @@ minetest.register_node("ks_terrain:eclogite", {
 minetest.register_node("ks_terrain:water_source", {
 	description = "Source Water",
 	drawtype = "liquid",
-	waving = 3,
 	tiles = {
 		{
 			name = "terrain.water.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
-				aspect_w = 32,
-				aspect_h = 32,
-				length = 0.7,
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 8,
 			},
 		},
 		{
@@ -243,15 +242,14 @@ minetest.register_node("ks_terrain:water_source", {
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
-				aspect_w = 32,
-				aspect_h = 32,
-				length = 0.7,
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 8,
 			},
 		},
 	},
-	use_texture_alpha = "blend",
 	paramtype = "light",
-	groups = {water = 1, liquid = 3},
+	use_texture_alpha = "blend",
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -261,13 +259,15 @@ minetest.register_node("ks_terrain:water_source", {
 	liquid_alternative_flowing = "ks_terrain:water_flowing",
 	liquid_alternative_source = "ks_terrain:water_source",
 	liquid_viscosity = 1,
+	liquid_range = 8,
+	groups = {water = 1, liquid = 3}
 })
 
 minetest.register_node("ks_terrain:water_flowing", {
 	description = "Flowing Water",
-	drawtype = "liquid",
-	waving = 3,
-	tiles = {
+	drawtype = "flowingliquid",
+	tiles = {"terrain.water.png"},
+	special_tiles = {
 		{
 			name = "terrain.water.png",
 			backface_culling = false,
@@ -275,7 +275,7 @@ minetest.register_node("ks_terrain:water_flowing", {
 				type = "vertical_frames",
 				aspect_w = 16,
 				aspect_h = 16,
-				length = 1,
+				length = 8,
 			},
 		},
 		{
@@ -285,14 +285,13 @@ minetest.register_node("ks_terrain:water_flowing", {
 				type = "vertical_frames",
 				aspect_w = 16,
 				aspect_h = 16,
-				length = 1,
+				length = 8,
 			},
 		},
 	},
 	use_texture_alpha = "blend",
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
-	groups = {water = 1, liquid = 3},
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -302,4 +301,6 @@ minetest.register_node("ks_terrain:water_flowing", {
 	liquid_alternative_flowing = "ks_terrain:water_flowing",
 	liquid_alternative_source = "ks_terrain:water_source",
 	liquid_viscosity = 1,
+	liquid_range = 8,
+	groups = {water = 1, liquid = 3}
 })

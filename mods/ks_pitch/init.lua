@@ -43,7 +43,8 @@ minetest.register_node("ks_pitch:pitch_source", {
 minetest.register_node("ks_pitch:pitch_flowing", {
 	description = "Flowing Pitch",
 	drawtype = "flowingliquid",
-	tiles = {
+	tiles = {"pitch.pitch.png"},
+	special_tiles = {
 		{
 			name = "pitch.pitch.png",
 			backface_culling = false,
