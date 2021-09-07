@@ -177,8 +177,8 @@ minetest.register_ore({
 	ore_type = "stratum",
 	ore = "strata_limestone",
 	wherein = "strata_bedrock",
-	y_min = feldspar_level-60,
-	y_max = feldspar_level-30,
+	y_min = feldspar_level-70,
+	y_max = feldspar_level-10,
 })
 
 
@@ -211,7 +211,7 @@ minetest.register_ore({
 	y_min = coastline_height,
 	y_max = feldspar_level,
 	clust_scarcity = 8*8*8,
-	clust_size = 6,
+	clust_size = 12,
 })
 
 minetest.register_ore({
@@ -270,7 +270,7 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_bedrock_bauxite",
 	wherein = "strata_bedrock",
-	y_min = feldspar_level-100,
+	y_min = maxdepth,
 	y_max = feldspar_level,
 	clust_scarcity = 2*2*2,
 	clust_size = 16,
@@ -280,7 +280,7 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_bedrock_uranium",
 	wherein = "strata_bedrock",
-	y_min = feldspar_level-150,
+	y_min = maxdepth,
 	y_max = feldspar_level-50,
 	clust_scarcity = 2*2*2,
 	clust_size = 16,
@@ -290,7 +290,7 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_bedrock_bornite",
 	wherein = "strata_bedrock",
-	y_min = feldspar_level-200,
+	y_min = maxdepth,
 	y_max = feldspar_level-100,
 	clust_scarcity = 2*2*2,
 	clust_size = 16,
