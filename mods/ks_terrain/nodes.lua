@@ -164,6 +164,22 @@ minetest.register_node("ks_terrain:feldspar_with_bornite", {
 	is_ground_content = true
 })
 
+minetest.register_node("ks_terrain:limestone_with_rose_quartz", {
+	description = "Limestone with Rose Quartz",
+	tiles = {"terrain.limestone.png^terrain.mineral_rose_quartz_overlay.png"},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1},
+	is_ground_content = true,
+	drop = {
+		max_items = 4,
+		items = {
+			{items = {"ks_ores:rose_quartz 3"}},
+			{items = {"ks_ores:rose_quartz 1"}, rarity = 2},
+			{items = {"ks_ores:rose_quartz 2"}, rarity = 4},
+			{items = {"ks_ores:rose_quartz 1"}, rarity = 4},
+		}
+	},
+})
+
 minetest.register_node("ks_terrain:dolomite_with_bauxite", {
 	description = "Dolomite Stone with Bauxite",
 	tiles = {"terrain.dolomite.png^terrain.mineral_bauxite_overlay.png"},
