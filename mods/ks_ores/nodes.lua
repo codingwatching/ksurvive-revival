@@ -12,7 +12,7 @@ minetest.register_node("ks_ores:chalcocite_block", {
 
 minetest.register_node("ks_ores:rose_quartz_block", {
 	description = "Block of Rose Quartz",
-	tiles = {"ores.rose_quartz_black.png"},
+	tiles = {"ores.rose_quartz_block.png"},
 	groups = {rose_quartz = 1, quartz = 1, chippable = 1, falling_node = 1},
 })
 
