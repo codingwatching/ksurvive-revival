@@ -2,11 +2,15 @@ local max_generated_items = 25
 local bin_column = 1
 local bin_row = 8
 
+local bin_debug = false
+
 
 -- { item_name, position_in_inventory }
 local bin_items = {
 	"ks_tools:dolomite_rock "..math.random(max_generated_items),
 	"ks_tools:dolomite_sharpened_rock "..math.random(max_generated_items),
+	"ks_tools:aragonite_rock "..math.random(max_generated_items),
+	"ks_tools:aragonite_sharpened_rock "..math.random(max_generated_items),
 	"ks_tools:holly_stick "..math.random(max_generated_items),
 	"ks_tools:holly_adze",
 	"ks_tools:juniper_stick "..math.random(max_generated_items),
@@ -43,9 +47,13 @@ local function choose_items(options, chance)
 			table.insert(result, item) --add item
 		end
 	end
-	minetest.log("chat", "Items chosen.")
+	if bin_debug then
+		minetest.log("chat", "Items chosen.")
+	end
 	for i = 1, #result do
-		minetest.log("chat", "Items chosen include :"..result[i])
+		if bin_debug then
+			minetest.log("chat", "Items chosen include :"..result[i])
+		end
 	end
 	return result
 end	
@@ -70,10 +78,14 @@ local function insert_items(pos, listname, items)
 	inv:set_size("container", bin_column*bin_row)
 	for i = 1, #items do
 		inv:add_item("container", items[i])
-		minetest.log("chat", "Inserted item :"..items[i])
+		if bin_debug then
+			minetest.log("chat", "Inserted item :"..items[i])
+		end
 	end
 	local chosen_bin = choose_bin(bin_types)
-	minetest.log("chat", chosen_bin)
+	if bin_debug then
+		minetest.log("chat", chosen_bin)
+	end
 	minetest.swap_node(pos, {name=chosen_bin})
 	on_construct(pos)
 end
@@ -83,10 +95,12 @@ minetest.register_abm({
 	label = "Generate bins from spawners",
 	name = "ks_extras:bin_spawning",
 	nodenames = "ks_extras:bin_spawner",
-	interval = 1,
+	interval = 0.5,
 	chance = 1,
 	action = function(pos, node)
 		insert_items(pos, "container", choose_items(bin_items, 4))
-		minetest.log("chat", "Bin spawned at "..pos.x.." "..pos.y.." "..pos.z)
+		if bin_debug then
+			minetest.log("chat", "Bin spawned at X:"..pos.x.."Y: "..pos.y.." Z:"..pos.z)
+		end
 	end
 })
