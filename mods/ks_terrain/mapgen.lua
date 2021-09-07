@@ -162,7 +162,7 @@ minetest.register_alias("strata_limestone", "ks_terrain:limestone")
 
 
 
--- Register the bedrock layer.
+-- Register the bedrock layer, and limestone layer.
 minetest.register_ore({
 	ore_type = "stratum",
 	ore = "strata_bedrock",
@@ -184,14 +184,16 @@ minetest.register_ore({
 
 
 -- Register a cavern in limestone
+-- Nerfed this, used to be 10*10*10 and 20 nodes big. That was too much, in hindsight, as it would always fail to generate between chunks.
+-- Not sure what my plan for the future of this will be...
 minetest.register_ore({
 	ore_type = "blob",
 	ore = "air",
 	wherein = "strata_limestone",
 	y_min = coastline_height,
 	y_max = feldspar_level,
-	clust_scarcity = 10*10*10,
-	clust_size = 20,
+	clust_scarcity = 16*16*16,
+	clust_size = 5,
 })
 
 
@@ -252,7 +254,7 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = feldspar_level,
 	y_max = mindepth,
-	clust_scarcity = 2*2*2,
+	clust_scarcity = 4*4*4,
 	clust_size = 5,
 })
 
@@ -262,7 +264,7 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = feldspar_level,
 	y_max = mindepth,
-	clust_scarcity = 4*4*4,
+	clust_scarcity = 6*6*6,
 	clust_size = 3,
 })
 
