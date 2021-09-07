@@ -1,7 +1,7 @@
 local tool_durability = 15
 
 minetest.register_tool("ks_tools:douglasfir_adze", {
-	description = "Adze",
+	description = "Douglas Fir Adze",
 	inventory_image = "tools.douglasfir_adze.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -17,7 +17,7 @@ minetest.register_tool("ks_tools:douglasfir_adze", {
 })
 
 minetest.register_tool("ks_tools:juniper_adze", {
-	description = "Adze",
+	description = "Juniper Adze",
 	inventory_image = "tools.juniper_adze.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -33,7 +33,7 @@ minetest.register_tool("ks_tools:juniper_adze", {
 })
 
 minetest.register_tool("ks_tools:holly_adze", {
-	description = "Adze",
+	description = "Holly Adze",
 	inventory_image = "tools.holly_adze.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
