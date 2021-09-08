@@ -28,5 +28,6 @@ minetest.register_node("ks_ores:fluorite_spike", {
 	inventory_image = "ores.fluorite_spike.png",
 	wield_image = "ores.fluorite_spike.png",
 	tiles = {"ores.fluorite_spike.png"},
-	groups = {chippable = 1}
+	groups = {chippable = 1},
+	walkable = false,
 })
