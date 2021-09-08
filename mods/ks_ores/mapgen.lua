@@ -3,7 +3,7 @@ minetest.register_decoration({
 	deco_type = "simple",
 	place_on = "fluorite_cave_floor",
 	sidelen = 9,
-	fill_ratio = 0.05,
+	fill_ratio = 0.01,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
