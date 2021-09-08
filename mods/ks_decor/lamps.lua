@@ -34,6 +34,15 @@ minetest.register_node("ks_decor:rose_quartz_lamp", {
 	walkable = false,
 })
 
+minetest.register_node("ks_decor:fluorite_lamp", {
+	description = "Fluorite Lamp",
+	drawtype = "plantlike",
+	light_source = 14,
+	tiles = {"decor.fluorite_lamp.png"},
+	groups = {stonelamp = 1, chippable = 1},
+	walkable = false,
+})
+
 minetest.register_node("ks_decor:lantern", {
 	description = "Lantern",
 	drawtype = "plantlike",
