@@ -69,10 +69,12 @@ minetest.register_craft({
 	output = "ks_flora:juncus_patch 9",
 	recipe = {
 		{"ks_flora:juncus_block"}
+	}
 })
 
 minetest.register_craft({
 	output = "ks_flora:juncus_stalk 9",
 	recipe = {
 		{"ks_flora:juncus_patch"}
+	}
 })
