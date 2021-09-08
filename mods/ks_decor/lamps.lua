@@ -12,7 +12,7 @@ minetest.register_node("ks_decor:aragonite_lamp", {
 	drawtype = "plantlike",
 	light_source = 14,
 	tiles = {"decor.aragonite_lamp.png"},
-	groups = {stonelamp = 1, chippable = 2},
+	groups = {stonelamp = 1, chippable = 1},
 	walkable = false,
 })
 
@@ -21,7 +21,16 @@ minetest.register_node("ks_decor:eclogite_lamp", {
 	drawtype = "plantlike",
 	light_source = 14,
 	tiles = {"decor.eclogite_lamp.png"},
-	groups = {stonelamp = 1, chippable = 2},
+	groups = {stonelamp = 1, chippable = 3},
+	walkable = false,
+})
+
+minetest.register_node("ks_decor:rose_quartz_lamp", {
+	description = "Rose Quartz Lamp",
+	drawtype = "plantlike",
+	light_source = 14,
+	tiles = {"decor.rose_quartz_lamp.png"},
+	groups = {stonelamp = 1, chippable = 1},
 	walkable = false,
 })
 
