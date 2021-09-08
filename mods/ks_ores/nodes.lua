@@ -16,6 +16,27 @@ minetest.register_node("ks_ores:rose_quartz_block", {
 	groups = {rose_quartz = 1, quartz = 1, chippable = 1, falling_node = 1},
 })
 
+minetest.register_node("ks_ores:fluorite_block", {
+	description = "Block of Fluorite",
+	tiles = {"ores.fluorite_block.png"},
+	groups = {fluorite = 1, chippable = 1, falling_node = 1},
+})
+
+minetest.register_node("ks_ores:fluorite_buildup_on_limestone", {
+	description = "Limestone with Fluorite Buildup",
+	tiles = {"ores.fluorite_block.png", "terrain.limestone.png", "terrain.limestone.png^ores.fluorite_buildup_side.png"},
+	groups = {limestone = 1, fluorite = 1, fluorite_buildup = 1, chippable = 1, falling_node = 1},
+	drop = {
+		max_items = 4,
+		items = {
+			{items = {"ks_terrain:limestone"}},
+			{items = {"ks_ores:fluorite 2"}},
+			{items = {"ks_ores:fluorite 2"}, rarity = 4},
+			{items = {"ks_ores:fluorite 1"}, rarity = 4},
+		}
+	},
+})
+
 
 
 minetest.register_craft({
@@ -43,4 +64,13 @@ minetest.register_craft({
 		{"ks_ores:rose_quartz", "ks_ores:rose_quartz", "ks_ores:rose_quartz"}
 	},
 	output = "ks_ores:rose_quartz_block"
+})
+
+minetest.register_craft({
+	recipe = {
+		{"ks_ores:fluorite", "ks_ores:fluorite", "ks_ores:fluorite"},
+		{"ks_ores:fluorite", "ks_ores:fluorite", "ks_ores:fluorite"},
+		{"ks_ores:fluorite", "ks_ores:fluorite", "ks_ores:fluorite"}
+	},
+	output = "ks_ores:fluorite_block"
 })
