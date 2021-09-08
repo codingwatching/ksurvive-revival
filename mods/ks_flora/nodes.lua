@@ -68,7 +68,10 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 			{items = {"ks_tools:juniper_stick"}, rarity = 4},
 		}
 	},
-	is_ground_content = true
+	is_ground_content = true,
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "ks_flora:juniper_living_leaves"})
+	end,
 })
 
 
@@ -134,7 +137,10 @@ minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
 			{items = {"ks_tools:holly_stick"}, rarity = 4},
 		}
 	},
-	is_ground_content = true
+	is_ground_content = true,
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "ks_flora:holly_living_leaves"})
+	end,
 })
 
 
