@@ -180,17 +180,6 @@ minetest.register_biome({
 	y_max = shoreline_height
 })
 
-minetest.register_biome({
-	name = "fluorite_cave",
-	node_dungeon = "dungeon_fluorite_brick",
-	node_top = "fluorite_cave_floor",
-	depth_top = 1,
-	heat_point = 0,
-	humidity_point = 0,
-	y_min = feldspar_level-70,
-	y_max = feldspar_level-10,
-})
-
 
 
 -- Register bedrock alias.
@@ -231,6 +220,18 @@ minetest.register_ore({
 	y_max = feldspar_level,
 	clust_scarcity = 16*16*16,
 	clust_size = 5,
+})
+
+-- Register limestone cave biome
+minetest.register_biome({
+	name = "fluorite_cave",
+	node_dungeon = "dungeon_fluorite_brick",
+	node_top = "fluorite_cave_floor",
+	depth_top = 1,
+	heat_point = 0,
+	humidity_point = 0,
+	y_min = feldspar_level-70,
+	y_max = feldspar_level-10,
 })
 
 
