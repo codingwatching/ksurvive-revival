@@ -1,11 +1,4 @@
-minetest.register_node("ks_metals:aluminium", {
-	description = "Aluminium",
-	tiles = {"metals.aluminium_block.png"},
-	groups = {metal = 1, aluminium = 1, chippable = 2},
-})
+local modpath = minetest.get_modpath("ks_metals")
 
-minetest.register_node("ks_metals:copper", {
-	description = "Copper",
-	tiles = {"metals.copper_block.png"},
-	groups = {metal = 1, copper = 1, chippable = 2},
-})
+dofile(modpath.."/nodes.lua")
+dofile(modpath.."/molten.lua")
