@@ -269,6 +269,7 @@ minetest.register_alias("mineral_bedrock_bornite", "ks_terrain:feldspar_with_bor
 minetest.register_alias("mineral_stone_bauxite", "ks_terrain:dolomite_with_bauxite")
 minetest.register_alias("mineral_stone_chalcocite", "ks_terrain:dolomite_with_chalcocite")
 minetest.register_alias("mineral_limestone_rose_quartz", "ks_terrain:limestone_with_rose_quartz")
+minetest.register_alias("mineral_limestone_fluorite", "ks_terrain:limestone_with_fluorite")
 
 
 
@@ -296,6 +297,16 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type = "sheet",
 	ore = "mineral_limestone_rose_quartz",
+	wherein = "strata_limestone",
+	y_min = feldspar_level-70,
+	y_max = feldspar_level-10,
+	clust_scarcity = 2*2*2,
+	clust_size = 5,
+})
+
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "mineral_limestone_fluorite",
 	wherein = "strata_limestone",
 	y_min = feldspar_level-70,
 	y_max = feldspar_level-10,
