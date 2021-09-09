@@ -17,6 +17,6 @@ minetest.register_node("ks_pyro:flame", {
 		}
 	},
 	groups = {flame = 1, igniter = 1}
-}
+})
 
 dofile(modpath.."/torches.lua")

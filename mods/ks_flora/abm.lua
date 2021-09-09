@@ -17,6 +17,6 @@ minetest.register_abm({
 	chance = berry_grow_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "ks_flora:holly_living_leaves_with_berries"})
+		minetest.set_node(pos, {name = "ks_flora:holly_living_leaves_with_holly_berries"})
 	end
 })

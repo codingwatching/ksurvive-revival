@@ -232,6 +232,23 @@ minetest.register_node("ks_terrain:dolomite_with_chalcocite", {
 	},
 })
 
+minetest.register_node("ks_terrain:dolomite_with_coal_seam", {
+	description = "Dolomite Stone with a Coal Seam",
+	tiles = {"terrain.dolomite.png^terrain.mineral_coal_seam_overlay.png"},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1, coal_seam =1},
+	is_ground_content = true,
+	drop = {
+		max_items = 5,
+		items = {
+			{items = {"ks_tools:dolomite_rock 2"}},
+			{items = {"ks_ores:coal 2"}},
+			{items = {"ks_ores:coal 1"}, rarity = 2},
+			{items = {"ks_ores:coal 1"}, rarity = 4},
+			{items = {"ks_ores:coal 1"}, rarity = 4},
+		}
+	},
+})
+
 minetest.register_node("ks_terrain:eclogite", {
 	description = "Eclogite Stone",
 	tiles = {"terrain.eclogite.png"},
