@@ -234,7 +234,7 @@ minetest.register_node("ks_terrain:dolomite_with_chalcocite", {
 
 minetest.register_node("ks_terrain:dolomite_with_coal_seam", {
 	description = "Dolomite Stone with a Coal Seam",
-	tiles = {"terrain.dolomite.png^terrain.mineral_coal_seam_overlay.png"},
+	tiles = {"terrain.dolomite.png", "terrain.dolomite.png", "terrain.dolomite.png^terrain.mineral_coal_seam_overlay.png"},
 	groups = {stone = 1, sedimentaryrock = 1, chippable = 1, coal_seam =1},
 	is_ground_content = true,
 	drop = {

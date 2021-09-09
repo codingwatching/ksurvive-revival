@@ -26,7 +26,6 @@ minetest.register_node("ks_ores:fluorite_buildup_on_limestone", {
 	description = "Limestone with Fluorite Buildup",
 	tiles = {"ores.fluorite_block.png", "terrain.limestone.png", "terrain.limestone.png^ores.fluorite_buildup_side.png"},
 	groups = {limestone = 1, fluorite = 1, fluorite_buildup = 1, chippable = 1},
-	light_source = 15,
 	drop = {
 		max_items = 4,
 		items = {

@@ -274,7 +274,7 @@ minetest.register_tool("ks_tools:douglasfir_aragonite_axe", {
 	groups = {stone_tool = 1, aragonite_tool = 1, axe_tool = 1}
 })
 
-minetest.register_tool("ks_tools:aragonite_axe", {
+minetest.register_tool("ks_tools:holly_aragonite_axe", {
 	description = "Aragonite Axe",
 	inventory_image = "tools.tool_aragonite_axe_holly.png",
 	tool_capabilities = {

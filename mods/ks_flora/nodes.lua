@@ -60,14 +60,8 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 	tiles = {"flora.juniper_leaves.png^flora.juniper_berries_overlay.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, juniper_leaves = 1},
-	drop = {
-		max_items = 2,
-		items = {
-			{items = {"ks_flora:juniper_berries"}},
-			{items = {"ks_tools:juniper_stick"}, rarity = 4},
-		}
-	},
+	groups = {grabbable = 1, juniper_leaves = 1},
+	drop = "ks_flora:juniper_berries",
 	is_ground_content = true,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		minetest.set_node(pos, {name = "ks_flora:juniper_living_leaves"})
@@ -129,14 +123,8 @@ minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
 	tiles = {"flora.holly_leaves.png^flora.holly_berries_overlay.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, holly_leaves = 1},
-	drop = {
-		max_items = 2,
-		items = {
-			{items = {"ks_flora:holly_berries"}},
-			{items = {"ks_tools:holly_stick"}, rarity = 4},
-		}
-	},
+	groups = {grabbable = 1, holly_leaves = 1},
+	drop = "ks_flora:holly_berries",
 	is_ground_content = true,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		minetest.set_node(pos, {name = "ks_flora:holly_living_leaves"})

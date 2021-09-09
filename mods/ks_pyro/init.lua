@@ -4,6 +4,7 @@ minetest.register_node("ks_pyro:flame", {
 	description = "Open Flame",
 	drawtype = "firelike",
 	drop = {},
+	light_source = 14,
 	tiles = {
 		{
 			name = "pyro.flame.png",
@@ -16,7 +17,9 @@ minetest.register_node("ks_pyro:flame", {
 			}
 		}
 	},
-	groups = {flame = 1, igniter = 1}
+	groups = {flame = 1, igniter = 1},
+	walkable = false,
+	pointable = false,
 })
 
 dofile(modpath.."/torches.lua")
