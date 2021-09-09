@@ -21,7 +21,6 @@ minetest.register_alias("shingle_beach_sand_under", "ks_terrain:fine_sand")
 minetest.register_alias("seabed_gravel", "ks_terrain:dolomite_gravel")
 minetest.register_alias("mountain_gravel", "ks_terrain:dolomite_gravel")
 minetest.register_alias("gravel", "ks_terrain:dolomite_gravel")
-minetest.register_alias("fluorite_cave_floor", "ks_ores:fluorite_buildup_on_limestone")
 local shoreline_height = 5
 local oceanfloor_height = -10
 local mountain_height = 50
@@ -33,7 +32,6 @@ local mindepth = 31000
 
 -- Registering dungeon nodes here.
 minetest.register_alias("dungeon_stone_brick", "ks_decor:dolomite_bricks")
-minetest.register_alias("dungeon_fluorite_brick", "ks_decor:fluorite_bricks")
 
 
 
@@ -220,18 +218,6 @@ minetest.register_ore({
 	y_max = feldspar_level,
 	clust_scarcity = 16*16*16,
 	clust_size = 5,
-})
-
--- Register limestone cave biome
-minetest.register_biome({
-	name = "fluorite_cave",
-	node_dungeon = "dungeon_fluorite_brick",
-	node_top = "fluorite_cave_floor",
-	depth_top = 1,
-	heat_point = 0,
-	humidity_point = 0,
-	y_min = feldspar_level-70,
-	y_max = feldspar_level-10,
 })
 
 
