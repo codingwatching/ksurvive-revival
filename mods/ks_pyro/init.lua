@@ -13,7 +13,7 @@ minetest.register_node("ks_pyro:flame", {
 				type = "vertical_frames",
 				aspect_w = 16,
 				aspect_h = 16,
-				length = 2.0,
+				length = 0.5,
 			}
 		}
 	},
