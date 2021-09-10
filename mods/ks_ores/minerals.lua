@@ -1,11 +1,17 @@
+minetest.register_craftitem("ks_ores:coal", {
+	description = "Coal Lump",
+	inventory_image = "ores.coal.png",
+	wield_image = "ores.coal.png"
+})
+
 minetest.register_craftitem("ks_ores:bauxite", {
-	description = "Bauxite Ore",
+	description = "Bauxite Nodule",
 	inventory_image = "ores.bauxite.png",
 	wield_image = "ores.bauxite.png"
 })
 
 minetest.register_craftitem("ks_ores:chalcocite", {
-	description = "Chalcocite Ore",
+	description = "Chalcocite Nodule",
 	inventory_image = "ores.chalcocite.png",
 	wield_image = "ores.chalcocite.png"
 })
