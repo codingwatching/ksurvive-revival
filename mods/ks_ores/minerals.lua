@@ -4,18 +4,6 @@ minetest.register_craftitem("ks_ores:coal", {
 	wield_image = "ores.coal.png"
 })
 
-minetest.register_craftitem("ks_ores:bauxite", {
-	description = "Bauxite Nodule",
-	inventory_image = "ores.bauxite.png",
-	wield_image = "ores.bauxite.png"
-})
-
-minetest.register_craftitem("ks_ores:chalcocite", {
-	description = "Chalcocite Nodule",
-	inventory_image = "ores.chalcocite.png",
-	wield_image = "ores.chalcocite.png"
-})
-
 minetest.register_craftitem("ks_ores:rose_quartz", {
 	description = "Rose Quartz Crystal",
 	inventory_image = "ores.rose_quartz.png",
