@@ -22,7 +22,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	neighbors = {"group:igniter"},
-	nodenames = {"ks_metals:alumina_block"},
+	nodenames = {"ks_metals:alumina"},
 	interval = forming_interval,
 	chance = forming_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
