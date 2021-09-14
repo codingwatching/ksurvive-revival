@@ -2,6 +2,7 @@ local smelting_interval = 1
 local smelting_chance = 1
 local forming_interval = 1
 local forming_chance = 1
+minetest.register_alias("smelting_slag", "ks_terrain:dolomite_gravel")
 
 
 
@@ -14,7 +15,7 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		local pos_top = {x = pos.x, y = pos.y+1, z = pos.z}
-		minetest.set_node(pos, {name = "ks_terrain:dolomite_gravel"})
+		minetest.set_node(pos, {name = "smelting_slag"})
 		minetest.set_node(pos_top, {name = "ks_metals:alumina_dust"})
 	end
 })
@@ -26,6 +27,6 @@ minetest.register_abm({
 	chance = forming_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "ks_metals:aluminum_forming"})
+		minetest.set_node(pos, {name = "ks_metals:aluminum"})
 	end
 })
