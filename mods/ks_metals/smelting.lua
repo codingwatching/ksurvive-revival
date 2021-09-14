@@ -8,13 +8,13 @@ local forming_chance = 1
 -- register smelting abms for bauxite
 minetest.register_abm({
 	neighbors = {"group:smelter"},
-	nodenames = {"ks_metals:bauxite_block"},
+	nodenames = {"ks_terrain:dolomite_with_bauxite"},
 	interval = smelting_interval,
 	chance = smelting_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		local pos_top = {x = pos.x, y = pos.y+1, z = pos.z}
-		minetest.set_node(pos, {name = "ks_metals:slag"})
+		minetest.set_node(pos, {name = "ks_terrain:dolomite_gravel"})
 		minetest.set_node(pos_top, {name = "ks_metals:alumina_dust"})
 	end
 })
