@@ -10,6 +10,12 @@ minetest.register_node("ks_metals:copper", {
 	groups = {metal = 1, solid_metal = 1, copper = 1, chippable = 2},
 })
 
+minetest.register_node("ks_metals:alumina", {
+	description = "Alumina",
+	tiles = {"metals.alumina.png"},
+	groups = {diggable = 2, alumina = 2},
+})
+
 minetest.register_node("ks_metals:alumina_dust", {
 	description = "Dust of Alumina",
 	tiles = {"metals.alumina.png"},
