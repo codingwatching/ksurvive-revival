@@ -1,13 +1,11 @@
 local smelting_interval = 1
 local smelting_chance = 1
-local cooling_interval = 1
-local cooling_chance = 1
-
--- TODO: get rid of this wimpy garbage and write some original smelting routine.
+local forming_interval = 1
+local forming_chance = 1
 
 
 
--- register melting abms
+-- register smelting abms for bauxite
 minetest.register_abm({
 	neighbors = {"group:smelter"},
 	nodenames = {"ks_metals:bauxite_block"},
@@ -15,42 +13,19 @@ minetest.register_abm({
 	chance = smelting_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "ks_metals:aluminium_source"})
+		local pos_top = {x = pos.x, y = pos.y+1, z = pos.z}
+		minetest.set_node(pos, {name = "ks_metals:slag"})
+		minetest.set_node(pos_top, {name = "ks_metals:alumina_dust"})
 	end
 })
 
 minetest.register_abm({
-	neighbors = {"group:smelter"},
-	nodenames = {"ks_metals:chalcocite_block"},
-	interval = smelting_interval,
-	chance = smelting_chance,
+	neighbors = {"group:igniter"},
+	nodenames = {"ks_metals:alumina_block"},
+	interval = forming_interval,
+	chance = forming_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "ks_metals:copper_source"})
-	end
-})
-
-
-
--- register cooling abms.
-minetest.register_abm({
-	neighbors = {"group:cooler"},
-	nodenames = {"ks_metals:aluminium_source"},
-	interval = cooling_interval,
-	chance = cooling_chance,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "ks_metals:aluminium_block"})
-	end
-})
-
-minetest.register_abm({
-	neighbors = {"group:cooler"},
-	nodenames = {"ks_metals:copper_source"},
-	interval = cooling_interval,
-	chance = cooling_chance,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "ks_metals:copper_block"})
+		minetest.set_node(pos, {name = "ks_metals:aluminum_forming"})
 	end
 })
