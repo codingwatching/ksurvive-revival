@@ -8,7 +8,7 @@ minetest.register_node("ks_pyro:holly_firebrand",{
 	light_source = 12,
 	groups = {grabbable = 1, firebrand = 1, igniter = 1},
 	walkable = false,
-	climbable = true,
+	climbable = false,
 })
 
 minetest.register_craft({
@@ -29,7 +29,7 @@ minetest.register_node("ks_pyro:douglasfir_firebrand",{
 	light_source = 12,
 	groups = {grabbable = 1, firebrand = 1, igniter = 1},
 	walkable = false,
-	climbable = true,
+	climbable = false,
 })
 
 minetest.register_craft({
@@ -50,7 +50,7 @@ minetest.register_node("ks_pyro:juniper_firebrand",{
 	light_source = 12,
 	groups = {grabbable = 1, firebrand = 1, igniter = 1},
 	walkable = false,
-	climbable = true,
+	climbable = false,
 })
 
 minetest.register_craft({
