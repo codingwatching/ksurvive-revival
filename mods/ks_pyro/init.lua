@@ -17,7 +17,7 @@ minetest.register_node("ks_pyro:flame", {
 			}
 		}
 	},
-	groups = {flame = 1, igniter = 1},
+	groups = {flame = 1, igniter = 1, smelter = 1},
 	walkable = false,
 	pointable = false,
 })
