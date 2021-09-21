@@ -11,7 +11,8 @@ minetest.register_node("ks_flora:juniper_planks", {
 	tiles = {"flora.juniper_wood.png", "flora.juniper_wood.png", "flora.juniper_wood_end.png", "flora.juniper_wood_end.png", "flora.juniper_wood.png", "flora.juniper_wood.png"},
 	groups = {woodplank = 1, choppable = 1},
 	paramtype2 = "facedir",
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:holly_planks", {
@@ -19,7 +20,8 @@ minetest.register_node("ks_flora:holly_planks", {
 	tiles = {"flora.holly_wood.png", "flora.holly_wood.png", "flora.holly_wood_end.png", "flora.holly_wood_end.png", "flora.holly_wood.png", "flora.holly_wood.png"},
 	groups = {woodplank = 1, choppable = 1},
 	paramtype2 = "facedir",
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:douglasfir_planks", {
@@ -27,7 +29,8 @@ minetest.register_node("ks_flora:douglasfir_planks", {
 	tiles = {"flora.douglasfir_wood.png", "flora.douglasfir_wood.png", "flora.douglasfir_wood_end.png", "flora.douglasfir_wood_end.png", "flora.douglasfir_wood.png", "flora.douglasfir_wood.png"},
 	groups = {woodplank = 1, choppable = 1},
 	paramtype2 = "facedir",
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 
@@ -37,7 +40,8 @@ minetest.register_node("ks_flora:juniper_living_log", {
 	tiles = {"flora.juniper_log_top.png", "flora.juniper_log_top.png", "flora.juniper_log.png"},
 	groups = {woodlog = 1, choppable = 2, falling_node = 1},
 	is_ground_content = true,
-	drop = "ks_flora:juniper_log"
+	drop = "ks_flora:juniper_log",
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:juniper_living_leaves", {
@@ -52,7 +56,8 @@ minetest.register_node("ks_flora:juniper_living_leaves", {
 			{items = {"ks_tools:juniper_stick"}, rarity = 4},
 		}
 	},
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
@@ -66,6 +71,7 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		minetest.set_node(pos, {name = "ks_flora:juniper_living_leaves"})
 	end,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 
@@ -75,7 +81,8 @@ minetest.register_node("ks_flora:douglasfir_living_log", {
 	tiles = {"flora.douglasfir_log_top.png", "flora.douglasfir_log_top.png", "flora.douglasfir_log.png"},
 	groups = {woodlog = 1, choppable = 2, falling_node = 1},
 	is_ground_content = true,
-	drop = "ks_flora:douglasfir_log"
+	drop = "ks_flora:douglasfir_log",
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:douglasfir_living_leaves", {
@@ -90,7 +97,8 @@ minetest.register_node("ks_flora:douglasfir_living_leaves", {
 			{items = {"ks_tools:douglasfir_stick"}, rarity = 4},
 		}
 	},
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 
@@ -100,7 +108,8 @@ minetest.register_node("ks_flora:holly_living_log", {
 	tiles = {"flora.holly_log_top.png", "flora.holly_log_top.png", "flora.holly_log.png"},
 	groups = {woodlog = 1, choppable = 2, falling_node = 1},
 	is_ground_content = true,
-	drop = "ks_flora:holly_log"
+	drop = "ks_flora:holly_log",
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:holly_living_leaves", {
@@ -115,7 +124,8 @@ minetest.register_node("ks_flora:holly_living_leaves", {
 			{items = {"ks_tools:holly_stick"}, rarity = 4},
 		}
 	},
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
@@ -129,6 +139,7 @@ minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		minetest.set_node(pos, {name = "ks_flora:holly_living_leaves"})
 	end,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 
@@ -137,19 +148,22 @@ minetest.register_node("ks_flora:juniper_log", {
 	description = "Juniper Log",
 	tiles = {"flora.juniper_log_top.png", "flora.juniper_log_top.png", "flora.juniper_log.png"},
 	groups = {woodlog = 1, choppable = 2},
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:holly_log", {
 	description = "Holly Log",
 	tiles = {"flora.holly_log_top.png", "flora.holly_log_top.png", "flora.holly_log.png"},
 	groups = {woodlog = 1, choppable = 2},
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:douglasfir_log", {
 	description = "Douglas Fir Log",
 	tiles = {"flora.douglasfir_log_top.png", "flora.douglasfir_log_top.png", "flora.douglasfir_log.png"},
 	groups = {woodlog = 1, choppable = 2},
-	is_ground_content = true
+	is_ground_content = true,
+	sounds = ks_sounds.generalnode_sounds,
 })

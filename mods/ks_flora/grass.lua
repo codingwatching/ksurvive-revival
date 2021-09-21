@@ -21,7 +21,8 @@ minetest.register_node("ks_flora:bahia_0", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:bahia_1", {
@@ -39,7 +40,8 @@ minetest.register_node("ks_flora:bahia_1", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:bahia_2", {
@@ -57,7 +59,8 @@ minetest.register_node("ks_flora:bahia_2", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:bahia_3", {
@@ -75,7 +78,8 @@ minetest.register_node("ks_flora:bahia_3", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:bahia", {
@@ -101,6 +105,7 @@ minetest.register_node("ks_flora:bahia", {
 			{items = {"ks_flora:bahia_0 1"}, rarity = 4},
 		}
 	},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 
@@ -114,7 +119,8 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia_1"})
-	end
+	end,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_abm({
@@ -125,7 +131,8 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia_2"})
-	end
+	end,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_abm({
@@ -136,7 +143,8 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia_3"})
-	end
+	end,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_abm({
@@ -147,7 +155,8 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia"})
-	end
+	end,
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 
@@ -170,6 +179,7 @@ minetest.register_node("ks_flora:snowy_dead_shrub", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
 	},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 
@@ -193,7 +203,8 @@ minetest.register_node("ks_flora:juncus_0", {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:juncus_1", {
@@ -213,7 +224,8 @@ minetest.register_node("ks_flora:juncus_1", {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:juncus_2", {
@@ -233,7 +245,8 @@ minetest.register_node("ks_flora:juncus_2", {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:juncus_3", {
@@ -253,7 +266,8 @@ minetest.register_node("ks_flora:juncus_3", {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
-	drop = {}
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 minetest.register_node("ks_flora:juncus", {
@@ -281,6 +295,7 @@ minetest.register_node("ks_flora:juncus", {
 			{items = {"ks_flora:juncus_stalk"}}
 		}
 	},
+	sounds = ks_sounds.generalnode_sounds,
 })
 
 -- Now, make juncus actually grow also.
