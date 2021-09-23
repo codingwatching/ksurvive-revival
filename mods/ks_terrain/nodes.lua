@@ -28,7 +28,7 @@ minetest.register_node("ks_terrain:snowpile", {
 		},
 	},
 	groups = {diggable = 1, falling_node = 1, snow = 1},
-	sounds = ks_sounds.generalnode_sounds,
+	sounds = ks_sounds.snowynode_sounds,
 })
 
 minetest.register_node("ks_terrain:ice_sheet", {
@@ -140,7 +140,7 @@ minetest.register_node("ks_terrain:feldspar", {
 	tiles = {"terrain.feldspar.png"},
 	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true,
-	sounds = ks_sounds.generalnode_sounds,
+	sounds = ks_sounds.bedrocknode_sounds,
 })
 
 minetest.register_node("ks_terrain:feldspar_red", {
@@ -148,7 +148,7 @@ minetest.register_node("ks_terrain:feldspar_red", {
 	tiles = {"terrain.feldspar_red.png"},
 	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true,
-	sounds = ks_sounds.generalnode_sounds,
+	sounds = ks_sounds.bedrocknode_sounds,
 })
 
 minetest.register_node("ks_terrain:limestone", {
@@ -166,7 +166,7 @@ minetest.register_node("ks_terrain:feldspar_with_bauxite", {
 	tiles = {"terrain.feldspar.png^terrain.mineral_bauxite_overlay.png"},
 	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true,
-	sounds = ks_sounds.generalnode_sounds,
+	sounds = ks_sounds.bedrocknode_sounds,
 })
 
 minetest.register_node("ks_terrain:feldspar_with_uranium", {
@@ -174,7 +174,7 @@ minetest.register_node("ks_terrain:feldspar_with_uranium", {
 	tiles = {"terrain.feldspar.png^terrain.mineral_uranium_overlay.png"},
 	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true,
-	sounds = ks_sounds.generalnode_sounds,
+	sounds = ks_sounds.bedrocknode_sounds,
 })
 
 minetest.register_node("ks_terrain:feldspar_with_bornite", {
@@ -182,7 +182,7 @@ minetest.register_node("ks_terrain:feldspar_with_bornite", {
 	tiles = {"terrain.feldspar.png^terrain.mineral_bornite_overlay.png"},
 	groups = {stone = 1, igneousrock = 1, chippable = 2},
 	is_ground_content = true,
-	sounds = ks_sounds.generalnode_sounds,
+	sounds = ks_sounds.bedrocknode_sounds,
 })
 
 minetest.register_node("ks_terrain:limestone_with_rose_quartz", {
@@ -237,7 +237,7 @@ minetest.register_node("ks_terrain:dolomite_with_chalcocite", {
 minetest.register_node("ks_terrain:dolomite_with_coal_seam", {
 	description = "Dolomite Stone with a Coal Seam",
 	tiles = {"terrain.dolomite.png", "terrain.dolomite.png", "terrain.dolomite.png^terrain.mineral_coal_seam_overlay.png"},
-	groups = {stone = 1, sedimentaryrock = 1, chippable = 1, coal_seam =1},
+	groups = {stone = 1, sedimentaryrock = 1, chippable = 1, coal_seam = 1},
 	is_ground_content = true,
 	drop = {
 		max_items = 5,
@@ -257,7 +257,7 @@ minetest.register_node("ks_terrain:eclogite", {
 	tiles = {"terrain.eclogite.png"},
 	groups = {stone = 1, metamorphicrock = 1, chippable = 3},
 	is_ground_content = true,
-	sounds = ks_sounds.generalnode_sounds,
+	sounds = ks_sounds.bedrocknode_sounds,
 })
 
 
