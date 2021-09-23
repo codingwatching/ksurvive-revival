@@ -31,6 +31,12 @@ local bin_types = {
 	"ks_decor:juniper_bin"
 }
 
+local bin_names = {
+	"Douglas Fir-Wood Bin",
+	"Holly-Wood Bin",
+	"Juniper-Wood Bin"
+}
+
 
 local function choose_bin(options)
 	local result
@@ -63,13 +69,19 @@ end
 local function on_construct(pos)
 	local meta = minetest.get_meta(pos)
 	local inv = meta:get_inventory()
-	meta:set_string("infotext", "Dungeon Bin")
+	--meta:set_string("infotext", "Dungeon Bin")
 	local fs_content = "size[8,7;]" ..
 		"list[context;container;0,0.3;10,1;]" ..
 		"list[current_player;main;0,2.85;8,1;]" ..
 		"list[current_player;main;0,4.08;8,3;8]" ..
 		"listring[context;container]"
 	meta:set_string("formspec", fs_content)
+end
+
+
+local function rename_bin(pos, name)
+	local meta = minetest.get_meta(pos)
+	meta:set_string("infotext", name) -- This sets the name of the bin. Old code for this was at line 72.
 end
 
 
@@ -88,6 +100,7 @@ local function insert_items(pos, listname, items)
 		minetest.log("chat", chosen_bin)
 	end
 	minetest.swap_node(pos, {name=chosen_bin})
+	rename_bin(pos, bin_plaintext_name) --Not sure how I'll get this to work...
 	on_construct(pos)
 end
 
