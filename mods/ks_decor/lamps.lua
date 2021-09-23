@@ -1,3 +1,5 @@
+minetest.register_alias("ks_decor:lantern", "ks_decor:holly_lantern") -- For retro compat
+
 minetest.register_node("ks_decor:dolomite_lamp", {
 	description = "Dolomite Lamp",
 	drawtype = "plantlike",
@@ -43,11 +45,29 @@ minetest.register_node("ks_decor:fluorite_lamp", {
 	walkable = false,
 })
 
-minetest.register_node("ks_decor:lantern", {
-	description = "Lantern",
+minetest.register_node("ks_decor:holly_lantern", {
+	description = "Holly Lantern",
 	drawtype = "plantlike",
 	light_source = 14,
-	tiles = {"decor.lantern.png"},
+	tiles = {"decor.holly_lantern.png"},
+	groups = {lantern = 1, grabbable = 1, falling_node = 1},
+	walkable = false,
+})
+
+minetest.register_node("ks_decor:juniper_lantern", {
+	description = "Juniper Lantern",
+	drawtype = "plantlike",
+	light_source = 14,
+	tiles = {"decor.juniper_lantern.png"},
+	groups = {lantern = 1, grabbable = 1, falling_node = 1},
+	walkable = false,
+})
+
+minetest.register_node("ks_decor:douglasfir_lantern", {
+	description = "Douglas Fir Lantern",
+	drawtype = "plantlike",
+	light_source = 14,
+	tiles = {"decor.douglasfir_lantern.png"},
 	groups = {lantern = 1, grabbable = 1, falling_node = 1},
 	walkable = false,
 })
