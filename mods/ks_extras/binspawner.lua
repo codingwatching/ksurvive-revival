@@ -81,7 +81,12 @@ end
 
 local function rename_bin(pos, name)
 	local meta = minetest.get_meta(pos)
-	meta:set_string("infotext", name) -- This sets the name of the bin. Old code for this was at line 72.
+	local index={} -- took this snippet from StackOverflow. I needed this to find an index, because Lua can't do this by default. I miss Python...
+	for k,v in pairs(bin_types) do
+		index[v]=k
+	end
+	meta:set_string("infotext", bin_names[index[name]]) -- This sets the name of the bin. Old code for this was at line 72.
+	-- This may or may not work. I hope that this will, because this is annoying me.
 end
 
 
@@ -100,7 +105,7 @@ local function insert_items(pos, listname, items)
 		minetest.log("chat", chosen_bin)
 	end
 	minetest.swap_node(pos, {name=chosen_bin})
-	rename_bin(pos, bin_plaintext_name) --Not sure how I'll get this to work...
+	rename_bin(pos, chosen_bin) --Hope this works.
 	on_construct(pos)
 end
 
