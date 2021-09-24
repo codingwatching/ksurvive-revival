@@ -1,5 +1,5 @@
-local berry_growth_rate = 1
-local berry_grow_chance = 1
+local berry_growth_rate = 5
+local berry_grow_chance = 5
 
 minetest.register_abm({
 	nodenames = {"ks_flora:juniper_living_leaves"},
