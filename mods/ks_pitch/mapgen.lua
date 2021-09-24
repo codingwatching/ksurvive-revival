@@ -1,0 +1,8 @@
+--minetest.register_ore({
+--	ore_type       = "scatter",
+--	ore            = "ks_pitch:hard_pitch", -- This should be a node that isn't a liquid, but will become one if it comes into contact with air.
+--	wherein        = "mapgen_stone",
+--	clust_scarcity = 13 * 13 * 13,
+--	clust_num_ores = 4,
+--	clust_size     = 4,
+--})
