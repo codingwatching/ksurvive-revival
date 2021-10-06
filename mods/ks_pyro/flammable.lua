@@ -64,7 +64,7 @@ minetest.register_node("ks_pyro:burning", {
 			},
 		}
 	},
-	groups = {igniter = 1, burning = 1, diggable = 1},
+	groups = {igniter = 1, burning = 1, tongable = 1},
 })
 
 minetest.register_node("ks_pyro:light_burning", {
@@ -82,5 +82,5 @@ minetest.register_node("ks_pyro:light_burning", {
 			},
 		}
 	},
-	groups = {igniter = 1, light_burning = 1, diggable = 1},
+	groups = {igniter = 1, light_burning = 1, tongable = 1},
 })
