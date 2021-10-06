@@ -38,7 +38,7 @@ minetest.register_node("ks_flora:douglasfir_planks", {
 minetest.register_node("ks_flora:juniper_living_log", {
 	description = "Living Juniper Log",
 	tiles = {"flora.juniper_log_top.png", "flora.juniper_log_top.png", "flora.juniper_log.png"},
-	groups = {woodlog = 1, choppable = 2, falling_node = 1},
+	groups = {woodlog = 1, choppable = 2, falling_node = 1, flammable = 1},
 	is_ground_content = true,
 	drop = "ks_flora:juniper_log",
 	sounds = ks_sounds.loggynode_sounds,
@@ -49,7 +49,7 @@ minetest.register_node("ks_flora:juniper_living_leaves", {
 	tiles = {"flora.juniper_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, juniper_leaves = 1},
+	groups = {sliceable = 1, juniper_leaves = 1, flammable = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -65,7 +65,7 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 	tiles = {"flora.juniper_leaves.png^flora.juniper_berries_overlay.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {grabbable = 1, juniper_leaves = 1},
+	groups = {grabbable = 1, juniper_leaves = 1, flammable = 1},
 	drop = "ks_flora:juniper_berries",
 	is_ground_content = true,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
@@ -79,7 +79,7 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 minetest.register_node("ks_flora:douglasfir_living_log", {
 	description = "Living Douglas Fir Log",
 	tiles = {"flora.douglasfir_log_top.png", "flora.douglasfir_log_top.png", "flora.douglasfir_log.png"},
-	groups = {woodlog = 1, choppable = 2, falling_node = 1},
+	groups = {woodlog = 1, choppable = 2, falling_node = 1, flammable = 1},
 	is_ground_content = true,
 	drop = "ks_flora:douglasfir_log",
 	sounds = ks_sounds.loggynode_sounds,
@@ -90,7 +90,7 @@ minetest.register_node("ks_flora:douglasfir_living_leaves", {
 	tiles = {"flora.douglasfir_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, douglasfir_leaves = 1},
+	groups = {sliceable = 1, douglasfir_leaves = 1, flammable = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -106,7 +106,7 @@ minetest.register_node("ks_flora:douglasfir_living_leaves", {
 minetest.register_node("ks_flora:holly_living_log", {
 	description = "Living Holly Log",
 	tiles = {"flora.holly_log_top.png", "flora.holly_log_top.png", "flora.holly_log.png"},
-	groups = {woodlog = 1, choppable = 2, falling_node = 1},
+	groups = {woodlog = 1, choppable = 2, falling_node = 1, flammable = 1},
 	is_ground_content = true,
 	drop = "ks_flora:holly_log",
 	sounds = ks_sounds.loggynode_sounds,
@@ -117,7 +117,7 @@ minetest.register_node("ks_flora:holly_living_leaves", {
 	tiles = {"flora.holly_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, holly_leaves = 1},
+	groups = {sliceable = 1, holly_leaves = 1, flammable = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -133,7 +133,7 @@ minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
 	tiles = {"flora.holly_leaves.png^flora.holly_berries_overlay.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {grabbable = 1, holly_leaves = 1},
+	groups = {grabbable = 1, holly_leaves = 1, flammable = 1},
 	drop = "ks_flora:holly_berries",
 	is_ground_content = true,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
@@ -147,7 +147,7 @@ minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
 minetest.register_node("ks_flora:juniper_log", {
 	description = "Juniper Log",
 	tiles = {"flora.juniper_log_top.png", "flora.juniper_log_top.png", "flora.juniper_log.png"},
-	groups = {woodlog = 1, choppable = 2},
+	groups = {woodlog = 1, choppable = 2, flammable = 1},
 	is_ground_content = true,
 	sounds = ks_sounds.loggynode_sounds,
 })
@@ -155,7 +155,7 @@ minetest.register_node("ks_flora:juniper_log", {
 minetest.register_node("ks_flora:holly_log", {
 	description = "Holly Log",
 	tiles = {"flora.holly_log_top.png", "flora.holly_log_top.png", "flora.holly_log.png"},
-	groups = {woodlog = 1, choppable = 2},
+	groups = {woodlog = 1, choppable = 2, flammable = 1},
 	is_ground_content = true,
 	sounds = ks_sounds.loggynode_sounds,
 })
@@ -163,7 +163,7 @@ minetest.register_node("ks_flora:holly_log", {
 minetest.register_node("ks_flora:douglasfir_log", {
 	description = "Douglas Fir Log",
 	tiles = {"flora.douglasfir_log_top.png", "flora.douglasfir_log_top.png", "flora.douglasfir_log.png"},
-	groups = {woodlog = 1, choppable = 2},
+	groups = {woodlog = 1, choppable = 2, flammable = 1},
 	is_ground_content = true,
 	sounds = ks_sounds.loggynode_sounds,
 })
