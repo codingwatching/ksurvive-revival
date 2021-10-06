@@ -9,6 +9,16 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
+	neighbors = {"group:igniter"},
+	nodenames = {"group:light_flammable"},
+	interval = 1,
+	chance = 2,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		minetest.set_node(pos, {name = "ks_pyro:light_burning"})
+	end
+})
+
+minetest.register_abm({
 	nodenames = {"ks_pyro:flame"},
 	interval = 1,
 	chance = 1,
@@ -55,4 +65,22 @@ minetest.register_node("ks_pyro:burning", {
 		}
 	},
 	groups = {igniter = 1, burning = 1, diggable = 1},
+})
+
+minetest.register_node("ks_pyro:light_burning", {
+	description = "Light Burning Node",
+	light_source = 8,
+	tiles = {
+		{
+			name = "pyro.light_burning_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.1,
+			},
+		}
+	},
+	groups = {igniter = 1, light_burning = 1, diggable = 1},
 })

@@ -49,7 +49,7 @@ minetest.register_node("ks_flora:juniper_living_leaves", {
 	tiles = {"flora.juniper_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, juniper_leaves = 1, flammable = 1},
+	groups = {sliceable = 1, juniper_leaves = 1, light_flammable = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -65,7 +65,7 @@ minetest.register_node("ks_flora:juniper_living_leaves_with_berries", {
 	tiles = {"flora.juniper_leaves.png^flora.juniper_berries_overlay.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {grabbable = 1, juniper_leaves = 1, flammable = 1},
+	groups = {grabbable = 1, juniper_leaves = 1, light_flammable = 1},
 	drop = "ks_flora:juniper_berries",
 	is_ground_content = true,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
@@ -90,7 +90,7 @@ minetest.register_node("ks_flora:douglasfir_living_leaves", {
 	tiles = {"flora.douglasfir_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, douglasfir_leaves = 1, flammable = 1},
+	groups = {sliceable = 1, douglasfir_leaves = 1, light_flammable = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -117,7 +117,7 @@ minetest.register_node("ks_flora:holly_living_leaves", {
 	tiles = {"flora.holly_leaves.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {sliceable = 1, holly_leaves = 1, flammable = 1},
+	groups = {sliceable = 1, holly_leaves = 1, light_flammable = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -133,7 +133,7 @@ minetest.register_node("ks_flora:holly_living_leaves_with_holly_berries", {
 	tiles = {"flora.holly_leaves.png^flora.holly_berries_overlay.png"},
 	paramtype = "light",
 	drawtype = "allfaces_optional",
-	groups = {grabbable = 1, holly_leaves = 1, flammable = 1},
+	groups = {grabbable = 1, holly_leaves = 1, light_flammable = 1},
 	drop = "ks_flora:holly_berries",
 	is_ground_content = true,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
