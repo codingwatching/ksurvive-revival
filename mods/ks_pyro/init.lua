@@ -30,3 +30,4 @@ minetest.register_node("ks_pyro:flame", {
 -- C: Heat (Going to be pretty hard to implement. Maybe it could be biome-specific? Like a fire is harder to have in a cold desert.)
 
 dofile(modpath.."/torches.lua")
+dofile(modpath.."/flammable.lua")

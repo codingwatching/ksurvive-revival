@@ -9,7 +9,7 @@ minetest.register_alias("ks_flora:maple_log", "ks_flora:holly_log")
 minetest.register_node("ks_flora:juniper_planks", {
 	description = "Juniper-Wood Planks",
 	tiles = {"flora.juniper_wood.png", "flora.juniper_wood.png", "flora.juniper_wood_end.png", "flora.juniper_wood_end.png", "flora.juniper_wood.png", "flora.juniper_wood.png"},
-	groups = {woodplank = 1, choppable = 1},
+	groups = {woodplank = 1, choppable = 1, flammable = 1},
 	paramtype2 = "facedir",
 	is_ground_content = true,
 	sounds = ks_sounds.woodennode_sounds,
@@ -18,7 +18,7 @@ minetest.register_node("ks_flora:juniper_planks", {
 minetest.register_node("ks_flora:holly_planks", {
 	description = "Holly-Wood Planks",
 	tiles = {"flora.holly_wood.png", "flora.holly_wood.png", "flora.holly_wood_end.png", "flora.holly_wood_end.png", "flora.holly_wood.png", "flora.holly_wood.png"},
-	groups = {woodplank = 1, choppable = 1},
+	groups = {woodplank = 1, choppable = 1, flammable = 1},
 	paramtype2 = "facedir",
 	is_ground_content = true,
 	sounds = ks_sounds.woodennode_sounds,
@@ -27,7 +27,7 @@ minetest.register_node("ks_flora:holly_planks", {
 minetest.register_node("ks_flora:douglasfir_planks", {
 	description = "Douglas Fir-Wood Planks",
 	tiles = {"flora.douglasfir_wood.png", "flora.douglasfir_wood.png", "flora.douglasfir_wood_end.png", "flora.douglasfir_wood_end.png", "flora.douglasfir_wood.png", "flora.douglasfir_wood.png"},
-	groups = {woodplank = 1, choppable = 1},
+	groups = {woodplank = 1, choppable = 1, flammable = 1},
 	paramtype2 = "facedir",
 	is_ground_content = true,
 	sounds = ks_sounds.woodennode_sounds,
