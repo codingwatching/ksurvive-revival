@@ -4,7 +4,7 @@ minetest.register_decoration({
 	schematic = minetest.get_modpath("ks_flora").."/schematics/juniper_tree.mts",
 	place_on = "prairie_soil_grass",
 	sidelen = 5,
-	fill_ratio = 0.01,
+	fill_ratio = 0.001,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 	place_offset_y = -1
@@ -16,7 +16,7 @@ minetest.register_decoration({
 	schematic = minetest.get_modpath("ks_flora").."/schematics/douglasfir_tree.mts",
 	place_on = "coniferous_forest_soil_grass",
 	sidelen = 9,
-	fill_ratio = 0.005,
+	fill_ratio = 0.05,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 	place_offset_y = -1
@@ -49,7 +49,7 @@ minetest.register_decoration({
 	deco_type = "simple",
 	place_on = "prairie_soil_grass",
 	sidelen = 1,
-	fill_ratio = 0.05,
+	fill_ratio = 0.01,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
