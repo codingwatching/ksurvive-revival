@@ -49,9 +49,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "ks_flora:juncus_block",
 	recipe = {
-		{"ks_flora:juncus_patch", "ks_flora:juncus_patch", "ks_flora:juncus_patch"},
-		{"ks_flora:juncus_patch", "ks_flora:juncus_patch", "ks_flora:juncus_patch"},
-		{"ks_flora:juncus_patch", "ks_flora:juncus_patch", "ks_flora:juncus_patch"},
+		{"ks_flora:juncus_patch", "ks_flora:juncus_patch"},
+		{"ks_flora:juncus_patch", "ks_flora:juncus_patch"}
 	}
 })
 
@@ -59,21 +58,20 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "ks_flora:juncus_patch",
 	recipe = {
-		{"ks_flora:juncus_stalk", "ks_flora:juncus_stalk", "ks_flora:juncus_stalk"},
-		{"ks_flora:juncus_stalk", "ks_flora:juncus_stalk", "ks_flora:juncus_stalk"},
-		{"ks_flora:juncus_stalk", "ks_flora:juncus_stalk", "ks_flora:juncus_stalk"},
+		{"ks_flora:juncus_stalk", "ks_flora:juncus_stalk"},
+		{"ks_flora:juncus_stalk", "ks_flora:juncus_stalk"},
 	}
 })
 
 minetest.register_craft({
-	output = "ks_flora:juncus_patch 9",
+	output = "ks_flora:juncus_patch 4",
 	recipe = {
 		{"ks_flora:juncus_block"}
 	}
 })
 
 minetest.register_craft({
-	output = "ks_flora:juncus_stalk 9",
+	output = "ks_flora:juncus_stalk 4",
 	recipe = {
 		{"ks_flora:juncus_patch"}
 	}

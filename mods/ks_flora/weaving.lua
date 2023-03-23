@@ -1,6 +1,7 @@
 minetest.register_craftitem("ks_flora:juncus_stalk", {
 	description = "Juncus Stalk",
-	inventory_image = "flora.juncus_stalk.png"
+	inventory_image = "flora.juncus_stalk.png",
+	on_use = minetest.item_eat(1)
 })
 
 minetest.register_craftitem("ks_flora:juncus_patch", {
