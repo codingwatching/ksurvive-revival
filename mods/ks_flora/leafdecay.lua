@@ -1,4 +1,4 @@
-local distance = 3
+local distance = 5
 
 minetest.register_abm({
 	label = "Remove lonely juniper leaves.",
