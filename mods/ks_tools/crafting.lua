@@ -202,3 +202,87 @@ minetest.register_craft({
 	recipe = {"ks_tools:toolhead_aragonite_axe", "ks_tools:holly_stick"},
 	output = "ks_tools:holly_aragonite_axe"
 })
+
+
+
+minetest.register_craft({
+	recipe = {
+		{"ks_metal:aluminuim", "ks_metal:aluminuim"}
+	},
+	output = "ks_tools:toolhead_aluminium_pickaxe"
+})
+
+minetest.register_craft({
+	recipe = {
+		{"ks_metal:aluminuim"}
+	},
+	output = "ks_tools:toolhead_aluminium_shovel"
+})
+
+minetest.register_craft({
+	recipe = {
+		{"ks_metal:aluminuim"},
+		{"ks_metal:aluminuim"}
+	},
+	output = "ks_tools:toolhead_aluminium_axe"
+})
+
+
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_shovel", "ks_tools:juniper_stick"},
+	output = "ks_tools:juniper_aluminium_shovel"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_shovel", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_aluminium_shovel"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_shovel", "ks_tools:holly_stick"},
+	output = "ks_tools:holly_aluminium_shovel"
+})
+
+
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_pickaxe", "ks_tools:juniper_stick"},
+	output = "ks_tools:juniper_aluminium_pickaxe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_pickaxe", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_aluminium_pickaxe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_pickaxe", "ks_tools:holly_stick"},
+	output = "ks_tools:holly_aluminium_pickaxe"
+})
+
+
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_axe", "ks_tools:juniper_stick"},
+	output = "ks_tools:juniper_aluminium_axe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_axe", "ks_tools:douglasfir_stick"},
+	output = "ks_tools:douglasfir_aluminium_axe"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"ks_tools:toolhead_aluminium_axe", "ks_tools:holly_stick"},
+	output = "ks_tools:holly_aluminium_axe"
+})
