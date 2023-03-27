@@ -278,16 +278,6 @@ minetest.register_alias("mineral_limestone_fluorite", "ks_terrain:limestone_with
 -- register ores
 minetest.register_ore({
 	ore_type = "sheet",
-	ore = "mineral_stone_coalseam",
-	wherein = "mapgen_stone",
-	y_min = feldspar_level,
-	y_max = mindepth,
-	clust_scarcity = 4*4*4,
-	clust_size = 20,
-})
-
-minetest.register_ore({
-	ore_type = "sheet",
 	ore = "mineral_stone_bauxite",
 	wherein = "mapgen_stone",
 	y_min = feldspar_level,
