@@ -7,7 +7,7 @@ minetest.register_tool("ks_tools:juniper_aluminium_pickaxe", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			chippable={times={[1]=tool_damage*3, [2]=tool_damage*6}, uses=tool_durability, maxlevel=3},
+			chippable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=3},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -22,7 +22,7 @@ minetest.register_tool("ks_tools:holly_aluminium_pickaxe", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			chippable={times={[1]=tool_damage*3, [2]=tool_damage*6}, uses=tool_durability, maxlevel=3},
+			chippable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=3},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -37,7 +37,7 @@ minetest.register_tool("ks_tools:douglasfir_aluminium_pickaxe", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			chippable={times={[1]=tool_damage*3, [2]=tool_damage*6}, uses=tool_durability, maxlevel=3},
+			chippable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=3},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -54,7 +54,7 @@ minetest.register_tool("ks_tools:douglasfir_aluminium_shovel", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			diggable={times={[1]=tool_damage*2, [2]=tool_damage*4}, uses=tool_durability, maxlevel=1},
+			diggable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -69,7 +69,7 @@ minetest.register_tool("ks_tools:holly_aluminium_shovel", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			diggable={times={[1]=tool_damage*2, [2]=tool_damage*4}, uses=tool_durability, maxlevel=1},
+			diggable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -84,7 +84,7 @@ minetest.register_tool("ks_tools:juniper_aluminium_shovel", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			diggable={times={[1]=tool_damage*2, [2]=tool_damage*4}, uses=tool_durability, maxlevel=1},
+			diggable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -101,8 +101,8 @@ minetest.register_tool("ks_tools:juniper_aluminium_axe", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppable={times={[1]=tool_damage*2, [2]=tool_damage*3}, uses=tool_durability, maxlevel=1},
-			sliceable={times={[1]=tool_damage, [2]=tool_damage}, uses=tool_durability, maxlevel=1},
+			choppable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+			sliceable={times={[1]=tool_damage/4, [2]=tool_damage/5}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -117,8 +117,8 @@ minetest.register_tool("ks_tools:douglasfir_aluminium_axe", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppable={times={[1]=tool_damage*2, [2]=tool_damage*3}, uses=tool_durability, maxlevel=1},
-			sliceable={times={[1]=tool_damage, [2]=tool_damage}, uses=tool_durability, maxlevel=1},
+			choppable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+			sliceable={times={[1]=tool_damage/4, [2]=tool_damage/5}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
@@ -133,8 +133,8 @@ minetest.register_tool("ks_tools:holly_aluminium_axe", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppable={times={[1]=tool_damage*2, [2]=tool_damage*3}, uses=tool_durability, maxlevel=1},
-			sliceable={times={[1]=tool_damage, [2]=tool_damage}, uses=tool_durability, maxlevel=1},
+			choppable={times={[1]=tool_damage, [2]=tool_damage*2}, uses=tool_durability, maxlevel=1},
+			sliceable={times={[1]=tool_damage/4, [2]=tool_damage/5}, uses=tool_durability, maxlevel=1},
 		},
 		damage_groups = {fleshy=tool_damage},
 	},
