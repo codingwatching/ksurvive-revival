@@ -6,6 +6,8 @@ dofile(modpath.."/wood_adze.lua")
 dofile(modpath.."/crafting.lua")
 dofile(modpath.."/stone_toolheads.lua")
 dofile(modpath.."/stone_tools.lua")
+dofile(modpath.."/metal_toolheads.lua")
+dofile(modpath.."/metal_tools.lua")
 dofile(modpath.."/cooking_tools.lua")
 
 
