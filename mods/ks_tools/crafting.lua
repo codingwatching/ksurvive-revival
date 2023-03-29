@@ -207,22 +207,22 @@ minetest.register_craft({
 
 minetest.register_craft({
 	recipe = {
-		{"ks_metal:aluminuim", "ks_metal:aluminuim"}
+		{"ks_metal:aluminium", "ks_metal:aluminium"}
 	},
 	output = "ks_tools:toolhead_aluminium_pickaxe"
 })
 
 minetest.register_craft({
 	recipe = {
-		{"ks_metal:aluminuim"}
+		{"ks_metal:aluminium"}
 	},
 	output = "ks_tools:toolhead_aluminium_shovel"
 })
 
 minetest.register_craft({
 	recipe = {
-		{"ks_metal:aluminuim"},
-		{"ks_metal:aluminuim"}
+		{"ks_metal:aluminium"},
+		{"ks_metal:aluminium"}
 	},
 	output = "ks_tools:toolhead_aluminium_axe"
 })
