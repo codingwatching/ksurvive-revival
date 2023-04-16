@@ -45,6 +45,11 @@ minetest.register_node("ks_terrain:silt_soil_with_grass", {
 	groups = {silt_soil = 1, wet_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true,
 	sounds = ks_sounds.generalnode_sounds,
+	node_dig_prediction = "ks_terrain:silty_soil",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "ks_terrain:silty_soil"})
+	end,
+	drop = ""
 })
 
 minetest.register_node("ks_terrain:mulchy_soil_with_grass", {
@@ -53,6 +58,11 @@ minetest.register_node("ks_terrain:mulchy_soil_with_grass", {
 	groups = {mulchy_soil = 1, wet_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true,
 	sounds = ks_sounds.generalnode_sounds,
+	node_dig_prediction = "ks_terrain:mulchy_soil",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "ks_terrain:mulchy_soil"})
+	end,
+	drop = ""
 })
 
 minetest.register_node("ks_terrain:coarse_soil_with_grass", {
@@ -61,6 +71,11 @@ minetest.register_node("ks_terrain:coarse_soil_with_grass", {
 	groups = {coarse_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true,
 	sounds = ks_sounds.generalnode_sounds,
+	node_dig_prediction = "ks_terrain:coarse_soil",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "ks_terrain:coarse_soil"})
+	end,
+	drop = ""
 })
 
 minetest.register_node("ks_terrain:silt_soil", {
@@ -118,7 +133,7 @@ minetest.register_node("ks_terrain:dolomite", {
 minetest.register_node("ks_terrain:dolomite_gravel", {
 	description = "Dolomite Gravel",
 	tiles = {"terrain.dolomite_gravel.png"},
-	groups = {wetsoil = 1, diggable = 2, falling_node = 1},
+	groups = {gravel = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true,
 	drop = "ks_tools:dolomite_rock 2",
 	sounds = ks_sounds.generalnode_sounds,
