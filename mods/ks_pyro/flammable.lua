@@ -23,16 +23,16 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = {"group:burning"},
 	interval = 3,
-	chance = 5,
+	chance = 7,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node(pos, {name = "ks_pyro:burning_light"})
+		minetest.set_node(pos, {name = "ks_pyro:light_burning"})
 	end
 })
 
 minetest.register_abm({
 	nodenames = {"group:burning_light"},
 	interval = 3,
-	chance = 7,
+	chance = 5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.set_node(pos, {name = "ks_pyro:spent_embers"})
 	end
@@ -82,7 +82,7 @@ minetest.register_node("ks_pyro:burning", {
 				type = "vertical_frames",
 				aspect_w = 16,
 				aspect_h = 16,
-				length = 0.1,
+				length = 1,
 			},
 		}
 	},
@@ -100,7 +100,7 @@ minetest.register_node("ks_pyro:light_burning", {
 				type = "vertical_frames",
 				aspect_w = 16,
 				aspect_h = 16,
-				length = 0.1,
+				length = 1,
 			},
 		}
 	},
@@ -118,7 +118,7 @@ minetest.register_node("ks_pyro:spent_embers", {
 				type = "vertical_frames",
 				aspect_w = 16,
 				aspect_h = 16,
-				length = 0.1,
+				length = 1,
 			},
 		}
 	},
