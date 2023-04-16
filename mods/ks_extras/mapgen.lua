@@ -1,4 +1,4 @@
-if minetest.settings:get("ks2_spawn_structures") == "yes" then
+if minetest.settings:get_bool("ks2_spawn_structures") then
 	minetest.register_decoration({
 		decoration = "ks_extras:temple_1",
 		deco_type = "schematic",
