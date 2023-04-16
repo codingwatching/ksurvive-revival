@@ -22,8 +22,8 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"group:burning"},
-	interval = 3,
-	chance = 7,
+	interval = 1,
+	chance = 14,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.set_node(pos, {name = "ks_pyro:light_burning"})
 	end
@@ -31,7 +31,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"group:burning_light"},
-	interval = 3,
+	interval = 2,
 	chance = 5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.set_node(pos, {name = "ks_pyro:spent_embers"})
@@ -53,6 +53,26 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"group:burning"},
+	interval = 1,
+	chance = 1,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos_arr = {
+			a = {x=pos.x+0,y=pos.y+0,z=pos.z+1},
+			b = {x=pos.x+0,y=pos.y+0,z=pos.z-1},
+			c = {x=pos.x+1,y=pos.y+0,z=pos.z+0},
+			d = {x=pos.x-1,y=pos.y+0,z=pos.z+0},
+			e = {x=pos.x+0,y=pos.y+1,z=pos.z+0}
+		}
+		for k, v in pairs(pos_arr) do
+			if minetest.get_node(v).name == "air" then
+				minetest.set_node(v, {name = "ks_pyro:flame"})
+			end
+		end
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"group:burning_light"},
 	interval = 1,
 	chance = 2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
