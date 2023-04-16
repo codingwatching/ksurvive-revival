@@ -18,6 +18,28 @@ minetest.register_abm({
 	end
 })
 
+
+
+minetest.register_abm({
+	nodenames = {"group:burning"},
+	interval = 3,
+	chance = 5,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		minetest.set_node(pos, {name = "ks_pyro:burning_light"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"group:burning_light"},
+	interval = 3,
+	chance = 7,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		minetest.set_node(pos, {name = "ks_pyro:spent_embers"})
+	end
+})
+
+
+
 minetest.register_abm({
 	nodenames = {"ks_pyro:flame"},
 	interval = 1,
@@ -51,7 +73,7 @@ minetest.register_abm({
 
 minetest.register_node("ks_pyro:burning", {
 	description = "Burning Node",
-	light_source = 8,
+	light_source = 15,
 	tiles = {
 		{
 			name = "pyro.burning_animated.png",
@@ -82,5 +104,30 @@ minetest.register_node("ks_pyro:light_burning", {
 			},
 		}
 	},
-	groups = {igniter = 1, light_burning = 1, tongable = 1},
+	groups = {igniter = 1, light_burning = 1, tongable = 1, falling_node = 1},
+})
+
+minetest.register_node("ks_pyro:spent_embers", {
+	description = "Spent Embers Node",
+	light_source = 2,
+	tiles = {
+		{
+			name = "pyro.spent_burning_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.1,
+			},
+		}
+	},
+	drop = "ks_pyro:ash",
+	groups = {diggable = 1, falling_node = 1},
+})
+
+minetest.register_node("ks_pyro:ash", {
+	description = "Ash",
+	tiles = {"pyro.ash.png"},
+	groups = {diggable = 1, falling_node = 1},
 })
