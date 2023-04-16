@@ -24,8 +24,8 @@ minetest.register_alias("mountain_gravel", "ks_terrain:dolomite_gravel")
 minetest.register_alias("gravel", "ks_terrain:dolomite_gravel")
 local shoreline_height = 5
 local oceanfloor_height = -10
-local mountain_height = 50
-local feldspar_level = -50
+local mountain_height = 65
+local feldspar_level = -30
 local maxdepth = -31000
 local mindepth = 31000
 
@@ -172,9 +172,9 @@ minetest.register_biome({
 	node_filler = "shingle_beach_sand",
 	depth_filler = 3,
 	node_water_top = "ks_terrain:icesheet",
-	depth_water_top = 2,
+	depth_water_top = 1,
 	heat_point = 0,
-	humidity_point = 75,
+	humidity_point = 15,
 	y_min = oceanfloor_height,
 	y_max = shoreline_height
 })
@@ -235,9 +235,9 @@ minetest.register_ore({
 	ore_type = "sheet",
 	ore = "stone_aragonite",
 	wherein = "mapgen_stone",
-	y_min = shoreline_height + 15,
+	y_min = shoreline_height + 35,
 	y_max = feldspar_level,
-	clust_scarcity = 4*4*4,
+	clust_scarcity = 2*1*1,
 	clust_size = 12,
 })
 
@@ -247,7 +247,7 @@ minetest.register_ore({
 	wherein = "strata_bedrock",
 	y_min = maxdepth,
 	y_max = feldspar_level,
-	clust_scarcity = 8*8*8,
+	clust_scarcity = 3*1*2,
 	clust_size = 10,
 })
 
@@ -257,7 +257,7 @@ minetest.register_ore({
 	wherein = "strata_bedrock",
 	y_min = maxdepth,
 	y_max = feldspar_level-50,
-	clust_scarcity = 4*4*4,
+	clust_scarcity = 3*2*4,
 	clust_size = 6,
 })
 
@@ -282,7 +282,7 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = feldspar_level,
 	y_max = mindepth,
-	clust_scarcity = 4*4*4,
+	clust_scarcity = 4*3*4,
 	clust_size = 5,
 })
 
@@ -292,7 +292,7 @@ minetest.register_ore({
 	wherein = "mapgen_stone",
 	y_min = feldspar_level,
 	y_max = mindepth,
-	clust_scarcity = 6*6*6,
+	clust_scarcity = 7*6*7,
 	clust_size = 3,
 })
 
@@ -302,8 +302,8 @@ minetest.register_ore({
 	wherein = "strata_limestone",
 	y_min = feldspar_level-70,
 	y_max = feldspar_level-10,
-	clust_scarcity = 2*2*2,
-	clust_size = 5,
+	clust_scarcity = 2*1*2,
+	clust_size = 16,
 })
 
 minetest.register_ore({
@@ -312,8 +312,8 @@ minetest.register_ore({
 	wherein = "strata_limestone",
 	y_min = feldspar_level-70,
 	y_max = feldspar_level-10,
-	clust_scarcity = 2*2*2,
-	clust_size = 5,
+	clust_scarcity = 1*2*2,
+	clust_size = 16,
 })
 
 minetest.register_ore({
@@ -331,7 +331,7 @@ minetest.register_ore({
 	ore = "mineral_bedrock_uranium",
 	wherein = "strata_bedrock",
 	y_min = maxdepth,
-	y_max = feldspar_level-50,
+	y_max = feldspar_level-35,
 	clust_scarcity = 2*2*2,
 	clust_size = 16,
 })
@@ -341,7 +341,7 @@ minetest.register_ore({
 	ore = "mineral_bedrock_bornite",
 	wherein = "strata_bedrock",
 	y_min = maxdepth,
-	y_max = feldspar_level-100,
+	y_max = feldspar_level-75,
 	clust_scarcity = 2*2*2,
 	clust_size = 16,
 })
@@ -370,5 +370,5 @@ minetest.register_ore({
 	y_min = maxdepth,
 	y_max = mountain_height,
 	clust_scarcity = 2*2*2,
-	clust_size = 9,
+	clust_size = 12,
 })
