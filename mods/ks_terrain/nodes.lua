@@ -45,9 +45,9 @@ minetest.register_node("ks_terrain:silt_soil_with_grass", {
 	groups = {silt_soil = 1, wet_soil = 1, soil = 1, diggable = 2, falling_node = 1},
 	is_ground_content = true,
 	sounds = ks_sounds.generalnode_sounds,
-	node_dig_prediction = "ks_terrain:silty_soil",
+	node_dig_prediction = "ks_terrain:silt_soil",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "ks_terrain:silty_soil"})
+		minetest.set_node(pos, {name = "ks_terrain:silt_soil"})
 	end,
 	drop = ""
 })
