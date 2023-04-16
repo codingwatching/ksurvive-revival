@@ -30,7 +30,7 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	nodenames = {"group:burning_light"},
+	nodenames = {"group:light_burning"},
 	interval = 2,
 	chance = 5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
