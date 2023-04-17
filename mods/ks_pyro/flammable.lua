@@ -22,7 +22,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"group:burning"},
-	interval = 1,
+	interval = 4,
 	chance = 14,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.set_node(pos, {name = "ks_pyro:light_burning"})
@@ -31,7 +31,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"ks_pyro:light_burning"},
-	interval = 2,
+	interval = 7,
 	chance = 5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.set_node(pos, {name = "ks_pyro:spent_embers"})
