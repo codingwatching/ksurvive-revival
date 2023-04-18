@@ -59,7 +59,17 @@ minetest.register_decoration({
 	deco_type = "simple",
 	place_on = "beach_sand",
 	sidelen = 9,
-	fill_ratio = 0.01,
+	fill_ratio = 0.8,
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+})
+
+minetest.register_decoration({
+	decoration = "ks_flora:juncus_twin",
+	deco_type = "simple",
+	place_on = "beach_sand",
+	sidelen = 9,
+	fill_ratio = 0.015,
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
