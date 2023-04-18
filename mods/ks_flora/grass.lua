@@ -249,6 +249,27 @@ minetest.register_node("ks_flora:juncus_2", {
 	sounds = ks_sounds.generalnode_sounds,
 })
 
+minetest.register_node("ks_flora:juncus_2_twin", {
+	description = "Young Twin Juncus Rushes",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_2_twin.png"},
+	inventory_image = "flora.juncus_2_twin.png",
+	wield_image = "flora.juncus_2_twin.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = g_groups,
+	
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
+})
+
 minetest.register_node("ks_flora:juncus_3", {
 	description = "Young Juncus Rushes",
 	drawtype = "plantlike",
@@ -256,6 +277,27 @@ minetest.register_node("ks_flora:juncus_3", {
 	tiles = {"flora.juncus_3.png"},
 	inventory_image = "flora.juncus_3.png",
 	wield_image = "flora.juncus_3.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = g_groups,
+	
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {},
+	sounds = ks_sounds.generalnode_sounds,
+})
+
+minetest.register_node("ks_flora:juncus_3_twin", {
+	description = "Young Twin Juncus Rushes",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_3_twin.png"},
+	inventory_image = "flora.juncus_3_twin.png",
+	wield_image = "flora.juncus_3_twin.png",
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
@@ -290,9 +332,38 @@ minetest.register_node("ks_flora:juncus", {
 	drop = {
 		max_items = 3,
 		items = {
-			{items = {"ks_flora:juncus_0 2"}},
-			{items = {"ks_flora:juncus_0"}, rarity = 2},
+			{items = {"ks_flora:juncus_0"}},
+			{items = {"ks_flora:juncus_0"}, rarity = 5},
 			{items = {"ks_flora:juncus_stalk"}}
+		}
+	},
+	sounds = ks_sounds.generalnode_sounds,
+})
+
+minetest.register_node("ks_flora:juncus_twin", {
+	description = "Mature Twin Juncus Rushes",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"flora.juncus_4_twin.png"},
+	inventory_image = "flora.juncus_4_twin.png",
+	wield_image = "flora.juncus_4_twin.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = gm_groups,
+	
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {
+		max_items = 4,
+		items = {
+			{items = {"ks_flora:juncus_0"}},
+			{items = {"ks_flora:juncus_0"}, rarity = 5},
+			{items = {"ks_flora:juncus_0"}, rarity = 5},
+			{items = {"ks_flora:juncus_stalk 2"}}
 		}
 	},
 	sounds = ks_sounds.generalnode_sounds,
@@ -313,8 +384,41 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = {"ks_flora:juncus_1"},
 	neighbors = juncus_soil_types,
+	interval = growthrate/2,
+	chance = growchance/2,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:juncus_2_twin"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"ks_flora:juncus_2_twin"},
+	neighbors = juncus_soil_types,
 	interval = growthrate,
 	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:juncus_3_twin"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"ks_flora:juncus_3_twin"},
+	neighbors = juncus_soil_types,
+	interval = growthrate,
+	chance = growchance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "ks_flora:juncus_twin"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"ks_flora:juncus_1"},
+	neighbors = juncus_soil_types,
+	interval = growthrate/2,
+	chance = growchance/2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus_2"})
