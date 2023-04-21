@@ -2,8 +2,8 @@ local g_groups = {attached_node = 1, sliceable = 1}
 local gm_groups = {attached_node = 1, sliceable = 1, mature_grass = 1}
 local bahiagrass_soil_types = {"group:wet_soil"}
 local juncus_soil_types = {"group:sand"}
-local growthchance = 1
-local growthrate = 0.1
+local growthchance = 1.25
+local growthrate = 10
 
 
 minetest.register_node("ks_flora:bahia_0", {
@@ -115,7 +115,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:bahia_0"},
 	neighbors = bahia_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia_1"})
@@ -127,7 +127,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:bahia_1"},
 	neighbors = bahia_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia_2"})
@@ -139,7 +139,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:bahia_2"},
 	neighbors = bahia_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia_3"})
@@ -151,7 +151,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:bahia_3"},
 	neighbors = bahia_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:bahia"})
@@ -374,7 +374,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:juncus_0"},
 	neighbors = juncus_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus_1"})
@@ -385,7 +385,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:juncus_1"},
 	neighbors = juncus_soil_types,
 	interval = growthrate/2,
-	chance = growchance/2,
+	chance = growthchance/2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus_2_twin"})
@@ -396,7 +396,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:juncus_2_twin"},
 	neighbors = juncus_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus_3_twin"})
@@ -407,7 +407,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:juncus_3_twin"},
 	neighbors = juncus_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus_twin"})
@@ -418,7 +418,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:juncus_1"},
 	neighbors = juncus_soil_types,
 	interval = growthrate/2,
-	chance = growchance/2,
+	chance = growthchance/2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus_2"})
@@ -429,7 +429,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:juncus_2"},
 	neighbors = juncus_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus_3"})
@@ -440,7 +440,7 @@ minetest.register_abm({
 	nodenames = {"ks_flora:juncus_3"},
 	neighbors = juncus_soil_types,
 	interval = growthrate,
-	chance = growchance,
+	chance = growthchance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "ks_flora:juncus"})
