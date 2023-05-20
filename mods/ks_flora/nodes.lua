@@ -12,7 +12,7 @@ minetest.register_node("ks_flora:juniper_planks", {
 	groups = {woodplank = 1, choppable = 1, flammable = 1},
 	paramtype2 = "facedir",
 	is_ground_content = true,
-	sounds = ks_sounds.woodennode_sounds,
+	sounds = ks_sounds.loggynode_sounds,
 })
 
 minetest.register_node("ks_flora:holly_planks", {
@@ -21,7 +21,7 @@ minetest.register_node("ks_flora:holly_planks", {
 	groups = {woodplank = 1, choppable = 1, flammable = 1},
 	paramtype2 = "facedir",
 	is_ground_content = true,
-	sounds = ks_sounds.woodennode_sounds,
+	sounds = ks_sounds.loggynode_sounds,
 })
 
 minetest.register_node("ks_flora:douglasfir_planks", {
@@ -30,7 +30,7 @@ minetest.register_node("ks_flora:douglasfir_planks", {
 	groups = {woodplank = 1, choppable = 1, flammable = 1},
 	paramtype2 = "facedir",
 	is_ground_content = true,
-	sounds = ks_sounds.woodennode_sounds,
+	sounds = ks_sounds.loggynode_sounds,
 })
 
 

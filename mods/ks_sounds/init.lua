@@ -7,13 +7,6 @@ ks_sounds.generalnode_sounds.dig = {name = "generalnode_dig", gain = 0.25}
 ks_sounds.generalnode_sounds.place = {name = "generalnode_place", gain = 1.0}
 
 
-ks_sounds.woodennode_sounds = {}
-ks_sounds.woodennode_sounds.footstep = {name = "woodennode_footstep", gain = 1.0}
-ks_sounds.woodennode_sounds.dug = {name = "woodennode_dug", gain = 0.25}
-ks_sounds.woodennode_sounds.dig = {name = "woodennode_dig", gain = 0.25}
-ks_sounds.woodennode_sounds.place = {name = "woodennode_place", gain = 1.0}
-
-
 ks_sounds.loggynode_sounds = {}
 ks_sounds.loggynode_sounds.footstep = {name = "loggynode_footstep", gain = 1.0}
 ks_sounds.loggynode_sounds.dug = {name = "loggynode_dug", gain = 0.25}
